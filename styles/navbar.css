@@ -5,32 +5,68 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  background-color: var(--secondary);
 }
 .navbar img {
   height: 80%;
 }
 .navbar div {
-  width: 33%;
+  width: 70%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .navbar div:nth-child(1) {
+  width: 15%;
   justify-content: flex-start;
   margin-left: 24px;
 }
 .navbar div:nth-child(3) {
+  width: 15%;
   justify-content: flex-end;
   margin-right: 24px;
 }
 .navlinks ul {
   list-style: none;
+}
+.navlinks > ul {
   display: flex;
 }
-.navlinks ul li {
-  margin: 0 12px;
+.navlinks > ul > li {
+  padding: 12px 1.5vw;
 }
 .navlinks ul li a {
   text-decoration: none;
+}
+.navlinks > ul > li:last-child:hover .products-dropdown {
+  max-height: 100vh;
+  padding: 12px;
+  opacity: 1;
+  transition: 0.3s ease;
+}
+.navlinks > ul > li:last-child span {
+  transition: 0.3s ease;
+}
+.navlinks > ul > li:last-child:hover span {
+  transform: rotate(180deg);
+  transition: 0.3s ease;
+}
+.navlinks ul li:last-child > span {
+  cursor: pointer;
+}
+.products-dropdown {
+  max-height: 0;
+  padding: 0;
+  opacity: 0;
+  overflow: hidden;
+  border-radius: var(--roundness);
+  background-color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  transition: 0.3s ease;
+}
+.products-dropdown li {
+  padding: 6px;
 }
