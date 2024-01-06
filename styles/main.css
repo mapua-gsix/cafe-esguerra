@@ -1,0 +1,20 @@
+:root {
+  --primary: #ffffff;
+  --secondary: #ffffff;
+  --accent: #ffffff;
+  --text: #ffffff;
+  --shadow: #ffffff;
+  font-family: sans-serif;
+}
+.material-symbols-outlined {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+body {
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
