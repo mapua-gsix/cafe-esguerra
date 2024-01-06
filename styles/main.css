@@ -2,7 +2,7 @@
   --primary: #ffffff;
   --secondary: #ffffff;
   --accent: #ffffff;
-  --text: #ffffff;
+  --text: #000000;
   --shadow: #ffffff;
   font-family: sans-serif;
 }
@@ -17,4 +17,7 @@ body {
   color: var(--text);
   margin: 0;
   padding: 0;
+}
+a {
+  color: var(--text);
 }
