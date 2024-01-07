@@ -1,17 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lustria&family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
 :root {
-  --primary: #ac7147;
-  --secondary: #e4ded0;
-  --accent: #566b30;
-  --text: #000000;
-  --textlight: #e4ded0;
-  --shadow: #000000;
+  --primary: #ac7146;
+  --secondary: #e5ddd0;
+  --accent: #387529;
+  --text: #3f3a39;
+  --textlight: #e7e7e0;
+  --shadow: #3f3a39;
   --roundness: 12px; /*Use this when defining border-radius*/
 }
 .material-symbols-outlined {
-  position: absolute;
   display: flex;
   align-items: center;
+  vertical-align: middle;
   justify-content: center;
   color: var(--accent);
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 12;
@@ -22,9 +22,24 @@ body {
   padding: 0;
   background-color: var(--primary);
   font-family: "Poppins", sans-serif;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+li {
+  font-family: "Lustria", serif;
+}
+li {
+  font-weight: bold;
 }
 a {
   color: var(--text);
+}
+p {
+  font-family: "Poppins", sans-serif;
 }
 button.b1 {
   font-family: "Poppins", sans-serif;
@@ -34,4 +49,18 @@ button.b1 {
 }
 .noselect {
   user-select: none;
+}
+section {
+  padding: 0;
+  max-height: 89vh;
+  height: 100vw;
+  max-width: 100vw;
+  overflow: hidden;
+}
+section.default {
+  max-height: unset;
+  height: unset;
+}
+section:nth-child(2) {
+  padding: 72px 0 0 0;
 }
