@@ -1,11 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Lustria&family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
+@font-face {
+  font-family: black-mango;
+  src: url("../assets/fonts/brand_fonts/BlackMango-Regular.otf");
+}
+@font-face {
+  font-family: black-mango;
+  src: url("../assets/fonts/brand_fonts/BlackMango-Bold.otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: black-mango;
+  src: url("../assets/fonts/brand_fonts/BlackMango-ExtraBold.otf");
+  font-weight: bolder;
+}
 :root {
   --primary: #ac7146;
   --secondary: #e5ddd0;
   --accent: #387529;
   --text: #3f3a39;
   --textlight: #e7e7e0;
-  --shadow: #3f3a39;
+  --shadow: black;
+  --tint: #3f3a39ca;
+  --shadowtemplate: 0px 0px 12px -4px var(--shadow);
   --roundness: 12px; /*Use this when defining border-radius*/
 }
 .material-symbols-outlined {
@@ -22,7 +38,6 @@ body {
   padding: 0;
   background-color: var(--primary);
   font-family: "Poppins", sans-serif;
-  height: 100vh;
 }
 
 h1,
@@ -37,24 +52,39 @@ li {
 }
 a {
   color: var(--text);
+  transition: all 0.3s ease;
+}
+a:hover {
+  color: var(--accent);
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 p {
   font-family: "Poppins", sans-serif;
 }
 button.b1 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Lustria", serif;
   background-color: transparent;
   border: 3px var(--accent) solid;
-  border-radius: calc(var(--roundness) / 4);
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button.b1:hover {
+  padding-inline: 12px;
+  background-color: var(--accent);
+  color: var(--textlight);
+  transition: all 0.3s ease;
 }
 .noselect {
   user-select: none;
 }
 section {
   padding: 0;
-  max-height: 89vh;
+  max-height: 93vh;
+  min-height: 40vh;
   height: 100vw;
-  max-width: 100vw;
+  width: 100%;
   overflow: hidden;
 }
 section.default {
@@ -62,5 +92,8 @@ section.default {
   height: unset;
 }
 section:nth-child(2) {
-  padding: 72px 0 0 0;
+  padding: 50px 0 0 0;
+}
+.brandfont {
+  font-family: "black-mango", sans-serif;
 }

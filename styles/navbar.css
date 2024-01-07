@@ -6,11 +6,18 @@
   justify-content: space-evenly;
   align-items: center;
   background-color: var(--secondary);
+  z-index: 2;
+}
+.navbar,
+.navbar a,
+.navbar button {
+  transition: all 0.6s;
 }
 .navbar img {
   height: 65%;
 }
 .navbar div {
+  vertical-align: middle;
   width: 70%;
   height: 100%;
   display: flex;
@@ -48,6 +55,7 @@
   transition: 0.3s ease;
 }
 .navlinks > ul > li:last-child span {
+  font-size: 22px;
   transition: 0.3s ease;
 }
 .navlinks > ul > li:last-child:hover span {
@@ -68,6 +76,7 @@
   flex-direction: column;
   position: absolute;
   transition: 0.3s ease;
+  box-shadow: var(--shadowtemplate);
 }
 .products-dropdown li {
   padding: 6px;
