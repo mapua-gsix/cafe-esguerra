@@ -1,9 +1,8 @@
 section {
   max-height: 100vh;
+  padding: 0 0 0 0 !important;
 }
-section:nth-child(2) {
-  padding: 0 0 0 0;
-}
+
 .hero {
   background-color: var(--tint);
   background-image: url("../assets/banner_img.jpg");
@@ -40,15 +39,4 @@ section:nth-child(2) {
   background-color: var(--textlight);
   color: var(--text);
   padding-inline: 18px;
-}
-.navbar.transparent,
-.navbar.transparent .products-dropdown {
-  background-color: transparent;
-}
-.navbar.transparent a,
-.navbar.transparent button {
-  color: var(--textlight);
-}
-.navbar.transparent img {
-  filter: invert(100%);
 }
