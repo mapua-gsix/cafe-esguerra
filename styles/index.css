@@ -54,8 +54,9 @@ section.promo {
 .promoitem {
   display: flex;
   justify-content: space-evenly;
-  width: 100%;
+  width: 100vw;
   height: 75vh;
+  max-height: 50vw;
   padding: 12px 0;
   overflow: hidden;
 }
@@ -148,6 +149,7 @@ hr {
     height: fit-content;
     justify-content: center;
     align-items: center;
+    max-height: unset;
   }
   .promoitem div {
     width: 80vw;
