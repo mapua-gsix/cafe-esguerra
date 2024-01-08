@@ -1,7 +1,12 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+
+h1{
+    display: flex;
+}
+
+label{
+    padding-top: 2rem;
+    font-weight: 700;
+    font-size: 1.5rem;
 }
 
 .container{
@@ -12,7 +17,70 @@
 
 .products-list{
     display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: red;
+    gap: 2rem;
     width: 75vw;
-    height: 100%
+    height: 100%;;
+}
+
+.coffee-container{
+    background: yellow;
+    width: 20rem;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5%;
+}
+
+.coffee-container img {
+    display: block;
+    background: white;
+    width: 15rem;
+    height: 15rem;
+    position: relative;
+    border-radius: 5%;
+}
+
+.beverage-container{
+    background: yellow;
+    width: 20rem;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5%;
+}
+
+.beverage-container img {
+    display: block;
+    background: white;
+    width: 15rem;
+    height: 15rem;
+    position: relative;
+    border-radius: 5%;
+}
+
+.dessert-container{
+    background: yellow;
+    width: 20rem;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5%;
+}
+
+.dessert-container img {
+    display: block;
+    background: white;
+    width: 15rem;
+    height: 15rem;
+    position: relative;
+    border-radius: 5%;
 }
