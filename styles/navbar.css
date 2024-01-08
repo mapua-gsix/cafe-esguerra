@@ -11,7 +11,7 @@
 .navbar,
 .navbar a,
 .navbar button {
-  transition: all 0.6s;
+  transition: all 0.3s ease;
 }
 .navbar img {
   height: 65%;
@@ -80,4 +80,18 @@
 }
 .products-dropdown li {
   padding: 6px;
+}
+.navbar.transparent,
+.navbar.transparent .products-dropdown {
+  background-color: transparent;
+}
+.navbar.transparent a,
+.navbar.transparent button {
+  color: var(--textlight);
+}
+.navbar.transparent img {
+  filter: invert(100%);
+}
+.navbar.transparent a:hover {
+  color: var(--accent);
 }

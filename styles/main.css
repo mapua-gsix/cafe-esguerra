@@ -23,6 +23,8 @@
   --tint: #3f3a39ca;
   --shadowtemplate: 0px 0px 12px -4px var(--shadow);
   --roundness: 12px; /*Use this when defining border-radius*/
+
+  /*DECLARE VARIABLES ABOVE ^^^*/
 }
 .material-symbols-outlined {
   display: flex;
