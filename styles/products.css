@@ -4,8 +4,6 @@ body{
     background-color: var(--tint);
 }
 
-
-
 h1{
     display: flex;
 }
@@ -30,6 +28,23 @@ a{
     background-color: var(--secondary);
     z-index: 2;
 }
+
+.b1.body {
+    padding: 12px;
+    color: var(--textlight);
+    border-color: var(--textlight);
+    font-weight: 500;
+    font-size: large;
+  }
+  .b1.body:hover {
+    background-color: var(--textlight);
+    color: var(--text);
+    padding-inline: 18px;
+  }
+  .navbar.transparent,
+  .navbar.transparent .products-dropdown {
+    background-color: transparent;
+  }
 
 .navbar.transparent a,
 .navbar.transparent button {
@@ -61,7 +76,7 @@ a{
 }
 
 .coffee-container{
-    background: var(--secondary);
+    background: linear-gradient(to bottom,#FFFFFF 80%, var(--secondary));
     width: 20rem;
     height: 25rem;
     display: flex;
@@ -91,7 +106,7 @@ a{
 }
 
 .beverage-container{
-    background: var(--secondary);
+    background: linear-gradient(to bottom,#FFFFFF 80%, var(--secondary));
     width: 20rem;
     height: 25rem;
     display: flex;
@@ -121,7 +136,7 @@ a{
 }
 
 .dessert-container{
-    background: var(--secondary);
+    background: linear-gradient(to bottom,#FFFFFF 80%, var(--secondary));
     width: 20rem;
     height: 25rem;
     display: flex;
@@ -154,6 +169,18 @@ a{
     animation: on-load 1.5s ease;
 }
 
+.load2{
+    animation: on-load2 1.5s ease;
+}
+
+.load3{
+    animation: on-load3 1.6s ease;
+}
+
+.appear{
+    opacity: 1;
+}
+
 @keyframes on-load {
     from {
         opacity: 0;
@@ -161,6 +188,38 @@ a{
     }
 
     to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes on-load2 {
+    from {
+        opacity: 0;
+        transform: translateY(-15%);
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes on-load3 {
+    from {
+        opacity: 0;
+        transform: translateY(-19%);
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    to{
         opacity: 1;
         transform: translateY(0);
     }
