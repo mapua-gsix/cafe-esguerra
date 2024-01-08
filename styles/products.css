@@ -1,5 +1,5 @@
 body{
-    background-image: url(/assets/banner_blur.jpg);
+    background-image: url(../assets/banner_blur.jpg);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
