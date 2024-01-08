@@ -87,11 +87,12 @@ a{
     align-items: center;
     border-radius: 5%;
     box-shadow: inset 0px 0px 5px var(--shadow);
-    transition: scale 340ms ease;
+    transition: scale 340ms ease-out, box-shadow 340ms ease-out;
 }
 
 .coffee-container:hover{
     scale: 1.05;
+    box-shadow: 0px 0px 10px #F1F1F1;
 }
 
 .coffee-container label:hover{
@@ -116,12 +117,13 @@ a{
     flex-direction: column;
     align-items: center;
     border-radius: 5%;
-    transition: scale 340ms ease;
+    transition: scale 340ms ease-out, box-shadow 340ms ease-out;
     box-shadow: inset 0px 0px 5px var(--shadow);
 }
 
 .beverage-container:hover{
     scale: 1.05;
+    box-shadow: 0px 0px 10px #F1F1F1;
 }
 
 .beverage-container label:hover{
@@ -146,12 +148,13 @@ a{
     flex-direction: column;
     align-items: center;
     border-radius: 5%;
-    transition: scale 340ms ease;
+    transition: scale 340ms ease-out, box-shadow 340ms ease-out;
     box-shadow: inset 0px 0px 5px var(--shadow);
 }
 
 .dessert-container:hover{
     scale: 1.05;
+    box-shadow: 0px 0px 10px #F1F1F1;
 }
 
 .dessert-container label:hover{
