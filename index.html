@@ -53,8 +53,15 @@
           </button>
         </div>
       </nav>
+      <button
+        id="menutoggle"
+        class="menutoggle noselect"
+        onclick="menutoggleClick()"
+      >
+        <span class="material-symbols-outlined">menu</span>
+      </button>
     </header>
-    <section class="nopadding">
+    <section>
       <div class="hero">
         <div class="hero content">
           <img src="./assets//logo.svg" alt="logo" />
@@ -63,7 +70,23 @@
         </div>
       </div>
     </section>
-    <section class="black"></section>
+    <section class="promo">
+      <div class="promobanner">
+        <div class="promobanner img"></div>
+      </div>
+      <div class="promocontent">
+        <h2>Promo</h2>
+        <p>
+          Content here Content here Content here Content here Content here
+          Content here Content here Content here Content here
+        </p>
+        <button class="promobutton">
+          Check it out!<span class="material-symbols-outlined"
+            >arrow_forward</span
+          >
+        </button>
+      </div>
+    </section>
     <footer>
       <div class="horizontal">
         <div class="contacts">
@@ -94,4 +117,17 @@
     src="./scripts/transparent_navbar.js"
     crossorigin="anonymous"
   ></script>
+  <script>
+    var menutoggle = document.getElementById("menutoggle");
+    var navbar = document.getElementById("navbar");
+    function menutoggleClick() {
+      if (navbar.classList.contains("expanded")) {
+        navbar.classList.remove("expanded");
+        menutoggle.classList.remove("expanded");
+      } else {
+        navbar.classList.add("expanded");
+        menutoggle.classList.add("expanded");
+      }
+    }
+  </script>
 </html>

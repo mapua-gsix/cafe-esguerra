@@ -14,13 +14,19 @@
   font-weight: bolder;
 }
 :root {
-  --primary: #ac7146;
+  --primary: #865837;
+  --primarydark: #523b2b;
   --secondary: #e5ddd0;
   --accent: #387529;
   --text: #3f3a39;
   --textlight: #e7e7e0;
   --shadow: black;
   --tint: #3f3a39ca;
+  --backgroundgradient: linear-gradient(
+    180deg,
+    var(--primary) 0%,
+    var(--primarydark) 100%
+  );
   --shadowtemplate: 0px 0px 12px -4px var(--shadow);
   --roundness: 12px; /*Use this when defining border-radius*/
 
@@ -38,7 +44,7 @@ body {
   color: var(--text);
   margin: 0;
   padding: 0;
-  background-color: var(--primary);
+  background: var(--backgroundgradient);
   font-family: "Poppins", sans-serif;
 }
 

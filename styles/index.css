@@ -40,3 +40,58 @@ section {
   color: var(--text);
   padding-inline: 18px;
 }
+
+/*PROMO SECTION*/
+
+section.promo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  max-height: 80vh;
+}
+section.promo div {
+  width: 48%;
+  height: 100%;
+}
+.promobanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.promobanner .img {
+  display: flex;
+  background-image: url("../assets/banner_img.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 12px;
+  width: 90%;
+  height: 90%;
+  box-shadow: var(--shadowtemplate);
+}
+.promocontent {
+  color: var(--textlight);
+}
+.promobutton {
+  font-family: "Lustria", serif;
+  color: var(--textlight);
+  display: flex;
+  padding: 12px;
+  border: none;
+  background-color: transparent;
+  font-size: larger;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.promobutton span {
+  padding: 0 8px;
+  font-size: 20px;
+  color: var(--textlight);
+  transition: all 0.3s ease;
+}
+.promobutton:hover {
+  color: var(--accent);
+}
+.promobutton:hover span {
+  color: var(--accent);
+  transform: translate(5px, 0);
+}
