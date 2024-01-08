@@ -1,9 +1,17 @@
 {
   "news": [
     {
+      "header": "Indulge your palate with just a few clicks! ",
+      "content": "<p><strong>FREE DELIVERY</strong> with no minimum purchase within Cainta, Rizal (Any point between Junction and Estrella)<p><p>Hit us up for your orders on our social media or you may contact us at 09084257473/ 09365888562.<p>",
+      "bannerImagePath": "https://scontent.fpag2-1.fna.fbcdn.net/v/t39.30808-6/416889575_768010285356558_2703193551153643089_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeEQc2ofCwTgR8InJJEZDjHVzdETnQ7-4czN0ROdDv7hzNBwzopTnNWnVBv9xxrmD7A&_nc_ohc=8iXT7JBD4zgAX9ecej9&_nc_ht=scontent.fpag2-1.fna&oh=00_AfAylLiiKGng1tlQxToG-iru16XLuXXTF8bOzYWaX68Nug&oe=65A00CF7",
+      "redirectText": "Learn more!",
+      "redirectLink": "https://www.facebook.com/cafethena/posts/768010542023199",
+      "datePosted": "January 6, 2024"
+    },
+    {
       "header": "Promo",
-      "content": "",
-      "bannerImagePath": "",
+      "content": "Content here",
+      "bannerImagePath": "./assets/banner_img.jpg",
       "redirectText": "Check it out!",
       "redirectLink": ""
     }

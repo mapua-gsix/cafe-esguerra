@@ -25,6 +25,7 @@
   --backgroundgradient: linear-gradient(
     180deg,
     var(--primary) 0%,
+    var(--primary) 50%,
     var(--primarydark) 100%
   );
   --shadowtemplate: 0px 0px 12px -4px var(--shadow);
@@ -61,6 +62,7 @@ li {
 a {
   color: var(--text);
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 a:hover {
   color: var(--accent);
@@ -70,7 +72,7 @@ a:hover {
 p {
   font-family: "Poppins", sans-serif;
 }
-button.b1 {
+.b1 {
   font-family: "Lustria", serif;
   background-color: transparent;
   border: 3px var(--accent) solid;
@@ -78,7 +80,7 @@ button.b1 {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-button.b1:hover {
+.b1:hover {
   padding-inline: 12px;
   background-color: var(--accent);
   color: var(--textlight);

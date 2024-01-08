@@ -70,22 +70,13 @@
         </div>
       </div>
     </section>
-    <section class="promo">
-      <div class="promobanner">
-        <div class="promobanner img"></div>
-      </div>
-      <div class="promocontent">
-        <h2>Promo</h2>
-        <p>
-          Content here Content here Content here Content here Content here
-          Content here Content here Content here Content here
-        </p>
-        <button class="promobutton">
-          Check it out!<span class="material-symbols-outlined"
-            >arrow_forward</span
-          >
-        </button>
-      </div>
+    <section class="promo default">
+      <h2>Latest from Café Esguerra</h2>
+      <hr />
+      <div id="promosection"></div>
+      <hr />
+      <br />
+      <a class="b1 body" href="./news.html">View more</a>
     </section>
     <footer>
       <div class="horizontal">
@@ -118,4 +109,40 @@
     crossorigin="anonymous"
   ></script>
   <script src="./scripts/responsive_navbar.js" crossorigin="anonymous"></script>
+  <script>
+    fetch("./content/news.json")
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        appendData(data);
+      })
+      .catch(function (err) {
+        console.log("error: " + err);
+      });
+    function appendData(data) {
+      for (let i = 0; i < 1; i++) {
+        const newChild = document.createElement("div");
+        newChild.classList.add("promoitem");
+        newChild.id = "new_content";
+        newChild.innerHTML = `
+        <div class="promobanner">
+              <div class="promobanner img">
+                <img src=${data.news[i].bannerImagePath} alt="Missing"></div>
+            </div>
+            <div class="promocontent">
+              <h3>${data.news[i].header}</h3>
+              <p class="date">${data.news[i].datePosted}</p>
+              ${data.news[i].content}
+              <button class="promobutton" onclick="(function(){ window.location.href='${data.news[i].redirectLink}' })();">
+                ${data.news[i].redirectText}<span class="material-symbols-outlined"
+                  >arrow_forward</span
+                >
+              </button>
+            </div>
+    `;
+        document.getElementById("promosection").appendChild(newChild);
+      }
+    }
+  </script>
 </html>

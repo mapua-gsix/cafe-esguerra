@@ -44,13 +44,23 @@ section {
 /*PROMO SECTION*/
 
 section.promo {
+  padding: 12px 0 48px 0 !important;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  max-height: 80vh;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  color: var(--textlight);
 }
-section.promo div {
-  width: 48%;
+.promoitem {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 75vh;
+  padding: 12px 0;
+  overflow: hidden;
+}
+.promoitem div {
+  width: 47%;
   height: 100%;
 }
 .promobanner {
@@ -59,17 +69,32 @@ section.promo div {
   align-items: center;
 }
 .promobanner .img {
+  overflow: hidden;
   display: flex;
+  background-color: var(--tint);
   background-image: url("../assets/banner_img.jpg");
   background-position: center;
   background-size: cover;
-  padding: 12px;
+  background-blend-mode: multiply;
+
   width: 90%;
   height: 90%;
   box-shadow: var(--shadowtemplate);
 }
+.promobanner .img img {
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+}
 .promocontent {
+  padding: 24px;
   color: var(--textlight);
+  overflow: hidden;
+}
+.promocontent p {
+  line-height: 36px;
+  text-align: justify;
+  text-indent: 48px;
 }
 .promobutton {
   font-family: "Lustria", serif;
@@ -94,4 +119,26 @@ section.promo div {
 .promobutton:hover span {
   color: var(--accent);
   transform: translate(5px, 0);
+}
+.date {
+  text-indent: 0px !important;
+  font-size: smaller;
+  font-style: italic;
+  opacity: 0.5;
+}
+hr {
+  width: 80%;
+  border: 1px solid rgb(255, 255, 255, 0.3);
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(229, 229, 229, 0) 0%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(229, 229, 229, 0) 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    rgba(229, 229, 229, 0) 0%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(229, 229, 229, 0) 100%
+  );
 }
