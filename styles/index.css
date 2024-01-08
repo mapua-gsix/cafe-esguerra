@@ -7,7 +7,7 @@ section {
   background-color: var(--tint);
   background-image: url("../assets/banner_img.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   background-attachment: fixed;
   background-blend-mode: multiply;
   height: 100%;

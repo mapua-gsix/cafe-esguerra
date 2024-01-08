@@ -64,7 +64,7 @@ a {
 }
 a:hover {
   color: var(--accent);
-  font-weight: bold;
+
   transition: all 0.3s ease;
 }
 p {

@@ -22,5 +22,11 @@ footer .horizontal div {
   padding: 12px;
 }
 footer a {
+  width: 30%;
   font-size: smaller;
+  text-decoration: none;
+  user-select: none;
+}
+footer a:hover {
+  transform: translate(6px, 0);
 }
