@@ -4,211 +4,228 @@ body{
     background-attachment: fixed;
     background-size: cover;
     background-color: var(--tint);
-  
-body {
-  background-image: url(../assets/banner_blur.jpg);
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: var(--tint);
 }
 
-h1 {
-  display: flex;
+h1{
+    display: flex;
 }
 
-label {
-  padding-top: 2rem;
-  font-weight: 600;
-  font-size: 1.5rem;
+label{
+    padding-top: 2rem;
+    font-weight: 600;
+    font-size: 1.5rem;
 }
 
-a {
-  text-decoration: none;
+a{
+    text-decoration: none;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    height: 72px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--secondary);
+    z-index: 2;
 }
 
 .b1.body {
-  padding: 12px;
+    padding: 12px;
+    color: var(--textlight);
+    border-color: var(--textlight);
+    font-weight: 500;
+    font-size: large;
+  }
+  .b1.body:hover {
+    background-color: var(--textlight);
+    color: var(--text);
+    padding-inline: 18px;
+  }
+  .navbar.transparent,
+  .navbar.transparent .products-dropdown {
+    background-color: transparent;
+  }
+
+.navbar.transparent a,
+.navbar.transparent button {
   color: var(--textlight);
-  border-color: var(--textlight);
-  font-weight: 500;
-  font-size: large;
-}
-.b1.body:hover {
-  background-color: var(--textlight);
-  color: var(--text);
-  padding-inline: 18px;
 }
 
-.transparent {
-  background: transparent;
+.navbar.transparent img {
+    filter: invert(100%);
+  }
+
+.transparent{
+    background: transparent;
 }
 
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.products-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  width: 75vw;
-  height: 100%;
-  background: transparent;
+.products-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 75vw;
+    height: 100%;;
+    background: transparent;
 }
 
-.coffee-container {
-  background: linear-gradient(to bottom, #ffffff 80%, var(--secondary));
-  width: 20rem;
-  height: 25rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 5%;
-  box-shadow: inset 0px 0px 5px var(--shadow);
-  transition: scale 340ms ease-out, box-shadow 340ms ease-out;
+.coffee-container{
+    background: linear-gradient(to bottom,#FFFFFF 80%, var(--secondary));
+    width: 20rem;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5%;
+    box-shadow: inset 0px 0px 5px var(--shadow);
+    transition: scale 340ms ease-out, box-shadow 340ms ease-out;
 }
 
-.coffee-container:hover {
-  scale: 1.05;
-  box-shadow: 0px 0px 10px #f1f1f1;
+.coffee-container:hover{
+    scale: 1.05;
+    box-shadow: 0px 0px 10px #F1F1F1;
 }
 
-.coffee-container label:hover {
-  cursor: pointer;
+.coffee-container label:hover{
+    cursor: pointer;
 }
 
 .coffee-container img {
-  display: block;
-  background: white;
-  width: 15rem;
-  height: 15rem;
-  position: relative;
-  border-radius: 5%;
+    display: block;
+    background: white;
+    width: 15rem;
+    height: 15rem;
+    position: relative;
+    border-radius: 5%;
 }
 
-.beverage-container {
-  background: linear-gradient(to bottom, #ffffff 80%, var(--secondary));
-  width: 20rem;
-  height: 25rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 5%;
-  transition: scale 340ms ease-out, box-shadow 340ms ease-out;
-  box-shadow: inset 0px 0px 5px var(--shadow);
+.beverage-container{
+    background: linear-gradient(to bottom,#FFFFFF 80%, var(--secondary));
+    width: 20rem;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5%;
+    transition: scale 340ms ease-out, box-shadow 340ms ease-out;
+    box-shadow: inset 0px 0px 5px var(--shadow);
 }
 
-.beverage-container:hover {
-  scale: 1.05;
-  box-shadow: 0px 0px 10px #f1f1f1;
+.beverage-container:hover{
+    scale: 1.05;
+    box-shadow: 0px 0px 10px #F1F1F1;
 }
 
-.beverage-container label:hover {
-  cursor: pointer;
+.beverage-container label:hover{
+    cursor: pointer;
 }
 
 .beverage-container img {
-  display: block;
-  background: white;
-  width: 15rem;
-  height: 15rem;
-  position: relative;
-  border-radius: 5%;
+    display: block;
+    background: white;
+    width: 15rem;
+    height: 15rem;
+    position: relative;
+    border-radius: 5%;
 }
 
-.dessert-container {
-  background: linear-gradient(to bottom, #ffffff 80%, var(--secondary));
-  width: 20rem;
-  height: 25rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 5%;
-  transition: scale 340ms ease-out, box-shadow 340ms ease-out;
-  box-shadow: inset 0px 0px 5px var(--shadow);
+.dessert-container{
+    background: linear-gradient(to bottom,#FFFFFF 80%, var(--secondary));
+    width: 20rem;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5%;
+    transition: scale 340ms ease-out, box-shadow 340ms ease-out;
+    box-shadow: inset 0px 0px 5px var(--shadow);
 }
 
-.dessert-container:hover {
-  scale: 1.05;
-  box-shadow: 0px 0px 10px #f1f1f1;
+.dessert-container:hover{
+    scale: 1.05;
+    box-shadow: 0px 0px 10px #F1F1F1;
 }
 
-.dessert-container label:hover {
-  cursor: pointer;
+.dessert-container label:hover{
+    cursor: pointer;
 }
 
 .dessert-container img {
-  display: block;
-  background: white;
-  width: 15rem;
-  height: 15rem;
-  position: relative;
-  border-radius: 5%;
+    display: block;
+    background: white;
+    width: 15rem;
+    height: 15rem;
+    position: relative;
+    border-radius: 5%;
 }
 
-.load {
-  animation: on-load 1.5s ease;
+.load{
+    animation: on-load 1.5s ease;
 }
 
-.load2 {
-  animation: on-load2 1.5s ease;
+.load2{
+    animation: on-load2 1.5s ease;
 }
 
-.load3 {
-  animation: on-load3 1.6s ease;
+.load3{
+    animation: on-load3 1.6s ease;
 }
 
-.appear {
-  opacity: 1;
+.appear{
+    opacity: 1;
 }
 
 @keyframes on-load {
-  from {
-    opacity: 0;
-    transform: translateY(-10%);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes on-load2 {
-  from {
-    opacity: 0;
-    transform: translateY(-15%);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(-15%);
+    }
 
-  20% {
-    opacity: 0;
-  }
+    20% {
+        opacity: 0;
+    }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes on-load3 {
-  from {
-    opacity: 0;
-    transform: translateY(-19%);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(-19%);
+    }
 
-  25% {
-    opacity: 0;
-  }
+    25% {
+        opacity: 0;
+    }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
