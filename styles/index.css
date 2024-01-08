@@ -142,3 +142,24 @@ hr {
     rgba(229, 229, 229, 0) 100%
   );
 }
+@media screen and (max-width: 900px) {
+  .promoitem {
+    flex-direction: column;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+  }
+  .promoitem div {
+    width: 80vw;
+    height: 100%;
+  }
+  .promobanner .img {
+    width: 80%;
+    height: 60%;
+  }
+  .promobanner .img img {
+    object-fit: cover;
+    min-width: 50%;
+    min-height: 50%;
+  }
+}
