@@ -24,6 +24,9 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="news.html">News</a></li>
+            <li class="hideable">
+              <a href="forms/order.html">Orders</a>
+            </li>
             <li><a href="forms/reservation.html">Reservations</a></li>
             <li>
               <a href="forms/feedback.html"><nobr>Rate Us!</nobr></a>
@@ -71,7 +74,7 @@
       </div>
     </section>
     <section class="promo default">
-      <h2>Latest from Café Esguerra</h2>
+      <div class="title"><h2>Latest from Café Esguerra</h2></div>
       <hr />
       <div id="promosection"></div>
       <hr />
@@ -131,10 +134,10 @@
                 <img src=${data.news[i].bannerImagePath} alt="Missing"></div>
             </div>
             <div class="promocontent">
-              <h3>${data.news[i].header}</h3>
+              <h3 class="noselect">${data.news[i].header}</h3>
               <p class="date">${data.news[i].datePosted}</p>
-              ${data.news[i].content}
-              <button class="promobutton" onclick="(function(){ window.location.href='${data.news[i].redirectLink}' })();">
+              <p>${data.news[i].content}</p>
+              <button class="promobutton noselect" onclick="(function(){ window.location.href='${data.news[i].redirectLink}' })();">
                 ${data.news[i].redirectText}<span class="material-symbols-outlined"
                   >arrow_forward</span
                 >

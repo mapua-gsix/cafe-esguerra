@@ -61,7 +61,7 @@ section.promo {
   overflow: hidden;
 }
 .promoitem div {
-  width: 47%;
+  width: 45%;
   height: 100%;
 }
 .promobanner {
@@ -77,7 +77,6 @@ section.promo {
   background-position: center;
   background-size: cover;
   background-blend-mode: multiply;
-
   width: 90%;
   height: 90%;
   box-shadow: var(--shadowtemplate);
@@ -93,9 +92,14 @@ section.promo {
   overflow: hidden;
 }
 .promocontent p {
-  line-height: 36px;
+  line-height: 32px;
   text-align: justify;
   text-indent: 48px;
+  font-size: smaller;
+  margin: 24px 36px;
+}
+.promocontent .date {
+  margin: 0;
 }
 .promobutton {
   font-family: "Lustria", serif;
@@ -114,11 +118,7 @@ section.promo {
   color: var(--textlight);
   transition: all 0.3s ease;
 }
-.promobutton:hover {
-  color: var(--accent);
-}
 .promobutton:hover span {
-  color: var(--accent);
   transform: translate(5px, 0);
 }
 .date {
@@ -142,6 +142,13 @@ hr {
     rgba(0, 0, 0, 1) 50%,
     rgba(229, 229, 229, 0) 100%
   );
+}
+.title {
+  background-color: var(--primarydark);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (max-width: 900px) {
   .promoitem {
