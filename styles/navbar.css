@@ -108,6 +108,9 @@
 .menutoggle span {
   color: var(--textlight);
 }
+.hideable {
+  display: none;
+}
 
 @media screen and (max-width: 900px) {
   .navbar div:nth-child(1),
@@ -161,5 +164,8 @@
   .navbar.expanded {
     max-width: max(200px, 30vw);
     transition: max-width 0.3s ease;
+  }
+  .hideable {
+    display: flex;
   }
 }
