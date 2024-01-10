@@ -111,6 +111,9 @@
 .hideable {
   display: none;
 }
+a.active {
+  color: var(--accent) !important;
+}
 
 @media screen and (max-width: 900px) {
   .navbar div:nth-child(1),
