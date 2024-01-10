@@ -70,7 +70,6 @@
   padding: 0;
   opacity: 0;
   overflow: hidden;
-  border-radius: var(--roundness);
   background-color: var(--secondary);
   display: flex;
   flex-direction: column;
@@ -103,10 +102,15 @@
   right: 6px;
   top: 6px;
   background-color: transparent;
-  border: 2px var(--textlight) solid;
+  border: none;
+  transition: all 0.3s ease;
 }
 .menutoggle span {
   color: var(--textlight);
+}
+.menutoggle:hover {
+  padding: 1px 8px;
+  transition: all 0.3s ease;
 }
 .hideable {
   display: none;
@@ -158,11 +162,11 @@ a.active {
   .menutoggle {
     display: flex;
   }
-  .menutoggle.expanded {
-    border: 2px transparent solid;
-  }
   .menutoggle.expanded span {
     color: var(--text);
+  }
+  .menutoggle.expanded:hover {
+    background-color: transparent;
   }
   .navbar.expanded {
     max-width: max(200px, 30vw);
@@ -170,5 +174,18 @@ a.active {
   }
   .hideable {
     display: flex;
+  }
+  .products-dropdown {
+    overflow: hidden;
+    border-radius: 0;
+    position: unset;
+    box-shadow: none;
+  }
+  .navlinks > ul > li:last-child:hover .products-dropdown {
+    width: 100%;
+    padding: 0;
+    opacity: 1;
+    padding: 6px 12px 0 0;
+    transition: 0.3s ease;
   }
 }
