@@ -9,6 +9,9 @@
   z-index: 2;
   transition: background-color 0.3s ease;
 }
+.navbar * {
+  user-select: none;
+}
 .navbar a,
 .navbar button {
   transition: all 0.3s ease;
@@ -18,7 +21,7 @@
 }
 .navbar div {
   vertical-align: middle;
-  width: 70%;
+  width: 64%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -26,12 +29,13 @@
   overflow: hidden;
 }
 .navbar div:nth-child(1) {
-  width: 15%;
+  width: 18%;
   justify-content: flex-start;
+
   margin-left: 24px;
 }
 .navbar div:nth-child(3) {
-  width: 15%;
+  width: 18%;
   justify-content: flex-end;
   margin-right: 24px;
 }
@@ -54,11 +58,11 @@
   opacity: 1;
   transition: 0.3s ease;
 }
-.navlinks > ul > li:last-child span {
+.navlinks > ul > li:last-child > span {
   font-size: 22px;
   transition: 0.3s ease;
 }
-.navlinks > ul > li:last-child:hover span {
+.navlinks > ul > li:last-child:hover > span {
   transform: rotate(180deg);
   transition: 0.3s ease;
 }
@@ -76,6 +80,7 @@
   position: absolute;
   transition: 0.3s ease;
   box-shadow: var(--shadowtemplate);
+  backdrop-filter: blur(8px);
 }
 .products-dropdown li {
   padding: 6px;
@@ -118,6 +123,12 @@
 a.active {
   color: var(--accent) !important;
 }
+.navbar.transparent .products-dropdown span {
+  color: var(--textlight);
+}
+.navbar .products-dropdown span {
+  color: var(--text);
+}
 
 @media screen and (max-width: 900px) {
   .navbar div:nth-child(1),
@@ -155,14 +166,14 @@ a.active {
   .navbar.transparent button {
     color: var(--text);
   }
-  .navlinks > ul > li:last-child span {
+  .navlinks > ul > li:last-child > span {
     font-size: 14px;
     transition: 0.3s ease;
   }
   .menutoggle {
     display: flex;
   }
-  .menutoggle.expanded span {
+  .menutoggle.expanded > span {
     color: var(--text);
   }
   .menutoggle.expanded:hover {
@@ -187,5 +198,9 @@ a.active {
     opacity: 1;
     padding: 6px 12px 0 0;
     transition: 0.3s ease;
+  }
+  .navbar .products-dropdown span,
+  .navbar.transparent .products-dropdown span {
+    color: var(--text);
   }
 }
