@@ -21,9 +21,12 @@
         <div class="logo"><img src="assets/logo.svg" alt="logo" /></div>
         <div class="navlinks">
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="news.html">News</a></li>
+            <li class="hideable">
+              <a href="forms/order.html">Orders</a>
+            </li>
             <li><a href="forms/reservation.html">Reservations</a></li>
             <li>
               <a href="forms/feedback.html"><nobr>Rate Us!</nobr></a>
@@ -35,13 +38,22 @@
               </span>
               <ul class="products-dropdown">
                 <li>
-                  <a href="products/coffee.html">Coffee</a>
+                  <a href="products/coffee.html"
+                    ><span class="material-symbols-outlined"> coffee </span>
+                    Coffee</a
+                  >
                 </li>
                 <li>
-                  <a href="products/beverage.html">Beverages</a>
+                  <a href="products/beverage.html"
+                    ><span class="material-symbols-outlined"> local_bar </span>
+                    Beverages</a
+                  >
                 </li>
                 <li>
-                  <a href="products/dessert.html">Desserts</a>
+                  <a href="products/dessert.html"
+                    ><span class="material-symbols-outlined"> icecream </span>
+                    Desserts</a
+                  >
                 </li>
               </ul>
             </li>
@@ -53,8 +65,15 @@
           </button>
         </div>
       </nav>
+      <button
+        id="menutoggle"
+        class="menutoggle noselect"
+        onclick="menutoggleClick()"
+      >
+        <span class="material-symbols-outlined">menu</span>
+      </button>
     </header>
-    <section class="nopadding">
+    <section>
       <div class="hero">
         <div class="hero content">
           <img src="./assets//logo.svg" alt="logo" />
@@ -63,14 +82,34 @@
         </div>
       </div>
     </section>
-    <section class="black"></section>
+    <hr class="accent" />
+    <section class="showcase default"></section>
+    <section class="promo default">
+      <div class="title noselect">
+        <h2>Latest from <span class="brandfont">Café ESGUERRA</span></h2>
+      </div>
+      <hr />
+      <div id="promosection"></div>
+      <hr />
+      <br />
+      <a class="b1 body2" href="./news.html">View more</a>
+    </section>
     <footer>
       <div class="horizontal">
+        <div class="authors">
+          <h4>Authors</h4>
+          <a>Cunanan, Ian</a>
+          <a>Cruz, Audrize</a>
+          <a>Fernando, Heughric</a>
+          <a>Papa, Rishon</a>
+          <a>Suarez, Yuan</a>
+          <a>Victoriano, Patrick</a>
+        </div>
         <div class="contacts">
           <h4>Stay connected</h4>
-          <a>Facebook</a>
-          <a>Instagram</a>
-          <a>Email</a>
+          <a href="https://www.facebook.com/cafethena">Facebook</a>
+          <a href="https://www.instagram.com/cafeesguerra/">Instagram</a>
+          <a>E-mail</a>
         </div>
         <div class="address">
           <h4>Find us</h4>
@@ -87,6 +126,8 @@
           <a>Orders ></a>
         </div>
       </div>
+
+      <hr />
       <h4>© 2024 Mapúa University - Makati</h4>
     </footer>
   </body>
@@ -94,4 +135,41 @@
     src="./scripts/transparent_navbar.js"
     crossorigin="anonymous"
   ></script>
+  <script src="./scripts/responsive_navbar.js" crossorigin="anonymous"></script>
+  <script>
+    fetch("./content/news.json")
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        appendData(data);
+      })
+      .catch(function (err) {
+        console.log("error: " + err);
+      });
+    function appendData(data) {
+      for (let i = 0; i < 1; i++) {
+        const newChild = document.createElement("div");
+        newChild.classList.add("promoitem");
+        newChild.id = "new_content";
+        newChild.innerHTML = `
+        <div class="promobanner">
+              <div class="promobanner img">
+                <img src=${data.news[i].bannerImagePath} alt="Missing"></div>
+            </div>
+            <div class="promocontent">
+              <h3 class="noselect">${data.news[i].header}</h3>
+              <p class="date">${data.news[i].datePosted}</p>
+              <p>${data.news[i].content}</p>
+              <button class="promobutton noselect" onclick="(function(){ window.location.href='${data.news[i].redirectLink}' })();">
+                ${data.news[i].redirectText}<span class="material-symbols-outlined"
+                  >arrow_forward</span
+                >
+              </button>
+            </div>
+    `;
+        document.getElementById("promosection").appendChild(newChild);
+      }
+    }
+  </script>
 </html>

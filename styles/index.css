@@ -7,7 +7,7 @@ section {
   background-color: var(--tint);
   background-image: url("../assets/banner_img.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   background-attachment: fixed;
   background-blend-mode: multiply;
   height: 100%;
@@ -39,4 +39,156 @@ section {
   background-color: var(--textlight);
   color: var(--text);
   padding-inline: 18px;
+}
+.b1.body2 {
+  padding: 12px;
+  color: var(--text);
+  border-color: var(--accent);
+  font-weight: 500;
+  font-size: large;
+}
+.b1.body2:hover {
+  background-color: var(--accent);
+  color: var(--textlight);
+  padding-inline: 18px;
+}
+
+/*PROMO SECTION*/
+
+section.promo {
+  padding: 12px 0 48px 0 !important;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  color: var(--text);
+}
+.promoitem {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 75vh;
+  max-height: 50vw;
+  padding: 12px 0;
+  overflow: hidden;
+}
+.promoitem div {
+  width: 45%;
+  height: 100%;
+}
+.promobanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.promobanner .img {
+  overflow: hidden;
+  display: flex;
+  background-color: var(--tint);
+  background-image: url("../assets/banner_img.jpg");
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  width: 90%;
+  height: 90%;
+  box-shadow: var(--shadowtemplate);
+}
+.promobanner .img img {
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+}
+.promocontent {
+  padding: 24px;
+  color: var(--text);
+  overflow: hidden;
+}
+.promocontent p {
+  line-height: 32px;
+  text-align: justify;
+  text-indent: 48px;
+  font-size: smaller;
+  margin: 24px 36px;
+}
+.promocontent .date {
+  margin: 0;
+}
+.promobutton {
+  font-family: "Lustria", serif;
+  color: var(--text);
+  display: flex;
+  padding: 12px;
+  border: none;
+  background-color: transparent;
+  font-size: larger;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.promobutton span {
+  padding: 0 8px;
+  font-size: 20px;
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+.promobutton:hover span {
+  transform: translate(5px, 0);
+}
+.date {
+  text-indent: 0px !important;
+  font-size: smaller;
+  font-style: italic;
+  opacity: 0.5;
+}
+hr {
+  width: 80%;
+  border: 1px solid rgb(255, 255, 255, 0.3);
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(229, 229, 229, 0) 0%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(229, 229, 229, 0) 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    rgba(229, 229, 229, 0) 0%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(229, 229, 229, 0) 100%
+  );
+}
+hr.accent {
+  width: 30%;
+  border: 4px solid var(--accent);
+  -webkit-mask-image: unset;
+  mask-image: none;
+  padding: 0;
+  margin: 0 0 0 50vw;
+}
+.title {
+  background-color: var(--primarydark);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 900px) {
+  .promoitem {
+    flex-direction: column;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    max-height: unset;
+  }
+  .promoitem div {
+    width: 80vw;
+    height: 100%;
+  }
+  .promobanner .img {
+    width: 80%;
+    height: 60%;
+  }
+  .promobanner .img img {
+    object-fit: cover;
+    min-width: 50%;
+    min-height: 50%;
+  }
 }
