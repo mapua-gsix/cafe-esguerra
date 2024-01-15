@@ -22,7 +22,7 @@
         <div class="logo"><img src="assets/logo.svg" alt="logo" /></div>
         <div class="navlinks">
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="news.html">News</a></li>
             <li class="hideable">
@@ -39,13 +39,22 @@
               </span>
               <ul class="products-dropdown">
                 <li>
-                  <a href="products/coffee.html">Coffee</a>
+                  <a href="products/coffee.html"
+                    ><span class="material-symbols-outlined"> coffee </span>
+                    Coffee</a
+                  >
                 </li>
                 <li>
-                  <a href="products/beverage.html">Beverages</a>
+                  <a href="products/beverage.html"
+                    ><span class="material-symbols-outlined"> local_bar </span>
+                    Beverages</a
+                  >
                 </li>
                 <li>
-                  <a href="products/dessert.html">Desserts</a>
+                  <a href="products/dessert.html"
+                    ><span class="material-symbols-outlined"> icecream </span>
+                    Desserts</a
+                  >
                 </li>
               </ul>
             </li>
@@ -96,7 +105,16 @@
             If you want a larger section, set its class to class="default" or simply make your own class.-->
 
     <footer>
-      <div class="horizontal">
+      <div class="horizontal" data-inviewport="fadefrombottom">
+        <div class="authors">
+          <h4>Authors</h4>
+          <a>Cunanan, Ian</a>
+          <a>Cruz, Audrize</a>
+          <a>Fernando, Heughric</a>
+          <a>Papa, Rishon</a>
+          <a>Suarez, Yuan</a>
+          <a>Victoriano, Patrick</a>
+        </div>
         <div class="contacts">
           <h4>Stay connected</h4>
           <a href="https://www.facebook.com/cafethena">Facebook</a>
@@ -118,12 +136,18 @@
           <a>Orders ></a>
         </div>
       </div>
+
+      <div class="hr" data-inviewport="expand">
+        <hr />
+      </div>
+
       <h4>© 2024 Mapúa University - Makati</h4>
     </footer>
-    <script src="scripts/transparent_navbar.js"></script>
-    <script
-      src="./scripts/responsive_navbar.js"
-      crossorigin="anonymous"
-    ></script>
   </body>
+  <script
+    src="./scripts/transparent_navbar.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="./scripts/responsive_navbar.js" crossorigin="anonymous"></script>
+  <script src="./scripts/load_animations.js" crossorigin="anonymous"></script>
 </html>

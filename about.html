@@ -20,7 +20,7 @@
         <div class="logo"><img src="assets/logo.svg" alt="logo" /></div>
         <div class="navlinks">
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="news.html">News</a></li>
             <li class="hideable">
@@ -37,13 +37,22 @@
               </span>
               <ul class="products-dropdown">
                 <li>
-                  <a href="products/coffee.html">Coffee</a>
+                  <a href="products/coffee.html"
+                    ><span class="material-symbols-outlined"> coffee </span>
+                    Coffee</a
+                  >
                 </li>
                 <li>
-                  <a href="products/beverage.html">Beverages</a>
+                  <a href="products/beverage.html"
+                    ><span class="material-symbols-outlined"> local_bar </span>
+                    Beverages</a
+                  >
                 </li>
                 <li>
-                  <a href="products/dessert.html">Desserts</a>
+                  <a href="products/dessert.html"
+                    ><span class="material-symbols-outlined"> icecream </span>
+                    Desserts</a
+                  >
                 </li>
               </ul>
             </li>
@@ -67,30 +76,33 @@
     <section>
       <div id="aboutheader">
         <div id="aboutheadertext">
-        <h1>What is Café Esguerra ?</h1>
+          <h1>What is Café Esguerra ?</h1>
         </div>
 
-        <div id ="aboutheaderbody">
-          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-            sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+        <div id="aboutheaderbody">
+          <h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </h3>
         </div>
-        </div>
-      </section>
-      <section>
-        <div id="aboutgallery">
-          <img src="assets\aboutphotos\aboutphoto1.jpg">
-          <img src="assets\aboutphotos\aboutphoto2.jpg">
-          <img src="assets\aboutphotos\aboutphoto3.jpg">
-          <img src="assets\aboutphotos\aboutphoto4.jpg">
-          <img src="assets\aboutphotos\aboutphoto5.jpg">
-          <img src="assets\aboutphotos\aboutphoto6.jpg">
-          <img src="assets\aboutphotos\aboutphoto7.jpg">
-          <img src="assets\aboutphotos\aboutphoto8.jpg">
-          
-        </div>
-        
+      </div>
+    </section>
+    <section>
+      <div id="aboutgallery">
+        <img src="assets\aboutphotos\aboutphoto1.jpg" />
+        <img src="assets\aboutphotos\aboutphoto2.jpg" />
+        <img src="assets\aboutphotos\aboutphoto3.jpg" />
+        <img src="assets\aboutphotos\aboutphoto4.jpg" />
+        <img src="assets\aboutphotos\aboutphoto5.jpg" />
+        <img src="assets\aboutphotos\aboutphoto6.jpg" />
+        <img src="assets\aboutphotos\aboutphoto7.jpg" />
+        <img src="assets\aboutphotos\aboutphoto8.jpg" />
+      </div>
     </section>
 
     <!-- ADD <section>s as you wish. 
@@ -98,7 +110,16 @@
             If you want a larger section, set its class to class="default" or simply make your own class.-->
 
     <footer>
-      <div class="horizontal">
+      <div class="horizontal" data-inviewport="fadefrombottom">
+        <div class="authors">
+          <h4>Authors</h4>
+          <a>Cunanan, Ian</a>
+          <a>Cruz, Audrize</a>
+          <a>Fernando, Heughric</a>
+          <a>Papa, Rishon</a>
+          <a>Suarez, Yuan</a>
+          <a>Victoriano, Patrick</a>
+        </div>
         <div class="contacts">
           <h4>Stay connected</h4>
           <a href="https://www.facebook.com/cafethena">Facebook</a>
@@ -120,15 +141,25 @@
           <a>Orders ></a>
         </div>
       </div>
+
+      <div class="hr" data-inviewport="expand">
+        <hr />
+      </div>
+
       <h4>© 2024 Mapúa University - Makati</h4>
     </footer>
   </body>
-
+  <script
+    src="./scripts/transparent_navbar.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="./scripts/responsive_navbar.js" crossorigin="anonymous"></script>
+  <script src="./scripts/load_animations.js" crossorigin="anonymous"></script>
   <script>
     window.onload = () => {
-  for (let i of document.querySelectorAll("#aboutgallery img")) {
-    i.onclick = () => i.classList.toggle("full");
-  }
-};
+      for (let i of document.querySelectorAll("#aboutgallery img")) {
+        i.onclick = () => i.classList.toggle("full");
+      }
+    };
   </script>
 </html>
