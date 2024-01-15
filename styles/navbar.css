@@ -5,9 +5,10 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: var(--secondary);
+  background-color: var(--primary);
   z-index: 2;
   transition: background-color 0.3s ease;
+  animation: 0.6s cubic-bezier(0.81, 0.02, 0.2, 0.98) 0s 1 navslidefromtop;
 }
 .navbar * {
   user-select: none;
@@ -74,7 +75,7 @@
   padding: 0;
   opacity: 0;
   overflow: hidden;
-  background-color: var(--secondary);
+  background-color: var(--primary);
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -111,7 +112,7 @@
   transition: all 0.3s ease;
 }
 .menutoggle span {
-  color: var(--textlight);
+  color: var(--accent);
 }
 .menutoggle:hover {
   padding: 1px 8px;
@@ -128,6 +129,16 @@ a.active {
 }
 .navbar .products-dropdown span {
   color: var(--text);
+}
+@keyframes navslidefromtop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: unset;
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -160,7 +171,7 @@ a.active {
   }
   .navbar.transparent,
   .navbar.transparent .products-dropdown {
-    background-color: var(--secondary);
+    background-color: var(--primary);
   }
   .navbar.transparent a,
   .navbar.transparent button {
