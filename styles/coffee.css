@@ -9,7 +9,11 @@ body{
     justify-content: center;
     font-weight: bold;
     font-size: 2rem;
-    transform: translateX(13.3rem);
+    transform: translateX(11.9rem) translateY(34rem);
+    background-color: #f1f1f1;
+    width: 12rem;
+    border-radius: 10rem;
+    box-shadow: 0px 0px 10px #f1f1f1;
 }
 
 .left-container{
