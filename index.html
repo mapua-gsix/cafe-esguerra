@@ -75,27 +75,53 @@
     </header>
     <section>
       <div class="hero">
-        <div class="hero content">
-          <img src="./assets//logo.svg" alt="logo" />
-          <h1>Your friendly not so ordinary coffee shop.</h1>
-          <button class="b1 body">ORDER NOW</button>
+        <div class="hero content" data-inviewport="fadefrombottom">
+          <div class="container">
+            <img src="./assets//logo.svg" alt="logo" />
+            <h1>Your friendly not so ordinary coffee shop.</h1>
+            <div class="hr" data-inviewport="expand">
+              <hr />
+            </div>
+            <button class="b1 body draw">ORDER NOW</button>
+          </div>
         </div>
       </div>
     </section>
-    <hr class="accent" />
-    <section class="showcase default"></section>
-    <section class="promo default">
-      <div class="title noselect">
-        <h2>Latest from <span class="brandfont">Café ESGUERRA</span></h2>
+    <div class="hr right" data-inviewport="expand">
+      <hr class="accent" />
+    </div>
+    <section class="padded1 enclosed">
+      <div class="showcase" data-inviewport="fadein">
+        <div class="title"><h1 class="brandfont">Café ESGUERRA</h1></div>
+
+        <div class="showcase content">
+          <div class="showcase img"></div>
+          <div class="showcase info">
+            <h2>Content here</h2>
+            <div class="hr" data-inviewport="expand">
+              <hr class="accent" />
+            </div>
+            <p>Content here</p>
+          </div>
+        </div>
       </div>
-      <hr />
-      <div id="promosection"></div>
-      <hr />
-      <br />
-      <a class="b1 body2" href="./news.html">View more</a>
+    </section>
+    <div class="hr left" data-inviewport="expand">
+      <hr class="accent" />
+    </div>
+    <section class="padded1 default">
+      <div class="promo" data-inviewport="fadein">
+        <div class="title">
+          <h1>Latest from <span class="brandfont">Café ESGUERRA</span></h1>
+        </div>
+        <div id="promosection"></div>
+        <div class="center">
+          <a class="b1 body2" href="./news.html">View more</a>
+        </div>
+      </div>
     </section>
     <footer>
-      <div class="horizontal">
+      <div class="horizontal" data-inviewport="fadefrombottom">
         <div class="authors">
           <h4>Authors</h4>
           <a>Cunanan, Ian</a>
@@ -127,7 +153,10 @@
         </div>
       </div>
 
-      <hr />
+      <div class="hr" data-inviewport="expand">
+        <hr />
+      </div>
+
       <h4>© 2024 Mapúa University - Makati</h4>
     </footer>
   </body>
@@ -136,6 +165,7 @@
     crossorigin="anonymous"
   ></script>
   <script src="./scripts/responsive_navbar.js" crossorigin="anonymous"></script>
+  <script src="./scripts/load_animations.js" crossorigin="anonymous"></script>
   <script>
     fetch("./content/news.json")
       .then(function (response) {
@@ -157,8 +187,10 @@
               <div class="promobanner img">
                 <img src=${data.news[i].bannerImagePath} alt="Missing"></div>
             </div>
+            
             <div class="promocontent">
               <h3 class="noselect">${data.news[i].header}</h3>
+              
               <p class="date">${data.news[i].datePosted}</p>
               <p>${data.news[i].content}</p>
               <button class="promobutton noselect" onclick="(function(){ window.location.href='${data.news[i].redirectLink}' })();">
