@@ -25,12 +25,12 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="news.html">News</a></li>
-
+            <li class="hideable">
+              <a href="forms/order.html">Orders</a>
+            </li>
             <li><a href="forms/reservation.html">Reservations</a></li>
             <li>
-              <a href="forms/feedback.html">
-                <nobr>Rate Us!</nobr>
-              </a>
+              <a href="forms/feedback.html"><nobr>Rate Us!</nobr></a>
             </li>
             <li>
               <a href="products.html">Products</a
@@ -53,12 +53,17 @@
         </div>
         <div class="ordernow">
           <button class="b1">
-            <h4>
-              <nobr>Order Now!</nobr>
-            </h4>
+            <h4><nobr>Order Now!</nobr></h4>
           </button>
         </div>
       </nav>
+      <button
+        id="menutoggle"
+        class="menutoggle noselect"
+        onclick="menutoggleClick()"
+      >
+        <span class="material-symbols-outlined">menu</span>
+      </button>
     </header>
 
     <section class="container">
@@ -94,9 +99,9 @@
       <div class="horizontal">
         <div class="contacts">
           <h4>Stay connected</h4>
-          <a>Facebook</a>
-          <a>Instagram</a>
-          <a>Email</a>
+          <a href="https://www.facebook.com/cafethena">Facebook</a>
+          <a href="https://www.instagram.com/cafeesguerra/">Instagram</a>
+          <a>E-mail</a>
         </div>
         <div class="address">
           <h4>Find us</h4>
@@ -113,9 +118,12 @@
           <a>Orders ></a>
         </div>
       </div>
-
       <h4>© 2024 Mapúa University - Makati</h4>
     </footer>
     <script src="scripts/transparent_navbar.js"></script>
+    <script
+      src="./scripts/responsive_navbar.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

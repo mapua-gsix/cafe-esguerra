@@ -7,8 +7,11 @@
   align-items: center;
   background-color: var(--secondary);
   z-index: 2;
+  transition: background-color 0.3s ease;
 }
-.navbar,
+.navbar * {
+  user-select: none;
+}
 .navbar a,
 .navbar button {
   transition: all 0.3s ease;
@@ -18,7 +21,7 @@
 }
 .navbar div {
   vertical-align: middle;
-  width: 70%;
+  width: 64%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -26,12 +29,13 @@
   overflow: hidden;
 }
 .navbar div:nth-child(1) {
-  width: 15%;
+  width: 18%;
   justify-content: flex-start;
+
   margin-left: 24px;
 }
 .navbar div:nth-child(3) {
-  width: 15%;
+  width: 18%;
   justify-content: flex-end;
   margin-right: 24px;
 }
@@ -54,11 +58,11 @@
   opacity: 1;
   transition: 0.3s ease;
 }
-.navlinks > ul > li:last-child span {
+.navlinks > ul > li:last-child > span {
   font-size: 22px;
   transition: 0.3s ease;
 }
-.navlinks > ul > li:last-child:hover span {
+.navlinks > ul > li:last-child:hover > span {
   transform: rotate(180deg);
   transition: 0.3s ease;
 }
@@ -70,13 +74,13 @@
   padding: 0;
   opacity: 0;
   overflow: hidden;
-  border-radius: var(--roundness);
   background-color: var(--secondary);
   display: flex;
   flex-direction: column;
   position: absolute;
   transition: 0.3s ease;
   box-shadow: var(--shadowtemplate);
+  backdrop-filter: blur(8px);
 }
 .products-dropdown li {
   padding: 6px;
@@ -94,4 +98,109 @@
 }
 .navbar.transparent a:hover {
   color: var(--accent);
+}
+.menutoggle {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  z-index: 3;
+  right: 6px;
+  top: 6px;
+  background-color: transparent;
+  border: none;
+  transition: all 0.3s ease;
+}
+.menutoggle span {
+  color: var(--textlight);
+}
+.menutoggle:hover {
+  padding: 1px 8px;
+  transition: all 0.3s ease;
+}
+.hideable {
+  display: none;
+}
+a.active {
+  color: var(--accent) !important;
+}
+.navbar.transparent .products-dropdown span {
+  color: var(--textlight);
+}
+.navbar .products-dropdown span {
+  color: var(--text);
+}
+
+@media screen and (max-width: 900px) {
+  .navbar div:nth-child(1),
+  .navbar div:nth-child(3) {
+    opacity: 0;
+    width: 0%;
+    height: 0;
+  }
+  .navbar div:nth-child(2) {
+    display: flex;
+    padding-top: 36px;
+    width: 100%;
+    height: 100%;
+  }
+  .navbar {
+    justify-content: flex-start;
+    flex-direction: column;
+    right: 0;
+    max-width: 0;
+    height: 100%;
+    transition: all 0s, max-width 0.3s ease;
+  }
+  .navbar ul {
+    text-align: left;
+    display: flex;
+    height: 100%;
+    width: 80%;
+    flex-direction: column;
+  }
+  .navbar.transparent,
+  .navbar.transparent .products-dropdown {
+    background-color: var(--secondary);
+  }
+  .navbar.transparent a,
+  .navbar.transparent button {
+    color: var(--text);
+  }
+  .navlinks > ul > li:last-child > span {
+    font-size: 14px;
+    transition: 0.3s ease;
+  }
+  .menutoggle {
+    display: flex;
+  }
+  .menutoggle.expanded > span {
+    color: var(--text);
+  }
+  .menutoggle.expanded:hover {
+    background-color: transparent;
+  }
+  .navbar.expanded {
+    max-width: max(200px, 30vw);
+    transition: max-width 0.3s ease;
+  }
+  .hideable {
+    display: flex;
+  }
+  .products-dropdown {
+    overflow: hidden;
+    border-radius: 0;
+    position: unset;
+    box-shadow: none;
+  }
+  .navlinks > ul > li:last-child:hover .products-dropdown {
+    width: 100%;
+    padding: 0;
+    opacity: 1;
+    padding: 6px 12px 0 0;
+    transition: 0.3s ease;
+  }
+  .navbar .products-dropdown span,
+  .navbar.transparent .products-dropdown span {
+    color: var(--text);
+  }
 }
