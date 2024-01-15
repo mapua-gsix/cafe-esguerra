@@ -48,23 +48,16 @@ section {
 }
 
 #aboutgallery img {
-    /* (C1) DIMENSION */
     width: 40vh;
     padding: 10px;
     margin: 20px;
-   
-    /* (C2) COLORS */
     border: 1px solid #ddd;
     background: #fff;
-   
-    /* (C3) IMAGE RESIZE */
-    /* cover | contain | fill | scale-down */
     object-fit: fill;
 }
 
 #aboutgallery img:hover {
     transform: scale(1.1);
-    /* linear | ease | ease-in | ease-out | ease-in-out */
     transition: transform ease 0.5s;
   }
 
