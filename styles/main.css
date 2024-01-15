@@ -47,6 +47,11 @@ body {
   background: var(--primary);
   font-family: "Poppins", sans-serif;
 }
+::selection {
+  background-color: var(--accent);
+  color: var(--textlight);
+  border-radius: 12px;
+}
 body > .hr {
   width: 30%;
   margin: 0 0 0 35vw;
