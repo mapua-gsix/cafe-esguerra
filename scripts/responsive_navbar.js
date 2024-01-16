@@ -9,3 +9,19 @@ function menutoggleClick() {
     menutoggle.classList.add("expanded");
   }
 }
+document.addEventListener("click", function (e) {
+  if (checkIfPartOfHeader(e.target)) {
+  } else {
+    navbar.classList.remove("expanded");
+    menutoggle.classList.remove("expanded");
+  }
+});
+function checkIfPartOfHeader(a) {
+  while (a) {
+    if (a.tagName === "HEADER") {
+      return true;
+    }
+    a = a.parentNode;
+  }
+  return false;
+}
