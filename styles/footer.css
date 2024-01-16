@@ -37,3 +37,28 @@ footer hr {
 footer .hr {
   width: 100%;
 }
+
+@media screen and (max-width: 900px) {
+  footer .horizontal {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+  footer .horizontal div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+  }
+  footer {
+    justify-content: center;
+    align-items: center;
+  }
+  footer a {
+    font-size: large;
+    width: 100%;
+  }
+  footer h4 {
+    font-size: x-large;
+  }
+}
