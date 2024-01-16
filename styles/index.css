@@ -3,6 +3,9 @@ section {
   padding: 0 0 0 0 !important;
   background: var(--backgroundgradient);
 }
+section.nomaxheight {
+  max-height: unset;
+}
 section.padded1 {
   padding: 12% 0 12% 0 !important;
 }
@@ -19,7 +22,7 @@ section.enclosed {
 }
 section.enclosed > div {
   width: 90%;
-  height: 100%;
+
   background-color: var(--primary);
 }
 
@@ -118,7 +121,7 @@ section.enclosed > div {
   background-blend-mode: multiply;
   width: 90%;
   height: 90%;
-  box-shadow: var(--shadowtemplate);
+  box-shadow: -50px -50px 0px 0px var(--primarydark);
 }
 .promobanner .img img {
   object-fit: cover;
@@ -182,45 +185,47 @@ p {
 }
 
 /* SHOWCASE SECTION */
-.showcase {
+.showcases {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  height: 100%;
+  height: fit-content;
+  padding: 12px;
   text-align: left;
 }
-.showcase.content {
+.showcase {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
   align-items: center;
   width: 100%;
+  height: 100%;
 }
-.showcase.content > div {
+.showcase > div {
   display: flex;
-  height: 90%;
+  height: 38vw;
 }
-.showcase.img {
+.showcase .img {
   width: 38%;
   background: url("../assets/showcase1.jpg");
   background-size: cover;
   background-position: center;
   box-shadow: -50px -50px 0px 0px var(--primarydark);
 }
-.showcase.info {
+.showcase .info {
   width: 38%;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 }
-.showcase.content .hr {
+.showcase .hr {
   width: 10%;
   height: unset;
   margin: 0 0 0 0 !important;
 }
-.showcase.content .hr hr {
+.showcase .hr hr {
   border: 2px solid var(--accent);
 }
 
@@ -244,5 +249,25 @@ p {
     object-fit: cover;
     min-width: 50%;
     min-height: 50%;
+  }
+  .showcases {
+    max-height: unset;
+    width: 200vw;
+    height: fit-content;
+  }
+  .showcase {
+    flex-direction: column;
+  }
+  .showcase .img {
+    display: flex;
+    width: 84% !important;
+    height: 60vw;
+    padding: 0;
+  }
+  .showcase .info {
+    display: flex;
+    width: 84% !important;
+    height: 60vh;
+    padding: 0;
   }
 }
