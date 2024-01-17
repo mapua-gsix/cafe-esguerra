@@ -4,10 +4,8 @@ const inViewport = (entries, observer) => {
       "is-inViewport",
       entry.isIntersecting || entry.target.classList.contains("is-inViewport")
     );
-    console.log(Obs.thresholds);
   });
 };
-const element = document.getElementById("element");
 
 const options = {
   root: null,
