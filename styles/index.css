@@ -57,29 +57,13 @@ section.enclosed > div {
   padding: 0;
   filter: invert(100%);
 }
-.b1.body {
-  padding: 12px;
-  color: var(--textlight);
-  border-color: var(--textlight);
-  font-weight: 500;
-  font-size: large;
-}
-.b1.body:hover {
-  background-color: var(--textlight);
-  color: var(--text);
-  padding-inline: 18px;
-}
-.b1.body2 {
-  padding: 12px;
-  color: var(--text);
+.accent_button {
   border-color: var(--accent);
-  font-weight: 500;
-  font-size: large;
+  color: var(--text);
 }
-.b1.body2:hover {
+.accent_button:hover {
   background-color: var(--accent);
   color: var(--textlight);
-  padding-inline: 18px;
 }
 
 /*PROMO SECTION*/
