@@ -9,7 +9,6 @@ footer {
 }
 footer .horizontal {
   width: 100%;
-  padding: 0;
   margin: 0;
   display: flex;
   flex-direction: row;
@@ -40,15 +39,12 @@ footer .hr {
 
 @media screen and (max-width: 900px) {
   footer .horizontal {
-    width: 100%;
     flex-direction: column;
     text-align: center;
   }
   footer .horizontal div {
     width: 100%;
-    display: flex;
     flex-direction: column;
-    padding: 12px;
   }
   footer {
     justify-content: center;
@@ -60,5 +56,8 @@ footer .hr {
   }
   footer h4 {
     font-size: x-large;
+  }
+  footer h4:last-child {
+    font-size: initial;
   }
 }
