@@ -13,8 +13,25 @@
 .navbar * {
   user-select: none;
 }
-.navbar a,
+.navbar a {
+  transition: all 0.3s ease;
+}
 .navbar button {
+  font-family: "Lustria", serif;
+  background-color: transparent;
+  border: var(--defaultborder);
+  border-color: var(--accent);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text);
+  font-size: 13.33333333px;
+  padding: 18px 6px;
+  font-weight: bold;
+}
+.navbar button:hover {
+  padding-inline: 12px;
+  background-color: var(--accent);
+  color: var(--textlight);
   transition: all 0.3s ease;
 }
 .navbar img {
@@ -141,7 +158,7 @@ a.active {
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-aspect-ratio: 3/2) {
   .navbar div:nth-child(1),
   .navbar div:nth-child(3) {
     opacity: 0;
