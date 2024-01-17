@@ -18,7 +18,7 @@
 
   <body>
     <header>
-      <nav id="navbar" class="navbar transparent">
+      <nav id="navbar" class="navbar">
         <div class="logo"><img src="assets/logo.svg" alt="logo" /></div>
         <div class="navlinks">
           <ul>
@@ -77,25 +77,31 @@
 
     <section class="container">
       <div class="products-list">
-        <a href="/products/coffee.html">
-          <div class="coffee-container load appear">
-            <img src="assets/placeholder.png" />
-            <label>COFFEE</label>
-          </div>
+        <a
+          class="coffee_link coffee-container"
+          data-inviewport="fadebackgroundfrombottom"
+          href="/products/coffee.html"
+        >
+          <h1 class="b1 body acrylic">COFFEE</h1>
+          <h3>Wake up and smell the coffee</h3>
         </a>
 
-        <a href="/products/beverage.html">
-          <div class="beverage-container load2 appear">
-            <img src="assets/placeholder.png" />
-            <label>BEVERAGES</label>
-          </div>
+        <a
+          class="beverage_link beverage-container"
+          data-inviewport="fadebackgroundfromtop"
+          href="/products/beverage.html"
+        >
+          <h1 class="b1 body acrylic">BEVERAGES</h1>
+          <h3>Refresh your day with a sip</h3>
         </a>
 
-        <a href="/products/dessert.html">
-          <div class="dessert-container load3 appear">
-            <img src="assets/placeholder.png" />
-            <label>DESSERTS</label>
-          </div>
+        <a
+          class="dessert_link dessert-container"
+          data-inviewport="fadebackgroundfrombottom"
+          href="/products/dessert.html"
+        >
+          <h1 class="b1 body acrylic">DESSERTS</h1>
+          <h3>Life is sweet, treat yourself</h3>
         </a>
       </div>
     </section>
@@ -103,51 +109,7 @@
     <!-- ADD <section>s as you wish. 
         A <section>'s height is only as large as 100vw to make it look good on mobile. 
             If you want a larger section, set its class to class="default" or simply make your own class.-->
-
-    <footer>
-      <div class="horizontal" data-inviewport="fadefrombottom">
-        <div class="authors">
-          <h4>Authors</h4>
-          <a>Cunanan, Ian</a>
-          <a>Cruz, Audrize</a>
-          <a>Fernando, Heughric</a>
-          <a>Papa, Rishon</a>
-          <a>Suarez, Yuan</a>
-          <a>Victoriano, Patrick</a>
-        </div>
-        <div class="contacts">
-          <h4>Stay connected</h4>
-          <a href="https://www.facebook.com/cafethena">Facebook</a>
-          <a href="https://www.instagram.com/cafeesguerra/">Instagram</a>
-          <a>E-mail</a>
-        </div>
-        <div class="address">
-          <h4>Find us</h4>
-          <a>Address</a>
-        </div>
-        <div class="navigate">
-          <h4>Navigate</h4>
-          <a>Home ></a>
-          <a>Products ></a>
-          <a>About ></a>
-          <a>News ></a>
-          <a>Reservations ></a>
-          <a>Feedback ></a>
-          <a>Orders ></a>
-        </div>
-      </div>
-
-      <div class="hr" data-inviewport="expand">
-        <hr />
-      </div>
-
-      <h4>© 2024 Mapúa University - Makati</h4>
-    </footer>
   </body>
-  <script
-    src="./scripts/transparent_navbar.js"
-    crossorigin="anonymous"
-  ></script>
   <script src="./scripts/responsive_navbar.js" crossorigin="anonymous"></script>
   <script src="./scripts/load_animations.js" crossorigin="anonymous"></script>
 </html>
