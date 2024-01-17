@@ -37,7 +37,7 @@ footer .hr {
   width: 100%;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-aspect-ratio: 3/2) {
   footer .horizontal {
     flex-direction: column;
     text-align: center;
