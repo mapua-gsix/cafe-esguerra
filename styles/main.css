@@ -28,7 +28,9 @@
     var(--primarydark) 100%
   );
   --shadowtemplate: 0px 0px 12px -4px var(--shadow);
-  --roundness: 12px; /*Use this when defining border-radius*/
+  --imageshadow: -50px -50px 0px 0px var(--primarydark);
+  --defaultborder: 3px var(--textlight) solid;
+  --defaultbezier: cubic-bezier(0.81, 0.02, 0.2, 0.98);
 
   /*DECLARE VARIABLES ABOVE ^^^*/
 }
@@ -111,18 +113,39 @@ p {
 img {
   user-select: none;
 }
-.b1 {
+
+.default_button {
   font-family: "Lustria", serif;
   background-color: transparent;
-  border: 3px var(--accent) solid;
-
+  border: var(--defaultborder);
   cursor: pointer;
   transition: all 0.3s ease;
-}
-.b1:hover {
-  padding-inline: 12px;
-  background-color: var(--accent);
   color: var(--textlight);
+  padding: 12px;
+  font-size: 18px;
+  font-weight: normal;
+}
+.default_button:hover {
+  padding-inline: 18px;
+  background-color: var(--textlight);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+.large_button {
+  font-family: "Lustria", serif;
+  background-color: transparent;
+  border: var(--defaultborder);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--textlight);
+  padding: 24px;
+  font-size: 24px;
+  font-weight: normal;
+}
+.large_button:hover {
+  padding-inline: 36px;
+  background-color: var(--textlight);
+  color: var(--text);
   transition: all 0.3s ease;
 }
 .noselect {
@@ -147,6 +170,7 @@ section:nth-child(2) {
   font-family: "black-mango", sans-serif;
 }
 .acrylic {
+  background-color: var(--tint2);
   backdrop-filter: blur(8px);
 }
 
