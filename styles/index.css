@@ -251,7 +251,8 @@ p {
   .showcase .info {
     display: flex;
     width: 84% !important;
-    height: 60vh;
+    max-height: none;
+    height: fit-content;
     padding: 0;
   }
 }

@@ -2,13 +2,13 @@ body {
   background-color: var(--primary);
 }
 .banner {
-  height: 25vw;
+  height: 30vw;
   background: var(--backgroundgradient);
   overflow: hidden;
 }
 .hero {
   display: flex;
-  padding: 12px 0 0 0;
+  padding: 50px 0 0 0;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -28,10 +28,13 @@ body {
 }
 .hero-title h1 {
   user-select: none;
-  font-size: 500px;
+  font-size: 32vw;
   opacity: 0.1;
   padding: 0;
   margin: 0;
+}
+.hero-subtitle h3 {
+  font-style: italic;
 }
 
 .left-container h1 {
