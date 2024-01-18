@@ -1,5 +1,5 @@
 body {
-  background: url(/assets/banner_blur.jpg) center center fixed;
+  background: url("../assets/banner_blur.jpg") center center fixed;
   background-size: cover;
 }
 
@@ -60,6 +60,7 @@ body {
   bottom: 1.25rem;
   left: 50%;
   transform: translateX(-50%);
+  mix-blend-mode: exclusion;
   z-index: 1;
 }
 
@@ -69,7 +70,11 @@ body {
   border-radius: 50%;
   background-color: var(--tint);
   transition: opacity ease 500ms;
+
   opacity: 75%;
+}
+.carousel-nav a.active {
+  background-color: var(--textlight);
 }
 
 .carousel-nav a:hover {

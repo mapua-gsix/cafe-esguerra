@@ -1,5 +1,6 @@
 const images = document.getElementsByClassName("carousel-image");
 const nav = document.getElementsByClassName("carousel-dot");
+const imagesContainer = document.getElementById("carousel-images");
 
 let slideIndex = 0;
 
@@ -19,7 +20,7 @@ function showSlides(n) {
     nav[i].className = nav[i].className.replace(" active", "");
   }
 
-  images[slideIndex].scrollIntoView();
+  imagesContainer.scroll(slideIndex * 500, 0);
 
   nav[slideIndex].className += " active";
 }
