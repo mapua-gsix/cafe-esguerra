@@ -158,7 +158,7 @@ a.active {
   }
 }
 
-@media screen and (max-aspect-ratio: 3/2) {
+@media screen and (max-width: 900px) {
   .navbar div:nth-child(1),
   .navbar div:nth-child(3) {
     opacity: 0;
