@@ -22,7 +22,12 @@ function render_data(
   clone.querySelector(".promo-image").src = bannerImagePath;
   clone.querySelector("div.promo-header").textContent = header;
   clone.querySelector("div.promo-date").textContent = datePosted;
-  clone.querySelector("div.promo-content").textContent = content;
+  var contentContainer = clone.querySelector("div.promo-content");
+  content.forEach((element) => {
+    const pElement = document.createElement("p");
+    pElement.textContent = element;
+    contentContainer.appendChild(pElement);
+  });
   clone.querySelector("div.promo-redirectText").textContent = redirectText;
   clone.querySelector(".promo-redirectButton").onclick = function () {
     window.location.href = redirectLink;
@@ -33,7 +38,7 @@ function render_data(
 function appendData(data) {
   if ("content" in document.createElement("template")) {
     const container = document.getElementById("promocontainer");
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < data.news.length; i++) {
       container.appendChild(
         render_data(
           data.news[i].bannerImagePath,
