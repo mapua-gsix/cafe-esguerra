@@ -16,7 +16,7 @@
 .navbar a {
   transition: all 0.3s ease;
 }
-.navbar button {
+.navbar div button {
   font-family: "Lustria", serif;
   background-color: transparent;
   border: var(--defaultborder);
@@ -28,7 +28,7 @@
   padding: 18px 6px;
   font-weight: bold;
 }
-.navbar button:hover {
+.navbar div:nth-child(3) button:hover {
   padding-inline: 12px;
   background-color: var(--accent);
   color: var(--textlight);
@@ -108,7 +108,8 @@
   background-color: transparent;
 }
 .navbar.transparent a,
-.navbar.transparent button {
+.navbar.transparent button,
+.navbar h1 {
   color: var(--textlight);
 }
 .navbar.transparent img {
@@ -147,6 +148,12 @@ a.active {
 .navbar .products-dropdown span {
   color: var(--text);
 }
+.navbar .back span {
+  color: var(--text);
+}
+.navbar.transparent .back span {
+  color: var(--textlight);
+}
 @keyframes navslidefromtop {
   0% {
     transform: translateY(-100%);
@@ -156,6 +163,20 @@ a.active {
     transform: unset;
     opacity: 1;
   }
+}
+.back {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.back-button {
+  border: none !important;
+}
+.back-button:hover {
+  background-color: transparent;
+}
+.back button:hover * {
+  transform: translate(-6px, 0) !important;
 }
 
 @media screen and (max-width: 900px) {
