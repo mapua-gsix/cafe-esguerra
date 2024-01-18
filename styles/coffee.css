@@ -1,6 +1,37 @@
 body {
-  background: url("../assets/banner_blur.jpg") center center fixed;
+  background-color: var(--primary);
+}
+.banner {
+  height: 25vw;
+  background: var(--backgroundgradient);
+  overflow: hidden;
+}
+.hero {
+  display: flex;
+  padding: 12px 0 0 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  background: url("../assets/product_images/coffee.jpg");
+  background-color: var(--tint);
+  background-blend-mode: multiply;
   background-size: cover;
+  background-position: 0% 30%;
+  color: var(--textlight);
+  overflow: hidden;
+  position: relative;
+}
+.hero-title {
+  position: absolute;
+  overflow: hidden;
+}
+.hero-title h1 {
+  user-select: none;
+  font-size: 500px;
+  opacity: 0.1;
+  padding: 0;
+  margin: 0;
 }
 
 .left-container h1 {
@@ -27,7 +58,6 @@ body {
 }
 
 .carousel {
-  aspect-ratio: 16/9;
   overflow: hidden;
   display: flex;
   position: relative;

@@ -18,37 +18,30 @@
 
   <body>
     <header>
-      <nav id="navbar" class="navbar transparent">
-        <div class="logo"><img src="../assets/logo.svg" alt="logo" /></div>
+      <nav id="navbar" class="navbar">
+        <div class="back">
+          <button
+            onclick="window.location.href='../products.html';"
+            class="back-button"
+          >
+            <span class="material-symbols-outlined">navigate_before</span>
+            <span>Back</span>
+          </button>
+        </div>
         <div class="navlinks">
           <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../about.html">About</a></li>
-            <li><a href="../news.html">News</a></li>
-
-            <li><a href="../forms/reservation.html">Reservations</a></li>
-            <li>
-              <a href="../forms/feedback.html">
-                <nobr>Rate Us!</nobr>
-              </a>
+            <li class="hideable">
+              <a href="../index.html">Home</a>
             </li>
-            <li>
-              <a href="../products.html">Products</a
-              ><span class="material-symbols-outlined noselect"
-                >expand_more
-              </span>
-              <ul class="products-dropdown">
-                <li>
-                  <a href="../products/coffee.html">Coffee</a>
-                </li>
-                <li>
-                  <a href="../products/beverage.html">Beverages</a>
-                </li>
-                <li>
-                  <a href="../products/dessert.html">Desserts</a>
-                </li>
-              </ul>
+            <li class="hideable">
+              <a href="..forms/order.html">Order Now!</a>
             </li>
+            <li class="hideable">
+              <a href="../products.html">Products</a>
+            </li>
+            <li><a class="active" href="../products/coffee.html">Coffee</a></li>
+            <li><a href="../products/beverage.html">Beverages</a></li>
+            <li><a href="../products/dessert.html">Desserts</a></li>
           </ul>
         </div>
         <div class="ordernow">
@@ -57,7 +50,25 @@
           </button>
         </div>
       </nav>
+      <button
+        id="menutoggle"
+        class="menutoggle noselect"
+        onclick="menutoggleClick()"
+      >
+        <span class="material-symbols-outlined">menu</span>
+      </button>
     </header>
+
+    <section class="banner">
+      <div class="hero" data-inviewport="fadefrombottom">
+        <div class="hero-title"><h1 class="brandfont">Coffee</h1></div>
+
+        <div class="subtitle"><h3>Wake up and smell the coffee</h3></div>
+      </div>
+    </section>
+    <div class="hr" data-inviewport="expand">
+      <hr class="accent" />
+    </div>
 
     <section class="container">
       <div class="left-container">
@@ -87,10 +98,14 @@
           </div>
           <div class="carousel-controls" id="carousel-controls">
             <button onclick="plusSlides(-1)" data-slide="prev">
-              <span class="material-symbols-outlined"> navigate_before </span>
+              <span class="material-symbols-outlined noselect">
+                navigate_before
+              </span>
             </button>
             <button onclick="plusSlides(1)" data-slide="next">
-              <span class="material-symbols-outlined"> navigate_next </span>
+              <span class="material-symbols-outlined noselect">
+                navigate_next
+              </span>
             </button>
           </div>
         </div>
@@ -129,7 +144,11 @@
 
       <h4>© 2024 Mapúa University - Makati</h4>
     </footer>
-    <script src="../scripts/transparent_navbar.js"></script>
   </body>
-  <script src="../scripts/carousel.js"></script>
+  <script src="../scripts/carousel.js" crossorigin="anonymous"></script>
+  <script
+    src="../scripts/responsive_navbar.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="../scripts/load_animations.js" crossorigin="anonymous"></script>
 </html>
