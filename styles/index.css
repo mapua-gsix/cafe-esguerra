@@ -213,7 +213,7 @@ p {
   border: 2px solid var(--accent);
 }
 
-@media screen and (max-aspect-ratio: 3/2) {
+@media screen and (max-width: 900px) {
   .promoitem {
     flex-direction: column;
     height: fit-content;
