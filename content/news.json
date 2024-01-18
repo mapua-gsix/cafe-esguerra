@@ -2,7 +2,10 @@
   "news": [
     {
       "header": "Indulge your palate with just a few clicks! ",
-      "content": "<p><strong>FREE DELIVERY</strong> with no minimum purchase within Cainta, Rizal (Any point between Junction and Estrella)<p><p>Hit us up for your orders on our social media or you may contact us at 09084257473/ 09365888562.<p>",
+      "content": [
+        "FREE DELIVERY with no minimum purchase within Cainta, Rizal (Any point between Junction and Estrella).",
+        "Hit us up for your orders on our social media or you may contact us at 09084257473/ 09365888562."
+      ],
       "bannerImagePath": "./assets/promo2.jpg",
       "redirectText": "Learn more!",
       "redirectLink": "https://www.facebook.com/cafethena/posts/768010542023199",
