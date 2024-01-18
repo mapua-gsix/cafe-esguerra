@@ -153,7 +153,7 @@ img {
 }
 section {
   padding: 0;
-  max-height: 93vh;
+  max-height: 100vh;
   min-height: 40vh;
   height: 100vw;
   width: 100%;
@@ -162,9 +162,6 @@ section {
 section.default {
   max-height: unset;
   height: unset;
-}
-section:nth-child(2) {
-  padding: 50px 0 0 0;
 }
 .brandfont {
   font-family: "black-mango", sans-serif;
@@ -195,6 +192,15 @@ section:nth-child(2) {
   transition: all 1s cubic-bezier(0.81, 0.02, 0.2, 0.98);
 }
 [data-inviewport="fadefrombottom"].is-inViewport > :not(.hr) {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+}
+[data-inviewport="fadefromtop"] > :not(.hr) {
+  transform: translateY(-20vh) !important;
+  opacity: 0 !important;
+  transition: all 1s cubic-bezier(0.81, 0.02, 0.2, 0.98);
+}
+[data-inviewport="fadefromtop"].is-inViewport > :not(.hr) {
   transform: translateY(0) !important;
   opacity: 1 !important;
 }
