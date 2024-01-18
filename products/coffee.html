@@ -22,40 +22,38 @@
         <div class="logo"><img src="/assets/logo.svg" alt="logo" /></div>
         <div class="navlinks">
           <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/news.html">News</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../news.html">News</a></li>
 
-            <li><a href="/forms/reservation.html">Reservations</a></li>
+            <li><a href="../forms/reservation.html">Reservations</a></li>
             <li>
-              <a href="/forms/feedback.html">
+              <a href="../forms/feedback.html">
                 <nobr>Rate Us!</nobr>
               </a>
             </li>
             <li>
-              <a href="/products.html">Products</a
+              <a href="../products.html">Products</a
               ><span class="material-symbols-outlined noselect"
                 >expand_more
               </span>
               <ul class="products-dropdown">
                 <li>
-                  <a href="/products/coffee.html">Coffee</a>
+                  <a href="../products/coffee.html">Coffee</a>
                 </li>
                 <li>
-                  <a href="/products/beverage.html">Beverages</a>
+                  <a href="../products/beverage.html">Beverages</a>
                 </li>
                 <li>
-                  <a href="/products/dessert.html">Desserts</a>
+                  <a href="../products/dessert.html">Desserts</a>
                 </li>
               </ul>
             </li>
           </ul>
         </div>
         <div class="ordernow">
-          <button class="b1">
-            <h4>
-              <nobr>Order Now!</nobr>
-            </h4>
+          <button>
+            <nobr>Order Now!</nobr>
           </button>
         </div>
       </nav>
@@ -64,14 +62,36 @@
     <section class="container">
       <div class="left-container">
         <h1>PROMOS</h1>
-        <div class="promo-container">
-          <img src="/assets/promo1.jpg" id="image1" class="image1" />
-          <img src="/assets/promo2.jpg" id="image2" class="image2" />
-          <img src="/assets/promo3.jpg" id="image3" class="image3" />
-          <div class="slider-nav">
-            <a href="#image1"></a>
-            <a href="#image2"></a>
-            <a href="#image3"></a>
+        <div class="carousel">
+          <div class="carousel-images" id="carousel-images">
+            <img
+              src="../assets/promo1.jpg"
+              id="image1"
+              class="image1 carousel-image"
+            />
+            <img
+              src="../assets/promo2.jpg"
+              id="image2"
+              class="image2 carousel-image"
+            />
+            <img
+              src="../assets/promo3.jpg"
+              id="image3"
+              class="image3 carousel-image"
+            />
+          </div>
+          <div class="carousel-nav" id="carousel-nav">
+            <a class="carousel-dot"></a>
+            <a class="carousel-dot"></a>
+            <a class="carousel-dot"></a>
+          </div>
+          <div class="carousel-controls" id="carousel-controls">
+            <button onclick="plusSlides(-1)" data-slide="prev">
+              <span class="material-symbols-outlined"> navigate_before </span>
+            </button>
+            <button onclick="plusSlides(1)" data-slide="next">
+              <span class="material-symbols-outlined"> navigate_next </span>
+            </button>
           </div>
         </div>
       </div>
@@ -111,4 +131,5 @@
     </footer>
     <script src="../scripts/transparent_navbar.js"></script>
   </body>
+  <script src="../scripts/carousel.js"></script>
 </html>
