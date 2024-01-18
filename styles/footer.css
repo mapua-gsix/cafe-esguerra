@@ -37,13 +37,14 @@ footer .hr {
   width: 100%;
 }
 
-@media screen and (max-aspect-ratio: 3/2) {
+@media screen and (max-width: 900px) {
   footer .horizontal {
     flex-direction: column;
     text-align: center;
   }
   footer .horizontal div {
     width: 100%;
+    padding: 12px 0;
     flex-direction: column;
   }
   footer {
