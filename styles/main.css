@@ -28,7 +28,7 @@
     var(--primarydark) 100%
   );
   --shadowtemplate: 0px 0px 12px -4px var(--shadow);
-  --imageshadow: -50px -50px 0px 0px var(--primarydark);
+  --imageshadow: -5vmin -5vmin 0px 0px var(--primarydark);
   --defaultborder: 3px var(--textlight) solid;
   --defaultbezier: cubic-bezier(0.81, 0.02, 0.2, 0.98);
 
