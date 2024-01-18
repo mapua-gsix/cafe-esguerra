@@ -128,7 +128,27 @@
         <div class="title">
           <h1>Latest from <span class="brandfont">Café ESGUERRA</span></h1>
         </div>
-        <div id="promosection"></div>
+        <div class="padded-bottom" id="promocontainer">
+          <template id="promo-item-template">
+            <div class="promo-item">
+              <div class="banner">
+                <img class="promo-image" />
+              </div>
+              <div class="content">
+                <div class="group">
+                  <div class="promo-header"></div>
+                  <div class="promo-date"></div>
+                </div>
+
+                <div class="promo-content"></div>
+                <button class="promo-redirectButton">
+                  <div class="promo-redirectText"></div>
+                  <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+          </template>
+        </div>
         <div class="center">
           <a class="default_button accent_button" href="./news.html"
             >View more</a
@@ -182,41 +202,56 @@
   ></script>
   <script src="./scripts/responsive_navbar.js" crossorigin="anonymous"></script>
   <script src="./scripts/load_animations.js" crossorigin="anonymous"></script>
-  <script>
+  <script defer>
     fetch("./content/news.json")
       .then(function (response) {
         return response.json();
       })
       .then(function (data) {
         appendData(data);
-      })
-      .catch(function (err) {
-        console.log("error: " + err);
       });
+    function render_data(
+      bannerImagePath,
+      header,
+      content,
+      datePosted,
+      redirectText,
+      redirectLink
+    ) {
+      var item_template = document.getElementById(
+        "promo-item-template"
+      ).content;
+
+      var clone = document.importNode(item_template, true);
+
+      clone.querySelector(".promo-image").src = bannerImagePath;
+      clone.querySelector("div.promo-header").textContent = header;
+      clone.querySelector("div.promo-date").textContent = datePosted;
+      clone.querySelector("div.promo-content").textContent = content;
+      clone.querySelector("div.promo-redirectText").textContent = redirectText;
+      clone.querySelector(".promo-redirectButton").onclick = function () {
+        window.location.href = redirectLink;
+      };
+
+      return clone;
+    }
     function appendData(data) {
-      for (let i = 0; i < 1; i++) {
-        const newChild = document.createElement("div");
-        newChild.classList.add("promoitem");
-        newChild.id = "new_content";
-        newChild.innerHTML = `
-        <div class="promobanner">
-              <div class="promobanner img">
-                <img src=${data.news[i].bannerImagePath} alt="Missing"></div>
-            </div>
-            
-            <div class="promocontent">
-              <h3 class="noselect">${data.news[i].header}</h3>
-              
-              <p class="date">${data.news[i].datePosted}</p>
-              <p>${data.news[i].content}</p>
-              <button class="promobutton noselect" onclick="(function(){ window.location.href='${data.news[i].redirectLink}' })();">
-                ${data.news[i].redirectText}<span class="material-symbols-outlined"
-                  >arrow_forward</span
-                >
-              </button>
-            </div>
-    `;
-        document.getElementById("promosection").appendChild(newChild);
+      if ("content" in document.createElement("template")) {
+        const container = document.getElementById("promocontainer");
+        for (let i = 0; i < 1; i++) {
+          container.appendChild(
+            render_data(
+              data.news[i].bannerImagePath,
+              data.news[i].header,
+              data.news[i].content,
+              data.news[i].datePosted,
+              data.news[i].redirectText,
+              data.news[i].redirectLink
+            )
+          );
+        }
+      } else {
+        console.log("template feature missing.");
       }
     }
   </script>
