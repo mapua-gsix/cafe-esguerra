@@ -1,51 +1,45 @@
 {
-    "categories":[
+    "products":[
         {
-            "coffeeItems":[
-                {
-                    "id":"",
-                    "name":"",
-                    "description":"",
-                    "image":"",
-                    "price":"",
-                    "category":"",
-                    "ingredients":[
-                        "water",
-                        "milk"
-                    ]
-                }
+            "id":"0000",
+            "name":"null",
+            "description":"This item does not exist",
+            "image":"../assets/placeholder.png",
+            "price":"null",
+            "ingredients":[
             ]
         },
         {
-            "beverageItems":[
-                {
-                    "id":"",
-                    "name":"",
-                    "description":"",
-                    "image":"",
-                    "price":"",
-                    "category":"",
-                    "ingredients":[
-                        "water",
-                        "milk"
-                    ]
-                }
+            "id":"1000",
+            "name":"Test (Coffee Item)",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":"100.00",
+            "ingredients":[
+                "water",
+                "milk"
             ]
         },
         {
-            "dessertItems":[
-                {
-                    "id":"",
-                    "name":"",
-                    "description":"",
-                    "image":"",
-                    "price":"",
-                    "category":"",
-                    "ingredients":[
-                        "water",
-                        "milk"
-                    ]
-                }
+            "id":"2000",
+            "name":"Test (Beverage Item)",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":"55.00",
+            "ingredients":[
+                "water",
+                "milk"
+            ]
+        },
+        {
+            "id":"3000",
+            "name":"Test (Dessert Item)",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":"150.00",
+            "ingredients":[
+                "water",
+                "milk"
             ]
         }
     ]

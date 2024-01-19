@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="../styles/navbar.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/order.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>Café Esguerra | by cafethena</title>
+  </head>
+  <body>
+    <header>
+      <nav id="navbar" class="navbar">
+        <div class="logo"><img src="../assets/logo.svg" alt="logo" /></div>
+        <div class="navlinks">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li class="hideable">
+              <a class="active" href="../forms/order.html"
+                ><span class="material-symbols-outlined"> shopping_cart </span>
+                Cart</a
+              >
+            </li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../news.html">News</a></li>
+
+            <li><a href="../forms/reservation.html">Reservations</a></li>
+            <li>
+              <a href="../forms/feedback.html"><nobr>Rate Us!</nobr></a>
+            </li>
+            <li>
+              <a href="../products.html">Products</a
+              ><span class="material-symbols-outlined noselect"
+                >expand_more
+              </span>
+              <ul class="products-dropdown">
+                <li>
+                  <a href="../products/coffee.html"
+                    ><span class="material-symbols-outlined"> coffee </span>
+                    Coffee</a
+                  >
+                </li>
+                <li>
+                  <a href="../products/beverage.html"
+                    ><span class="material-symbols-outlined"> local_bar </span>
+                    Beverages</a
+                  >
+                </li>
+                <li>
+                  <a href="../products/dessert.html"
+                    ><span class="material-symbols-outlined"> icecream </span>
+                    Desserts</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="ordernow">
+          <button onclick="window.location.href='../forms/order.html'">
+            <span class="material-symbols-outlined"> shopping_cart </span> CART
+          </button>
+        </div>
+      </nav>
+      <button
+        id="menutoggle"
+        class="menutoggle noselect"
+        onclick="menutoggleClick()"
+      >
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </header>
+    <section class="adapt-to-header">
+      <div class="cart">
+        <h1>Your cart:</h1>
+        <button onclick="add_to_cart('1000')" class="default_button">
+          Add to cart demo 1
+        </button>
+        <button onclick="add_to_cart('2000')" class="default_button">
+          Add to cart demo 2
+        </button>
+        <button onclick="add_to_cart('3000')" class="default_button">
+          Add to cart demo 3
+        </button>
+        <div class="orders" id="ordercontainer">
+          <template id="order-item-template">
+            <div class="order-item">
+              <div class="product-index"></div>
+              <img class="image" />
+              <div class="text-content">
+                <div class="product-name"></div>
+                <div class="product-description"></div>
+                <div class="controls">
+                  <div class="group">
+                    <div class="quantity-controls">
+                      <button class="increment-button remove">
+                        <span class="material-symbols-outlined">Remove</span>
+                      </button>
+                      <input min="1" class="product-quantity" type="number" />
+                      <button class="increment-button add">
+                        <span class="material-symbols-outlined">Add</span>
+                      </button>
+                    </div>
+
+                    <div class="item-price"></div>
+                    <div class="product-price"></div>
+                  </div>
+
+                  <button class="remove-button">
+                    <span class="material-symbols-outlined"
+                      >remove_shopping_cart</span
+                    >Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="horizontal" data-inviewport="fadefrombottom">
+        <div class="authors">
+          <h4>Authors</h4>
+          <a>Cunanan, Ian</a>
+          <a>Cruz, Audrize</a>
+          <a>Fernando, Heughric</a>
+          <a>Papa, Rishon</a>
+          <a>Suarez, Yuan</a>
+          <a>Victoriano, Patrick</a>
+        </div>
+        <div class="contacts">
+          <h4>Stay connected</h4>
+          <a href="https://www.facebook.com/cafethena">Facebook</a>
+          <a href="https://www.instagram.com/cafeesguerra/">Instagram</a>
+          <a>Contact us:<span>09084257473</span><span>09365888562</span></a>
+        </div>
+        <div class="address">
+          <h4>Find us</h4>
+          <a>Address</a>
+        </div>
+        <div class="navigate">
+          <h4>Navigate</h4>
+          <a>Home ></a>
+          <a>Products ></a>
+          <a>About ></a>
+          <a>News ></a>
+          <a>Reservations ></a>
+          <a>Feedback ></a>
+          <a>Orders ></a>
+        </div>
+      </div>
+
+      <div class="hr" data-inviewport="expand">
+        <hr />
+      </div>
+
+      <h4>© 2024 Mapúa University - Makati</h4>
+    </footer>
+  </body>
+  <script
+    src="../scripts/responsive_navbar.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="../scripts/load_animations.js" crossorigin="anonymous"></script>
+  <script src="../scripts/cart.js"></script>
+  <script>
+    function load_orders() {
+      console.log("loading orders...");
+      var head = document.getElementsByTagName("head")[0];
+      var script = document.createElement("script");
+      script.src = "../scripts/load_cart.js";
+      head.appendChild(script);
+    }
+    load_orders();
+  </script>
+</html>
