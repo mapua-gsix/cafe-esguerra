@@ -22,11 +22,15 @@
         <div class="navlinks">
           <ul>
             <li><a class="active" href="index.html">Home</a></li>
+            <li class="hideable">
+              <a href="forms/order.html"
+                ><span class="material-symbols-outlined"> shopping_cart </span>
+                Cart</a
+              >
+            </li>
             <li><a href="about.html">About</a></li>
             <li><a href="news.html">News</a></li>
-            <li class="hideable">
-              <a href="forms/order.html">Orders</a>
-            </li>
+
             <li><a href="forms/reservation.html">Reservations</a></li>
             <li>
               <a href="forms/feedback.html"><nobr>Rate Us!</nobr></a>
@@ -60,8 +64,8 @@
           </ul>
         </div>
         <div class="ordernow">
-          <button>
-            <nobr>Order Now!</nobr>
+          <button onclick="window.location.href='./forms/order.html'">
+            <span class="material-symbols-outlined"> shopping_cart </span> CART
           </button>
         </div>
       </nav>
@@ -86,7 +90,7 @@
               onclick="window.location.href='./products.html'"
               class="default_button"
             >
-              CHECK OUT OUR PRODUCTS!
+              ORDER NOW
             </button>
           </div>
         </div>
@@ -124,11 +128,11 @@
       <hr class="accent" />
     </div>
     <section class="padded2 default">
-      <div class="promo" data-inviewport="fadein">
+      <div class="promo">
         <div class="title">
           <h1>Latest from <span class="brandfont">Café ESGUERRA</span></h1>
         </div>
-        <div class="padded-bottom" id="promocontainer">
+        <div class="promos padded-bottom" id="promocontainer">
           <template id="promo-item-template">
             <div class="promo-item">
               <div class="banner">
@@ -171,7 +175,7 @@
           <h4>Stay connected</h4>
           <a href="https://www.facebook.com/cafethena">Facebook</a>
           <a href="https://www.instagram.com/cafeesguerra/">Instagram</a>
-          <a>E-mail</a>
+          <a>Contact us:<span>09084257473</span><span>09365888562</span></a>
         </div>
         <div class="address">
           <h4>Find us</h4>
@@ -243,8 +247,9 @@
     function appendData(data) {
       if ("content" in document.createElement("template")) {
         const container = document.getElementById("promocontainer");
-        for (let i = 0; i < 1; i++) {
-          container.appendChild(
+        const fragment = document.createDocumentFragment();
+        for (let i = 0; i < 3; i++) {
+          fragment.appendChild(
             render_data(
               data.news[i].bannerImagePath,
               data.news[i].header,
@@ -255,9 +260,11 @@
             )
           );
         }
+        container.appendChild(fragment);
       } else {
         console.log("template feature missing.");
       }
     }
   </script>
+  <script src="./scripts/cart.js"></script>
 </html>

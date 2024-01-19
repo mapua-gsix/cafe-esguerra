@@ -17,6 +17,9 @@
   transition: all 0.3s ease;
 }
 .navbar div button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Lustria", serif;
   background-color: transparent;
   border: var(--defaultborder);
@@ -25,14 +28,21 @@
   transition: all 0.3s ease;
   color: var(--text);
   font-size: 13.33333333px;
-  padding: 18px 6px;
+  padding: 8px;
   font-weight: bold;
+  gap: 6px;
+}
+.ordernow span {
+  color: var(--text);
 }
 .navbar div:nth-child(3) button:hover {
   padding-inline: 12px;
   background-color: var(--accent);
   color: var(--textlight);
   transition: all 0.3s ease;
+}
+.navbar div:nth-child(3) button:hover span {
+  color: var(--textlight);
 }
 .navbar img {
   height: 65%;
@@ -114,6 +124,7 @@
   background-color: transparent;
 }
 .navbar.transparent a,
+.navbar.transparent button span,
 .navbar.transparent button,
 .navbar h1 {
   color: var(--textlight);
@@ -178,6 +189,9 @@ a.active {
 .back-button {
   border: none !important;
 }
+.back-button * {
+  transition: all 0.3s ease;
+}
 .back-button:hover {
   background-color: transparent;
 }
@@ -218,6 +232,7 @@ a.active {
     background-color: var(--primary);
   }
   .navbar.transparent a,
+  .navbar.transparent button span,
   .navbar.transparent button {
     color: var(--text);
   }

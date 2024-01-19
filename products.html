@@ -18,16 +18,20 @@
 
   <body>
     <header>
-      <nav id="navbar" class="navbar">
+      <nav id="navbar" class="navbar transparent">
         <div class="logo"><img src="assets/logo.svg" alt="logo" /></div>
         <div class="navlinks">
           <ul>
             <li><a href="index.html">Home</a></li>
+            <li class="hideable">
+              <a href="forms/order.html"
+                ><span class="material-symbols-outlined"> shopping_cart </span>
+                Cart</a
+              >
+            </li>
             <li><a href="about.html">About</a></li>
             <li><a href="news.html">News</a></li>
-            <li class="hideable">
-              <a href="forms/order.html">Orders</a>
-            </li>
+
             <li><a href="forms/reservation.html">Reservations</a></li>
             <li>
               <a href="forms/feedback.html"><nobr>Rate Us!</nobr></a>
@@ -39,19 +43,19 @@
               </span>
               <ul class="products-dropdown">
                 <li>
-                  <a href="./products/coffee.html"
+                  <a href="products/coffee.html"
                     ><span class="material-symbols-outlined"> coffee </span>
                     Coffee</a
                   >
                 </li>
                 <li>
-                  <a href="./products/beverage.html"
+                  <a href="products/beverage.html"
                     ><span class="material-symbols-outlined"> local_bar </span>
                     Beverages</a
                   >
                 </li>
                 <li>
-                  <a href="./products/dessert.html"
+                  <a href="products/dessert.html"
                     ><span class="material-symbols-outlined"> icecream </span>
                     Desserts</a
                   >
@@ -61,8 +65,8 @@
           </ul>
         </div>
         <div class="ordernow">
-          <button>
-            <nobr>Order Now!</nobr>
+          <button onclick="window.location.href='./forms/order.html'">
+            <span class="material-symbols-outlined"> shopping_cart </span> CART
           </button>
         </div>
       </nav>
