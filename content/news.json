@@ -12,11 +12,104 @@
       "datePosted": "January 6, 2024"
     },
     {
-      "header": "Promo",
-      "content": "Content here",
+      "header": "Dummy content",
+      "content": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ex erat, in semper nibh suscipit non. Praesent vehicula, sem nec lacinia volutpat, lacus enim suscipit urna, suscipit faucibus urna odio sed augue. ", 
+      "Suspendisse euismod ante ut dignissim tincidunt. Proin tristique est ut enim elementum, et lobortis orci condimentum. Sed pretium ultricies sem ut imperdiet. Nunc tempor dui libero, sit amet rhoncus neque efficitur vel. Vivamus nec maximus orci. Donec accumsan tincidunt enim sed mattis. Aenean eget luctus libero."],
       "bannerImagePath": "./assets/banner_img.jpg",
       "redirectText": "Check it out!",
-      "redirectLink": ""
+      "redirectLink": "#",
+      "datePosted": "MMMM DD, YYYY"
+    },
+    {
+      "header": "Dummy content",
+      "content": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ex erat, in semper nibh suscipit non. Praesent vehicula, sem nec lacinia volutpat, lacus enim suscipit urna, suscipit faucibus urna odio sed augue. ", 
+      "Suspendisse euismod ante ut dignissim tincidunt. Proin tristique est ut enim elementum, et lobortis orci condimentum. Sed pretium ultricies sem ut imperdiet. Nunc tempor dui libero, sit amet rhoncus neque efficitur vel. Vivamus nec maximus orci. Donec accumsan tincidunt enim sed mattis. Aenean eget luctus libero."],
+      "bannerImagePath": "./assets/banner_img.jpg",
+      "redirectText": "Check it out!",
+      "redirectLink": "#",
+      "datePosted": "MMMM DD, YYYY"
+    },
+    {
+      "header": "Dummy content",
+      "content": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ex erat, in semper nibh suscipit non. Praesent vehicula, sem nec lacinia volutpat, lacus enim suscipit urna, suscipit faucibus urna odio sed augue. ", 
+      "Suspendisse euismod ante ut dignissim tincidunt. Proin tristique est ut enim elementum, et lobortis orci condimentum. Sed pretium ultricies sem ut imperdiet. Nunc tempor dui libero, sit amet rhoncus neque efficitur vel. Vivamus nec maximus orci. Donec accumsan tincidunt enim sed mattis. Aenean eget luctus libero."],
+      "bannerImagePath": "./assets/banner_img.jpg",
+      "redirectText": "Check it out!",
+      "redirectLink": "#",
+      "datePosted": "MMMM DD, YYYY"
+    },
+    {
+      "header": "Dummy content",
+      "content": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ex erat, in semper nibh suscipit non. Praesent vehicula, sem nec lacinia volutpat, lacus enim suscipit urna, suscipit faucibus urna odio sed augue. ", 
+      "Suspendisse euismod ante ut dignissim tincidunt. Proin tristique est ut enim elementum, et lobortis orci condimentum. Sed pretium ultricies sem ut imperdiet. Nunc tempor dui libero, sit amet rhoncus neque efficitur vel. Vivamus nec maximus orci. Donec accumsan tincidunt enim sed mattis. Aenean eget luctus libero."],
+      "bannerImagePath": "./assets/banner_img.jpg",
+      "redirectText": "Check it out!",
+      "redirectLink": "#",
+      "datePosted": "MMMM DD, YYYY"
+    },
+    {
+      "header": "Dummy content",
+      "content": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ex erat, in semper nibh suscipit non. Praesent vehicula, sem nec lacinia volutpat, lacus enim suscipit urna, suscipit faucibus urna odio sed augue. ", 
+      "Suspendisse euismod ante ut dignissim tincidunt. Proin tristique est ut enim elementum, et lobortis orci condimentum. Sed pretium ultricies sem ut imperdiet. Nunc tempor dui libero, sit amet rhoncus neque efficitur vel. Vivamus nec maximus orci. Donec accumsan tincidunt enim sed mattis. Aenean eget luctus libero."],
+      "bannerImagePath": "./assets/banner_img.jpg",
+      "redirectText": "Check it out!",
+      "redirectLink": "#",
+      "datePosted": "MMMM DD, YYYY"
+    },
+    {
+      "header": "Dummy content",
+      "content": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ex erat, in semper nibh suscipit non. Praesent vehicula, sem nec lacinia volutpat, lacus enim suscipit urna, suscipit faucibus urna odio sed augue. ", 
+      "Suspendisse euismod ante ut dignissim tincidunt. Proin tristique est ut enim elementum, et lobortis orci condimentum. Sed pretium ultricies sem ut imperdiet. Nunc tempor dui libero, sit amet rhoncus neque efficitur vel. Vivamus nec maximus orci. Donec accumsan tincidunt enim sed mattis. Aenean eget luctus libero."],
+      "bannerImagePath": "./assets/banner_img.jpg",
+      "redirectText": "Check it out!",
+      "redirectLink": "#",
+      "datePosted": "MMMM DD, YYYY"
+    },
+    {
+      "header": "Dummy content",
+      "content": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ex erat, in semper nibh suscipit non. Praesent vehicula, sem nec lacinia volutpat, lacus enim suscipit urna, suscipit faucibus urna odio sed augue. ", 
+      "Suspendisse euismod ante ut dignissim tincidunt. Proin tristique est ut enim elementum, et lobortis orci condimentum. Sed pretium ultricies sem ut imperdiet. Nunc tempor dui libero, sit amet rhoncus neque efficitur vel. Vivamus nec maximus orci. Donec accumsan tincidunt enim sed mattis. Aenean eget luctus libero."],
+      "bannerImagePath": "./assets/banner_img.jpg",
+      "redirectText": "Check it out!",
+      "redirectLink": "#",
+      "datePosted": "MMMM DD, YYYY"
+    },
+    {
+      "header": "Dummy content",
+      "content": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ex erat, in semper nibh suscipit non. Praesent vehicula, sem nec lacinia volutpat, lacus enim suscipit urna, suscipit faucibus urna odio sed augue. ", 
+      "Suspendisse euismod ante ut dignissim tincidunt. Proin tristique est ut enim elementum, et lobortis orci condimentum. Sed pretium ultricies sem ut imperdiet. Nunc tempor dui libero, sit amet rhoncus neque efficitur vel. Vivamus nec maximus orci. Donec accumsan tincidunt enim sed mattis. Aenean eget luctus libero."],
+      "bannerImagePath": "./assets/banner_img.jpg",
+      "redirectText": "Check it out!",
+      "redirectLink": "#",
+      "datePosted": "MMMM DD, YYYY"
+    },
+    {
+      "header": "Dummy content",
+      "content": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ex erat, in semper nibh suscipit non. Praesent vehicula, sem nec lacinia volutpat, lacus enim suscipit urna, suscipit faucibus urna odio sed augue. ", 
+      "Suspendisse euismod ante ut dignissim tincidunt. Proin tristique est ut enim elementum, et lobortis orci condimentum. Sed pretium ultricies sem ut imperdiet. Nunc tempor dui libero, sit amet rhoncus neque efficitur vel. Vivamus nec maximus orci. Donec accumsan tincidunt enim sed mattis. Aenean eget luctus libero."],
+      "bannerImagePath": "./assets/banner_img.jpg",
+      "redirectText": "Check it out!",
+      "redirectLink": "#",
+      "datePosted": "MMMM DD, YYYY"
+    },
+    {
+      "header": "Dummy content",
+      "content": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ex erat, in semper nibh suscipit non. Praesent vehicula, sem nec lacinia volutpat, lacus enim suscipit urna, suscipit faucibus urna odio sed augue. ", 
+      "Suspendisse euismod ante ut dignissim tincidunt. Proin tristique est ut enim elementum, et lobortis orci condimentum. Sed pretium ultricies sem ut imperdiet. Nunc tempor dui libero, sit amet rhoncus neque efficitur vel. Vivamus nec maximus orci. Donec accumsan tincidunt enim sed mattis. Aenean eget luctus libero."],
+      "bannerImagePath": "./assets/banner_img.jpg",
+      "redirectText": "Check it out!",
+      "redirectLink": "#",
+      "datePosted": "MMMM DD, YYYY"
+    },
+    {
+      "header": "Dummy content",
+      "content": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ex erat, in semper nibh suscipit non. Praesent vehicula, sem nec lacinia volutpat, lacus enim suscipit urna, suscipit faucibus urna odio sed augue. ", 
+      "Suspendisse euismod ante ut dignissim tincidunt. Proin tristique est ut enim elementum, et lobortis orci condimentum. Sed pretium ultricies sem ut imperdiet. Nunc tempor dui libero, sit amet rhoncus neque efficitur vel. Vivamus nec maximus orci. Donec accumsan tincidunt enim sed mattis. Aenean eget luctus libero."],
+      "bannerImagePath": "./assets/banner_img.jpg",
+      "redirectText": "Check it out!",
+      "redirectLink": "#",
+      "datePosted": "MMMM DD, YYYY"
     }
-  ]
+  ],
+  "mode":"first_is_recent"
 }
