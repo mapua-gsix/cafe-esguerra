@@ -80,6 +80,11 @@ section.enclosed > div {
   height: 100%;
   text-align: left;
 }
+.promos {
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+}
 .promo-item {
   display: flex;
   width: 100%;
@@ -115,11 +120,7 @@ section.enclosed > div {
   font-size: medium;
   line-height: 36px;
 }
-.group {
-  display: flex;
-  flex-direction: column;
-  gap: 2vh;
-}
+
 .promo-date {
   opacity: 0.5;
   font-style: italic;
