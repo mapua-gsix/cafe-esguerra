@@ -96,10 +96,11 @@
   display: flex;
 }
 .navlinks > ul > li {
-  padding: 12px 1.5vw;
+  padding: 0 1.5vw;
   white-space: nowrap;
 }
 .navlinks ul li a {
+  padding: 24px 0;
   text-decoration: none;
 }
 .navlinks > ul > li:last-child:hover .products-dropdown {
@@ -253,7 +254,7 @@ a.active {
     color: var(--text);
   }
   .navlinks > ul > li:last-child > span {
-    font-size: 14px;
+    font-size: 16px;
     transition: 0.3s ease;
   }
   .menutoggle {
@@ -270,7 +271,7 @@ a.active {
     transition: max-width 0.3s ease;
   }
   .hideable {
-    display: flex;
+    display: unset;
   }
   .products-dropdown {
     overflow: hidden;
@@ -288,5 +289,13 @@ a.active {
   .navbar .products-dropdown span,
   .navbar.transparent .products-dropdown span {
     color: var(--text);
+  }
+  .navlinks > ul > li {
+    padding: 12px 1.5vw;
+    white-space: nowrap;
+  }
+  .navlinks ul li a {
+    padding: 12px 1.5vw;
+    text-decoration: none;
   }
 }
