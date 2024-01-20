@@ -16,7 +16,8 @@
 .navbar a {
   transition: all 0.3s ease;
 }
-.navbar div button {
+.ordernow button,
+.back-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,18 +32,33 @@
   padding: 8px;
   font-weight: bold;
   gap: 6px;
+  position: relative;
 }
 .ordernow span {
   color: var(--text);
 }
-.navbar div:nth-child(3) button:hover {
+.ordernow .badge {
+  background-color: var(--accent);
+  padding: 2px 6px;
+  border-radius: 100px;
+  font-size: x-small;
+  position: absolute;
+  left: 20px;
+  top: 4px;
+  transition: all 0.3s ease;
+}
+.ordernow button:hover {
   padding-inline: 12px;
   background-color: var(--accent);
   color: var(--textlight);
   transition: all 0.3s ease;
 }
-.navbar div:nth-child(3) button:hover span {
+.ordernow button:hover span {
   color: var(--textlight);
+}
+.ordernow button:hover .badge {
+  background-color: var(--textlight);
+  color: var(--accent);
 }
 .navbar img {
   height: 65%;

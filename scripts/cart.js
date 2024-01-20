@@ -1,3 +1,5 @@
+const cart_badge = document.getElementById("badge");
+
 function add_to_cart(product_id) {
   var cart = JSON.parse(sessionStorage.getItem("cart"));
   if (cart === null) {
@@ -7,36 +9,24 @@ function add_to_cart(product_id) {
     ungrouped_cart.push(product_id);
     sessionStorage.setItem("cart", JSON.stringify(group_items(ungrouped_cart)));
   }
+  onModifyCart();
 }
 function remove_from_cart(product) {
   var cart = JSON.parse(sessionStorage.getItem("cart"));
   if (cart === null) {
+    return;
   } else {
-    console.log(product.id);
-    var index = cart
-      .map(function (e) {
-        return e.id;
-      })
-      .indexOf(product.id);
-    console.log(index);
-    cart.splice(index, 1);
-    sessionStorage.setItem("cart", JSON.stringify(cart));
   }
-}
-function remove_items_from_cart(product_id, amount) {
-  var cart = JSON.parse(sessionStorage.getItem("cart"));
-  if (cart === null) {
-  } else {
-    var ungrouped_cart = ungroup_cart(cart);
-    var i = amount;
-
-    while (i--) {
-      if (cart[i] === product_id) {
-        ungrouped_cart.splice(i, 1);
-      }
-    }
-    sessionStorage.setItem("cart", JSON.stringify(group_items(ungrouped_cart)));
-  }
+  console.log(product.id);
+  var index = cart
+    .map(function (e) {
+      return e.id;
+    })
+    .indexOf(product.id);
+  console.log(index);
+  cart.splice(index, 1);
+  sessionStorage.setItem("cart", JSON.stringify(cart));
+  onModifyCart();
 }
 function modify_item_quantities(product_id, target) {
   var cart = JSON.parse(sessionStorage.getItem("cart"));
@@ -50,6 +40,7 @@ function modify_item_quantities(product_id, target) {
     .indexOf(product_id);
   cart[index].quantity = target;
   sessionStorage.setItem("cart", JSON.stringify(cart));
+  onModifyCart();
 }
 function group_items(cart) {
   var array = [];
@@ -72,4 +63,10 @@ function ungroup_cart(grouped_cart) {
     }
   });
   return array;
+}
+function onModifyCart() {
+  var cart = JSON.parse(sessionStorage.getItem("cart"));
+  var ungrouped_cart = ungroup_cart(cart);
+  console.log(ungrouped_cart.length);
+  cart_badge.textContent = ungrouped_cart.length;
 }
