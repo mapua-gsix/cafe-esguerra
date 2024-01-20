@@ -70,3 +70,4 @@ function onModifyCart() {
   console.log(ungrouped_cart.length);
   cart_badge.textContent = ungrouped_cart.length;
 }
+onModifyCart();
