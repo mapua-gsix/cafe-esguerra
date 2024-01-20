@@ -27,10 +27,12 @@ section {
   gap: 24px;
   background: var(--primary);
   padding: 48px 12px;
+  overflow: hidden;
 }
 .image {
   aspect-ratio: 1;
   height: 100%;
+  box-shadow: var(--imageshadowsmall);
 }
 .product-index {
   width: 2%;

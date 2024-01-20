@@ -4,16 +4,19 @@ fetch("../content/products.json").then((response) =>
 
 function render_item(cartItem, data, i) {
   var item_template = document.getElementById("order-item-template").content;
+
+  //FINDING CORRESPONDING PRODUCT FROM PRODUCTS.JSON
   const isSameId = (element) => element.id == cartItem.id;
   var index = data.products.findIndex(isSameId);
 
+  //CREATING ITEM
   var clone = document.importNode(item_template, true);
 
+  //SETTING CHILDREN DATA
   var price = clone.querySelector(".item-price");
   price.textContent = `Price: ₱${
     data.products[index].price * cartItem.quantity
   }`;
-
   clone.querySelector(".product-name").textContent = data.products[index].name;
   clone.querySelector(".product-index").textContent = i + 1;
   var quantity = clone.querySelector(".product-quantity");
