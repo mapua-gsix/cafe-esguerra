@@ -105,10 +105,18 @@ section {
   padding: 8px;
   cursor: pointer;
   gap: 8px;
+  transition: all 0.3s ease;
 }
 .remove-button span {
   color: var(--text);
   font-size: 18px;
+}
+.remove-button:hover {
+  background-color: var(--accent);
+  color: var(--textlight);
+}
+.remove-button:hover span {
+  color: var(--textlight);
 }
 .item-price {
   font-size: medium;
