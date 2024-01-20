@@ -19,6 +19,13 @@ function render_item(cartItem, data, i) {
   var quantity = clone.querySelector(".product-quantity");
   quantity.value = cartItem.quantity;
   function changeQuantity(value) {
+    if (value < 1 || value == null) {
+      value = 1;
+      quantity.value = 1;
+    } else if (value > 100) {
+      value = 100;
+      quantity.value = 100;
+    }
     modify_item_quantities(cartItem.id, value);
 
     price.textContent = `Price: ₱${data.products[index].price * value}`;
@@ -38,9 +45,7 @@ function render_item(cartItem, data, i) {
     changeQuantity(quantity.value);
   };
   clone.querySelector(".remove").onclick = function () {
-    if (quantity.value-- == 1) {
-      quantity.value = 1;
-    }
+    quantity.value--;
     changeQuantity(quantity.value);
   };
   clone.querySelector(
