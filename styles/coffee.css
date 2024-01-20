@@ -148,3 +148,8 @@ body {
 .carousel-controls button:hover span {
   opacity: 1;
 }
+
+.products-section {
+  max-height: unset;
+  height: fit-content;
+}

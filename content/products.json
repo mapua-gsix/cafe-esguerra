@@ -21,6 +21,28 @@
             ]
         },
         {
+            "id":"1001",
+            "name":"Test1 (Coffee Item)",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":"100.00",
+            "ingredients":[
+                "water",
+                "milk"
+            ]
+        },
+        {
+            "id":"1002",
+            "name":"Test2 (Coffee Item)",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":"100.00",
+            "ingredients":[
+                "water",
+                "milk"
+            ]
+        },
+        {
             "id":"2000",
             "name":"Test (Beverage Item)",
             "description":"This is a test product",

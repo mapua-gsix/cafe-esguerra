@@ -16,7 +16,7 @@
     <title>Café Esguerra | by cafethena</title>
   </head>
 
-  <body>
+  <body onload="appendProducts('coffee')">
     <header>
       <nav id="navbar" class="navbar transparent">
         <div class="back">
@@ -114,6 +114,24 @@
 
       <div class="right-container"></div>
     </section>
+    <section class="products-section">
+      <!--Content is loaded using ../scripts/load_products.js
+      Ibahin mo nalang yung layout and style kung gusto mo pero dapat pareho parin yung class names - YUAN -->
+      <div id="products" class="products">
+        <template id="product-item-template">
+          <div class="product-item">
+            <img class="product-image" />
+            <div class="product-name"></div>
+            <div class="product-description"></div>
+            <div class="product-price"></div>
+            <button class="add-to-cart-button">
+              <span class="material-symbols-outlined">add_shopping_cart</span
+              >ADD TO CART
+            </button>
+          </div>
+        </template>
+      </div>
+    </section>
 
     <!-- ADD <section>s as you wish. 
         A <section>'s height is only as large as 100vw to make it look good on mobile. 
@@ -157,4 +175,5 @@
   ></script>
   <script src="../scripts/load_animations.js" crossorigin="anonymous"></script>
   <script src="../scripts/cart.js" crossorigin="anonymous"></script>
+  <script src="../scripts/load_products.js" crossorigin="anonymous"></script>
 </html>
