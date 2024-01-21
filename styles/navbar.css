@@ -21,7 +21,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Lustria", serif;
+  font-family: var(--headerfont);
   background-color: transparent;
   border: var(--defaultborder);
   border-color: var(--accent);
@@ -223,6 +223,7 @@ a.active {
     width: 0%;
     height: 0;
   }
+
   .navbar div:nth-child(2) {
     display: flex;
     padding-top: 36px;

@@ -5,7 +5,7 @@ section {
   justify-content: center;
   min-height: 100vh;
   padding: 10px;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--bodyfont);
   background: linear-gradient(115deg, #783b02 10%, #ac7146 90%);
 }
 .container {
@@ -19,7 +19,7 @@ section {
   text-align: center;
   font-size: 41px;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--bodyfont);
   background: -webkit-linear-gradient(
     right,
     #783b02,

@@ -108,7 +108,7 @@ section.enclosed > div {
   object-fit: cover;
 }
 .promo-header {
-  font-family: "Lustria", sans-serif;
+  font-family: var(--headerfont);
   color: var(--text);
   font-weight: bold;
   font-size: x-large;
@@ -127,7 +127,7 @@ section.enclosed > div {
 }
 .promo-redirectButton {
   display: flex;
-  font-family: "Lustria", sans-serif;
+  font-family: var(--headerfont);
   font-size: large;
   background-color: transparent;
   border: none;

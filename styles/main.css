@@ -32,7 +32,9 @@
   --imageshadowsmall: -2vmin -2vmin 0px 0px var(--primarydark);
   --defaultborder: 3px var(--textlight) solid;
   --defaultbezier: cubic-bezier(0.81, 0.02, 0.2, 0.98);
-
+  --brandfont: "black-mango", serif;
+  --headerfont: "Lustria", serif;
+  --bodyfont: "Poppins", sans-serif;
   /*DECLARE VARIABLES ABOVE ^^^*/
 }
 .material-symbols-outlined {
@@ -49,7 +51,7 @@ body {
   margin: 0;
   padding: 0;
   background: var(--primary);
-  font-family: "Poppins", sans-serif;
+  font-family: var(--bodyfont);
   overflow-x: hidden;
 }
 ::selection {
@@ -85,7 +87,7 @@ h2,
 h3,
 h4,
 li {
-  font-family: "Lustria", serif;
+  font-family: var(--headerfont);
 }
 li {
   font-weight: bold;
@@ -109,14 +111,14 @@ a:hover > span {
   animation-timing-function: ease-in-out;
 }
 p {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--bodyfont);
 }
 img {
   user-select: none;
 }
 
 .default_button {
-  font-family: "Lustria", serif;
+  font-family: var(--headerfont);
   background-color: transparent;
   border: var(--defaultborder);
   cursor: pointer;
@@ -133,7 +135,7 @@ img {
   transition: all 0.3s ease;
 }
 .large_button {
-  font-family: "Lustria", serif;
+  font-family: var(--headerfont);
   background-color: transparent;
   border: var(--defaultborder);
   cursor: pointer;
@@ -168,7 +170,7 @@ section.adapt-to-header {
   padding-top: 80px;
 }
 .brandfont {
-  font-family: "black-mango", sans-serif;
+  font-family: "black-mango", serif;
 }
 .group {
   display: inherit;
