@@ -15,7 +15,6 @@ function showSlides(n) {
   if (n < 0) {
     slideIndex = images.length - 1;
   }
-  console.log(slideIndex);
   for (i = 0; i < nav.length; i++) {
     nav[i].className = nav[i].className.replace(" active", "");
   }

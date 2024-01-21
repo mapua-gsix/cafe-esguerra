@@ -67,7 +67,6 @@ function ungroup_cart(grouped_cart) {
 function onModifyCart() {
   var cart = JSON.parse(sessionStorage.getItem("cart"));
   var ungrouped_cart = ungroup_cart(cart);
-  console.log(ungrouped_cart.length);
   cart_badge.textContent = ungrouped_cart.length;
 }
 onModifyCart();
