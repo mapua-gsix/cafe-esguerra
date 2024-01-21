@@ -1,13 +1,25 @@
 const cart_badge = document.getElementById("badge");
 
-function add_to_cart(product_id) {
+function add_to_cart(item) {
   var cart = JSON.parse(sessionStorage.getItem("cart"));
   if (cart === null) {
-    sessionStorage.setItem("cart", JSON.stringify(group_items([product_id])));
+    sessionStorage.setItem("cart", JSON.stringify([item]));
   } else {
-    var ungrouped_cart = ungroup_cart(cart);
-    ungrouped_cart.push(product_id);
-    sessionStorage.setItem("cart", JSON.stringify(group_items(ungrouped_cart)));
+    let foundDuplicate = false;
+    cart.forEach((cartItem) => {
+      item.quantity = cartItem.quantity;
+      if (JSON.stringify(item) === JSON.stringify(cartItem)) {
+        console.log(item, cartItem);
+        cartItem.quantity++;
+        foundDuplicate = true;
+      }
+      item.quantity = 1;
+    });
+    if (!foundDuplicate) {
+      cart.push(item);
+    }
+
+    sessionStorage.setItem("cart", JSON.stringify(cart));
   }
   onModifyCart();
 }
@@ -17,12 +29,13 @@ function remove_from_cart(product) {
     return;
   } else {
   }
-  console.log(product.id);
-  var index = cart
-    .map(function (e) {
-      return e.id;
-    })
-    .indexOf(product.id);
+  console.log(product);
+  let index = 0;
+  cart.forEach((cartItem, i) => {
+    if (JSON.stringify(product) === JSON.stringify(cartItem)) {
+      index = i;
+    }
+  });
   console.log(index);
   cart.splice(index, 1);
   sessionStorage.setItem("cart", JSON.stringify(cart));
@@ -62,11 +75,26 @@ function ungroup_cart(grouped_cart) {
       array.push(group.id);
     }
   });
+  console.log(array);
   return array;
 }
 function onModifyCart() {
   var cart = JSON.parse(sessionStorage.getItem("cart"));
   var ungrouped_cart = ungroup_cart(cart);
   cart_badge.textContent = ungrouped_cart.length;
+}
+function handle_submit(event) {
+  event.preventDefault();
+  console.log(event.target.temperatureOptionInput.value); // from elements property
+  var cart_item = {
+    id: event.target.productID.value,
+    quantity: 1,
+    customizations: [
+      event.target.sizeOptionInput.value,
+      event.target.temperatureOptionInput.value,
+      event.target.otherOptions,
+    ],
+  };
+  add_to_cart(cart_item);
 }
 onModifyCart();
