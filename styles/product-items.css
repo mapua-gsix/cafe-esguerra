@@ -1,0 +1,60 @@
+.products-section {
+  max-height: unset;
+  height: fit-content;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2vw;
+}
+.product-item {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+
+  gap: 24px;
+  padding: 24px;
+}
+.product-image {
+  object-fit: cover;
+  border: var(--defaultborder);
+  border-color: var(--accent);
+  border-width: 4px;
+  width: 80%;
+  aspect-ratio: 1;
+}
+.product-name {
+  font-family: var(--headerfont);
+  font-size: larger;
+  font-weight: 600;
+}
+.product-description {
+  font-style: italic;
+}
+.product-price {
+  font-family: var(--headerfont);
+  font-size: x-large;
+}
+.product-price::before {
+  content: "₱";
+}
+.add-to-cart-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: var(--accent);
+  color: var(--text);
+  gap: 8px;
+}
+.add-to-cart-button span {
+  color: var(--text);
+}
+.add-to-cart-button:hover {
+  color: var(--textlight);
+  background-color: var(--accent);
+}
+.add-to-cart-button:hover span {
+  color: var(--textlight);
+}
