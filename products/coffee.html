@@ -134,7 +134,97 @@
         </template>
       </div>
     </section>
+    <div id="options-modal" class="options-modal">
+      <div class="modal-content">
+        <h2>Customize your order...</h2>
+        <div>
+          <div class="product-view" id="product-view">
+            <image class="product-view-image"></image>
+            <div class="product-view-details">
+              <span class="product-name"></span>
+              <span class="product-price"></span>
+            </div>
+          </div>
+          <form onsubmit="handle_submit(event)" class="options" id="options">
+            <input
+              class="product-id"
+              name="productID"
+              type="text"
+              style="display: none"
+            />
+            <div class="group option-group">
+              <span class="option-label">Size:</span>
+              <div class="size-options" id="size-options">
+                <template
+                  id="size-option-template"
+                  class="size-option-template"
+                >
+                  <label class="input-container">
+                    <input
+                      class="size-option-input"
+                      type="radio"
+                      required
+                      name="sizeOptionInput"
+                    />
+                    <span class="checkmark"></span>
+                  </label>
 
+                  <span class="size-option option"></span>
+                </template>
+              </div>
+            </div>
+            <div class="group option-group">
+              <span class="option-label">Temperature:</span>
+              <div class="temperature-options" id="temperature-options">
+                <template
+                  id="temperature-option-template"
+                  class="temperature-option-template"
+                >
+                  <label class="input-container">
+                    <input
+                      class="temperature-option-input"
+                      type="radio"
+                      required
+                      name="temperatureOptionInput"
+                    />
+                    <span class="checkmark"></span>
+                  </label>
+                  <span class="temperature-option option"></span>
+                </template>
+              </div>
+            </div>
+            <div class="group option-group">
+              <span class="option-label">Other options:</span>
+              <div class="other-options" id="other-options">
+                <template
+                  id="other-option-template"
+                  class="other-option-template"
+                >
+                  <label class="input-container">
+                    <input
+                      class="other-option-input"
+                      type="radio"
+                      required
+                      name="otherOptionInput"
+                    />
+                    <span class="checkmark"></span>
+                  </label>
+                  <span class="other-option option"></span>
+                </template>
+              </div>
+            </div>
+
+            <button type="submit" class="add-to-cart-button default_button">
+              <span class="material-symbols-outlined">add_shopping_cart</span
+              >ADD TO CART
+            </button>
+          </form>
+        </div>
+        <button onclick="close_options()" class="close-button">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+    </div>
     <!-- ADD <section>s as you wish. 
         A <section>'s height is only as large as 100vw to make it look good on mobile. 
             If you want a larger section, set its class to class="default" or simply make your own class.-->
@@ -178,4 +268,5 @@
   <script src="../scripts/load_animations.js" crossorigin="anonymous"></script>
   <script src="../scripts/cart.js" crossorigin="anonymous"></script>
   <script src="../scripts/load_products.js" crossorigin="anonymous"></script>
+  <script src="../scripts/show_options.js"></script>
 </html>
