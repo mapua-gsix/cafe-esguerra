@@ -18,7 +18,10 @@
             "ingredients":[
                 "water",
                 "milk"
-            ]
+            ],
+            "sizeOptions":[],
+            "temperature":[],
+            "otherOptions":[]
         },
         {
             "id":"1001",
@@ -29,7 +32,10 @@
             "ingredients":[
                 "water",
                 "milk"
-            ]
+            ],
+            "sizeOptions":[],
+            "temperature":[],
+            "otherOptions":[]
         },
         {
             "id":"1002",
@@ -40,7 +46,10 @@
             "ingredients":[
                 "water",
                 "milk"
-            ]
+            ],
+            "sizeOptions":[],
+            "temperature":[],
+            "otherOptions":[]
         },
         {
             "id":"2000",
@@ -51,7 +60,10 @@
             "ingredients":[
                 "water",
                 "milk"
-            ]
+            ],
+            "sizeOptions":[],
+            "temperature":[],
+            "otherOptions":[]
         },
         {
             "id":"3000",
@@ -62,7 +74,10 @@
             "ingredients":[
                 "water",
                 "milk"
-            ]
+            ],
+            "sizeOptions":[],
+            "temperature":[],
+            "otherOptions":[]
         }
     ]
 }
