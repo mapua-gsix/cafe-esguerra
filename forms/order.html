@@ -15,7 +15,7 @@
     />
     <title>Café Esguerra | by cafethena</title>
   </head>
-  <body>
+  <body onload="load_cart()">
     <header>
       <nav id="navbar" class="navbar">
         <div class="logo"><img src="../assets/logo.svg" alt="logo" /></div>
@@ -81,15 +81,6 @@
     <section class="adapt-to-header">
       <div class="cart">
         <h1>Your cart:</h1>
-        <button onclick="add_to_cart('1000')" class="default_button">
-          Add to cart demo 1
-        </button>
-        <button onclick="add_to_cart('2000')" class="default_button">
-          Add to cart demo 2
-        </button>
-        <button onclick="add_to_cart('3000')" class="default_button">
-          Add to cart demo 3
-        </button>
         <div class="orders" id="ordercontainer">
           <template id="order-item-template">
             <div class="order-item">
@@ -172,14 +163,5 @@
   ></script>
   <script src="../scripts/load_animations.js" crossorigin="anonymous"></script>
   <script src="../scripts/cart.js"></script>
-  <script>
-    function load_orders() {
-      console.log("loading orders...");
-      var head = document.getElementsByTagName("head")[0];
-      var script = document.createElement("script");
-      script.src = "../scripts/load_cart.js";
-      head.appendChild(script);
-    }
-    load_orders();
-  </script>
+  <script src="../scripts/load_cart.js"></script>
 </html>
