@@ -35,7 +35,7 @@ function render_product(product) {
   clone.querySelector(".product-description").textContent = product.description;
   clone.querySelector(".product-price").textContent = product.price;
   clone.querySelector(".add-to-cart-button").onclick = function () {
-    add_to_cart(product.id);
+    show_options(product);
   };
 
   return clone;
