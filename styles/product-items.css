@@ -1,3 +1,6 @@
+body.modal-active {
+  overflow: hidden;
+}
 .products-section {
   max-height: unset;
   height: fit-content;
@@ -59,7 +62,7 @@
   color: var(--textlight);
 }
 .options-modal {
-  display: none; /* Hidden by default */
+  display: flex; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 999; /* Sit on top */
   left: 0;
@@ -71,6 +74,13 @@
   align-items: center;
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.options-modal.open {
+  opacity: 1;
+  pointer-events: all;
 }
 .modal-content {
   background-color: var(--primary);
@@ -78,10 +88,17 @@
   height: clamp(400px, 50%, 600px);
   display: flex;
   flex-direction: column;
+  opacity: 0;
   align-items: center;
   position: relative;
   gap: 12px;
   padding: 12px;
+  transform: translateY(20vh);
+  transition: all 0.5s var(--defaultbezier);
+}
+.modal-content.open {
+  transform: translateY(0);
+  opacity: 1;
 }
 .modal-content > div {
   display: flex;
@@ -228,3 +245,57 @@
   background: white;
 }
 /*end of CUSTOM RADIO BUTTON CSS*/
+
+@media screen and (max-width: 900px) {
+  .modal-content {
+    height: 100dvh;
+    padding: 0;
+    width: clamp(360px, 80%, 500px);
+    justify-content: center;
+  }
+  .modal-content > div {
+    flex-direction: column;
+  }
+  .product-view {
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 40%;
+    width: 100%;
+    overflow: hidden;
+  }
+  .product-view-image {
+    width: 42%;
+    height: unset;
+    aspect-ratio: 1;
+  }
+  .product-view-details {
+    width: 42%;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .option-label {
+    font-size: smaller;
+  }
+  .option {
+    font-size: smaller;
+  }
+}
+@media screen and (max-height: 600px) {
+  .product-view {
+    height: 50%;
+  }
+  .product-view-image {
+    display: none;
+  }
+  .modal-content > h2 {
+    display: none;
+  }
+  .modal-content > div {
+    height: 100%;
+  }
+  .product-view-details {
+    flex-direction: row;
+    width: 80%;
+    align-items: center;
+  }
+}

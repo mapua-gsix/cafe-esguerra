@@ -4,7 +4,6 @@ function show_options(product) {
   const temperatureOptions = product.temperature;
   const otherOptions = product.otherOptions;
   const initialAmountOfChildren = 1;
-  console.log(sizeOptions, temperatureOptions, otherOptions);
 
   const sizeOptionsFragment = document.createDocumentFragment();
   const temperatureOptionsFragment = document.createDocumentFragment();
@@ -45,7 +44,7 @@ function show_options(product) {
     sizeOptionsFragment.appendChild(
       render_options(
         sizeOption.name,
-        sizeOption,
+        sizeOption.price,
         sizeOptionsTemplate,
         ".size-option",
         product
@@ -56,7 +55,7 @@ function show_options(product) {
     temperatureOptionsFragment.appendChild(
       render_options(
         temperatureOption,
-        temperatureOption,
+        0,
         temperatureOptionsTemplate,
         ".temperature-option",
         product
@@ -67,7 +66,7 @@ function show_options(product) {
     otherOptionsFragment.appendChild(
       render_options(
         otherOption.name,
-        otherOption,
+        otherOption.price,
         otherOptionsTemplate,
         ".other-option",
         product
@@ -77,15 +76,23 @@ function show_options(product) {
   sizeOptionsContainer.appendChild(sizeOptionsFragment);
   temperatureOptionsContainer.appendChild(temperatureOptionsFragment);
   otherOptionsContainer.appendChild(otherOptionsFragment);
-  optionsmodal.style.display = "flex";
+  optionsmodal.classList.add("open");
+  optionsmodal.addEventListener("click", (event) => {
+    if (event.target.id === "options-modal") {
+      close_options();
+    }
+  });
+  document.getElementById("modal-content").classList.add("open");
+  document.getElementsByTagName("body")[0].classList.add("modal-active");
 }
 function close_options() {
-  const optionsmodal = document.getElementById("options-modal");
-  optionsmodal.style.display = "none";
+  document.getElementById("options-modal").classList.remove("open");
+  document.getElementById("modal-content").classList.remove("open");
+  document.getElementsByTagName("body")[0].classList.remove("modal-active");
 }
 function render_options(
   optionName,
-  optionValue,
+  optionPrice,
   template,
   class_name,
   product
@@ -94,9 +101,10 @@ function render_options(
   clone.querySelector(class_name).textContent = optionName;
   const input = clone.querySelector(`${class_name}-input`);
   input.value = optionName;
-  if (class_name === `.size-option`) {
+  input.dataset.price = optionPrice;
+  if (class_name === `.size-option` || class_name === ".other-option") {
     input.oninput = function () {
-      setProductPrice(optionValue.price + product.price);
+      setProductPrice(product);
     };
   }
 
@@ -112,10 +120,23 @@ function setProductViewInfo(product) {
   productview.querySelector(".product-view-image").src = product.image;
   options.querySelector(".product-id").value = product.id;
 }
-function setProductPrice(price) {
+function setProductPrice(product) {
+  var sizePrice = 0;
+  var otherPrice = 0;
+  document.options.sizeOptionInput.forEach((element) => {
+    if (element.checked) {
+      sizePrice = element.dataset.price;
+    }
+  });
+  document.options.otherOptionInput.forEach((element) => {
+    if (element.checked) {
+      otherPrice = element.dataset.price;
+    }
+  });
   const productview = document.getElementById("product-view");
-  productview.querySelector(".product-price").textContent =
-    parseFloat(price).toFixed(2);
+  productview.querySelector(".product-price").textContent = parseFloat(
+    parseFloat(product.price) + parseFloat(sizePrice) + parseFloat(otherPrice)
+  ).toFixed(2);
 }
 function getProductPrice() {
   const productview = document.getElementById("product-view");
