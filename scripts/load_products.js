@@ -33,7 +33,9 @@ function render_product(product) {
   clone.querySelector(".product-name").textContent = product.name;
   clone.querySelector(".product-image").src = product.image;
   clone.querySelector(".product-description").textContent = product.description;
-  clone.querySelector(".product-price").textContent = product.price;
+  clone.querySelector(".product-price").textContent = parseFloat(
+    product.price
+  ).toFixed(2);
   clone.querySelector(".add-to-cart-button").onclick = function () {
     show_options(product);
   };

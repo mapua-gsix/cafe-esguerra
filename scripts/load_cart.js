@@ -15,9 +15,9 @@ function load_cart() {
 
     //SETTING CHILDREN DATA
     var price = clone.querySelector(".item-price");
-    price.textContent = `Price: ₱${
-      data.products[index].price * cartItem.quantity
-    }`;
+    price.textContent = `Price: ₱${parseFloat(
+      cartItem.priceEach * cartItem.quantity
+    ).toFixed(2)}`;
     clone.querySelector(".product-name").textContent =
       data.products[index].name;
     clone.querySelector(".product-index").textContent = i + 1;
@@ -31,9 +31,10 @@ function load_cart() {
         value = 100;
         quantity.value = 100;
       }
-      modify_item_quantities(cartItem.id, value);
-
-      price.textContent = `Price: ₱${data.products[index].price * value}`;
+      modify_item_quantities(cartItem, value);
+      price.textContent = `Price: ₱${parseFloat(
+        cartItem.priceEach * value
+      ).toFixed(2)}`;
     }
     quantity.onchange = function () {
       changeQuantity(this.value);
@@ -53,20 +54,34 @@ function load_cart() {
       quantity.value--;
       changeQuantity(quantity.value);
     };
-    clone.querySelector(
-      ".product-price"
-    ).textContent = `₱${data.products[index].price} each`;
+    clone.querySelector(".product-price").textContent = `₱${parseFloat(
+      cartItem.priceEach
+    ).toFixed(2)} each`;
+
+    var customizations = clone.querySelector(".product-customizations");
+    customizations.appendChild(generateChildren(cartItem.customizations));
 
     return clone;
   }
+  function generateChildren(array) {
+    var frag = document.createDocumentFragment();
+    array.forEach((element) => {
+      if (element != null) {
+        var span = document.createElement("span");
+        span.textContent = element;
+        span.classList.add("product-customization");
+        frag.appendChild(span);
+      }
+    });
+    return frag;
+  }
   function appendOrders(data) {
     const ordercontainer = document.getElementById("ordercontainer");
-    console.log(ordercontainer.children);
     while (ordercontainer.children.length > 1) {
       ordercontainer.removeChild(ordercontainer.lastChild);
     }
     var cart = JSON.parse(sessionStorage.getItem("cart"));
-    console.log(cart);
+    console.log("ORDERS:", cart);
     if (cart != null) {
       const fragment = document.createDocumentFragment();
       for (let i = 0; i < cart.length; i++) {
