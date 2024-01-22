@@ -29,28 +29,49 @@ function remove_from_cart(product) {
     return;
   } else {
   }
-  console.log(product);
   let index = 0;
   cart.forEach((cartItem, i) => {
-    if (JSON.stringify(product) === JSON.stringify(cartItem)) {
+    if (
+      JSON.stringify({
+        id: product.id,
+        priceEach: product.priceEach,
+        customizations: product.customizations,
+      }) ===
+      JSON.stringify({
+        id: cartItem.id,
+        priceEach: cartItem.priceEach,
+        customizations: cartItem.customizations,
+      })
+    ) {
       index = i;
     }
   });
-  console.log(index);
   cart.splice(index, 1);
   sessionStorage.setItem("cart", JSON.stringify(cart));
   onModifyCart();
 }
-function modify_item_quantities(product_id, target) {
+function modify_item_quantities(product, target) {
   var cart = JSON.parse(sessionStorage.getItem("cart"));
   if (cart === null) {
     return;
   }
-  var index = cart
-    .map(function (e) {
-      return e.id;
-    })
-    .indexOf(product_id);
+  let index = 0;
+  cart.forEach((cartItem, i) => {
+    if (
+      JSON.stringify({
+        id: product.id,
+        priceEach: product.priceEach,
+        customizations: product.customizations,
+      }) ===
+      JSON.stringify({
+        id: cartItem.id,
+        priceEach: cartItem.priceEach,
+        customizations: cartItem.customizations,
+      })
+    ) {
+      index = i;
+    }
+  });
   cart[index].quantity = target;
   sessionStorage.setItem("cart", JSON.stringify(cart));
   onModifyCart();
@@ -72,20 +93,24 @@ function ungroup_cart(grouped_cart) {
   var array = [];
   grouped_cart.forEach((group) => {
     for (let i = 0; i < group.quantity; i++) {
-      array.push(group.id);
+      array.push({
+        id: group.id,
+        customizations: group.customizations,
+        price: group.priceEach,
+      });
     }
   });
-  console.log(array);
+
   return array;
 }
 function onModifyCart() {
   var cart = JSON.parse(sessionStorage.getItem("cart"));
   var ungrouped_cart = ungroup_cart(cart);
   cart_badge.textContent = ungrouped_cart.length;
+  getTotalPrice();
 }
 function handle_submit(event) {
   event.preventDefault();
-  console.log(event.target.temperatureOptionInput.value); // from elements property
   var cart_item = {
     id: event.target.productID.value,
     quantity: 1,
@@ -94,7 +119,19 @@ function handle_submit(event) {
       event.target.temperatureOptionInput.value,
       event.target.otherOptions,
     ],
+    priceEach: getProductPrice(),
   };
   add_to_cart(cart_item);
+}
+function getTotalPrice() {
+  var cart = JSON.parse(sessionStorage.getItem("cart"));
+  if (cart === null) {
+  } else {
+    var runningTotal = 0;
+    cart.forEach((cartItem) => {
+      runningTotal += cartItem.quantity * cartItem.priceEach;
+    });
+    return runningTotal;
+  }
 }
 onModifyCart();
