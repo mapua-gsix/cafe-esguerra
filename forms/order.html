@@ -84,11 +84,15 @@
         <div class="orders" id="ordercontainer">
           <template id="order-item-template">
             <div class="order-item">
-              <div class="product-index"></div>
+              <span class="product-index"></span>
               <img class="image" />
               <div class="text-content">
-                <div class="product-name"></div>
-                <div class="product-description"></div>
+                <div class="product-header group">
+                  <span class="product-name"></span>
+                  <span class="product-customizations"></span>
+                </div>
+
+                <span class="product-description"></span>
                 <div class="controls">
                   <div class="group">
                     <div class="quantity-controls">
@@ -101,8 +105,8 @@
                       </button>
                     </div>
 
-                    <div class="item-price"></div>
-                    <div class="product-price"></div>
+                    <span class="item-price"></span>
+                    <span class="product-price"></span>
                   </div>
 
                   <button class="remove-button">
