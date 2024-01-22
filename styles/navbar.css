@@ -134,11 +134,16 @@
   backdrop-filter: blur(8px);
 }
 .products-dropdown li {
-  padding: 6px;
+  padding: 12px;
 }
-.navbar.transparent,
-.navbar.transparent .products-dropdown {
+.products-dropdown a {
+  padding: 12px 0 !important;
+}
+.navbar.transparent {
   background-color: transparent;
+}
+.navbar.transparent .products-dropdown {
+  background-color: var(--tint);
 }
 .navbar.transparent a,
 .navbar.transparent button span,
