@@ -43,21 +43,35 @@ function show_options(product) {
 
   sizeOptions.forEach((sizeOption) => {
     sizeOptionsFragment.appendChild(
-      render_options(sizeOption, sizeOptionsTemplate, ".size-option")
+      render_options(
+        sizeOption.name,
+        sizeOption,
+        sizeOptionsTemplate,
+        ".size-option",
+        product
+      )
     );
   });
   temperatureOptions.forEach((temperatureOption) => {
     temperatureOptionsFragment.appendChild(
       render_options(
         temperatureOption,
+        temperatureOption,
         temperatureOptionsTemplate,
-        ".temperature-option"
+        ".temperature-option",
+        product
       )
     );
   });
   otherOptions.forEach((otherOption) => {
     otherOptionsFragment.appendChild(
-      render_options(otherOption, otherOptionsTemplate, ".other-option")
+      render_options(
+        otherOption.name,
+        otherOption,
+        otherOptionsTemplate,
+        ".other-option",
+        product
+      )
     );
   });
   sizeOptionsContainer.appendChild(sizeOptionsFragment);
@@ -69,17 +83,41 @@ function close_options() {
   const optionsmodal = document.getElementById("options-modal");
   optionsmodal.style.display = "none";
 }
-function render_options(option, template, class_name) {
+function render_options(
+  optionName,
+  optionValue,
+  template,
+  class_name,
+  product
+) {
   const clone = document.importNode(template, true);
-  clone.querySelector(class_name).textContent = option;
-  clone.querySelector(`${class_name}-input`).value = option;
+  clone.querySelector(class_name).textContent = optionName;
+  const input = clone.querySelector(`${class_name}-input`);
+  input.value = optionName;
+  if (class_name === `.size-option`) {
+    input.oninput = function () {
+      setProductPrice(optionValue.price + product.price);
+    };
+  }
+
   return clone;
 }
 function setProductViewInfo(product) {
   const productview = document.getElementById("product-view");
   const options = document.getElementById("options");
   productview.querySelector(".product-name").textContent = product.name;
-  productview.querySelector(".product-price").textContent = product.price;
+  productview.querySelector(".product-price").textContent = parseFloat(
+    product.price
+  ).toFixed(2);
   productview.querySelector(".product-view-image").src = product.image;
   options.querySelector(".product-id").value = product.id;
+}
+function setProductPrice(price) {
+  const productview = document.getElementById("product-view");
+  productview.querySelector(".product-price").textContent =
+    parseFloat(price).toFixed(2);
+}
+function getProductPrice() {
+  const productview = document.getElementById("product-view");
+  return productview.querySelector(".product-price").textContent;
 }
