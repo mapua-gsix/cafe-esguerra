@@ -117,11 +117,12 @@ function handle_submit(event) {
     customizations: [
       event.target.sizeOptionInput.value,
       event.target.temperatureOptionInput.value,
-      event.target.otherOptions,
+      event.target.otherOptionInput.value,
     ],
     priceEach: getProductPrice(),
   };
   add_to_cart(cart_item);
+  close_options();
 }
 function getTotalPrice() {
   var cart = JSON.parse(sessionStorage.getItem("cart"));

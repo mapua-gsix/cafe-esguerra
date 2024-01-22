@@ -135,7 +135,7 @@
       </div>
     </section>
     <div id="options-modal" class="options-modal">
-      <div class="modal-content">
+      <div class="modal-content" id="modal-content">
         <h2>Customize your order...</h2>
         <div>
           <div class="product-view" id="product-view">
@@ -145,7 +145,12 @@
               <span class="product-price"></span>
             </div>
           </div>
-          <form onsubmit="handle_submit(event)" class="options" id="options">
+          <form
+            onsubmit="handle_submit(event)"
+            name="options"
+            class="options"
+            id="options"
+          >
             <input
               class="product-id"
               name="productID"
@@ -163,6 +168,7 @@
                     <input
                       class="size-option-input"
                       type="radio"
+                      data-price="0"
                       required
                       name="sizeOptionInput"
                     />
@@ -204,6 +210,7 @@
                     <input
                       class="other-option-input"
                       type="radio"
+                      data-price="0"
                       required
                       name="otherOptionInput"
                     />
@@ -214,9 +221,13 @@
               </div>
             </div>
 
-            <button type="submit" class="add-to-cart-button default_button">
+            <button
+              type="submit"
+              name="addToCart"
+              class="add-to-cart-button default_button"
+            >
               <span class="material-symbols-outlined">add_shopping_cart</span
-              >ADD TO CART
+              ><span>ADD TO CART</span>
             </button>
           </form>
         </div>
