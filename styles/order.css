@@ -145,3 +145,22 @@ section {
   font-family: var(--headerfont);
   transition: all 0.3s ease;
 }
+.product-customizations {
+  display: flex;
+  gap: 12px;
+}
+.product-customization {
+  background-color: var(--accent);
+  padding: 4px 8px;
+  text-transform: capitalize;
+  color: var(--textlight);
+  font-family: var(--headerfont);
+  font-size: smaller;
+  font-style: italic;
+}
+.product-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
