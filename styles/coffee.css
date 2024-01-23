@@ -110,6 +110,19 @@ body {
   background-color: var(--textlight);
 }
 
+.slider-nav a{
+    width: 0.5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background-color: var(--shadow);
+    transition: opacity ease 500ms;
+    opacity: 30%;
+}
+
+.slider-nav a:hover{
+    opacity: 70%;
+}
+=======
 .carousel-nav a:hover {
   opacity: 1;
 }
