@@ -1,61 +1,113 @@
-body{
-    background: url(/assets/banner_blur.jpg) center center fixed;
-    background-size: cover;
+body {
+  background-color: var(--primary);
+}
+.banner {
+  height: 30vw;
+  background: var(--backgroundgradient);
+  overflow: hidden;
+}
+.hero {
+  display: flex;
+  padding: 50px 0 0 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  background: url("../assets/product_images/coffee.jpg");
+  background-color: var(--tint);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: 0% 30%;
+  color: var(--textlight);
+  overflow: hidden;
+  position: relative;
+}
+.hero-title {
+  position: absolute;
+  overflow: hidden;
+}
+.hero-title h1 {
+  user-select: none;
+  font-size: 32vw;
+  opacity: 0.1;
+  padding: 0;
+  margin: 0;
+}
+.hero-subtitle h3 {
+  font-style: italic;
 }
 
-.left-container h1{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 2rem;
-    transform: translateX(11.9rem) translateY(34rem);
-    background-color: #f1f1f1;
-    width: 12rem;
-    border-radius: 10rem;
-    box-shadow: 0px 0px 10px #f1f1f1;
+.left-container h1 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 2rem;
+  transform: translateX(11.9rem) translateY(34rem);
+  background-color: #f1f1f1;
+  width: 12rem;
+  border-radius: 10rem;
+  box-shadow: 0px 0px 10px #f1f1f1;
 }
 
-.left-container{
-    width: 35rem;
-    height: 35rem;
-    display: flex;
-    position: relative;
-    margin-top: 2.5rem;
-    margin-left: 5rem;
-    border-radius: 10px;
+.left-container {
+  width: 35rem;
+  height: 35rem;
+  display: flex;
+  position: relative;
+  margin-top: 2.5rem;
+  margin-left: 5rem;
+  border-radius: 10px;
 }
 
-.promo-container{
-    aspect-ratio: 16/9;
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    border-radius: 10%;
-    background-color: var(--tint);
-    background: linear-gradient(to bottom, #ffffff 80%, var(--secondary));
-    box-shadow: 0px 0px 10px #f1f1f1;
+.carousel {
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  border-radius: 10%;
+  background-color: var(--tint);
+  background: linear-gradient(to bottom, #ffffff 80%, var(--secondary));
+  box-shadow: 0px 0px 10px #f1f1f1;
 }
 
-.promo-container::-webkit-scrollbar{
-    display: none;
+.carousel-images::-webkit-scrollbar {
+  display: none;
+}
+.carousel-images {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 
-.promo-container img{
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-    object-fit: cover;
+.carousel img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
 }
 
-.slider-nav{
-    display: flex;
-    column-gap: 1rem;
-    position: absolute;
-    bottom: 1.25rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
+.carousel-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  mix-blend-mode: exclusion;
+  z-index: 1;
+}
+
+.carousel-nav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--tint);
+  transition: opacity ease 500ms;
+
+  opacity: 75%;
+}
+.carousel-nav a.active {
+  background-color: var(--textlight);
 }
 
 .slider-nav a{
@@ -69,4 +121,43 @@ body{
 
 .slider-nav a:hover{
     opacity: 70%;
+}
+=======
+.carousel-nav a:hover {
+  opacity: 1;
+}
+.carousel-controls {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+.carousel-controls button {
+  height: 100%;
+  width: 30%;
+  background-color: transparent;
+  border: none !important;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.carousel-controls button:nth-child(1) {
+  display: flex;
+  align-items: center;
+}
+.carousel-controls button:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.carousel-controls span {
+  color: var(--textlight);
+  opacity: 0;
+  mix-blend-mode: exclusion;
+}
+.carousel-controls button:hover span {
+  opacity: 1;
 }

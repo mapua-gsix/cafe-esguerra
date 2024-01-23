@@ -1,5 +1,5 @@
 footer {
-  background-color: var(--secondary);
+  background-color: var(--primary);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -9,7 +9,6 @@ footer {
 }
 footer .horizontal {
   width: 100%;
-  padding: 0;
   margin: 0;
   display: flex;
   flex-direction: row;
@@ -33,4 +32,33 @@ footer a:hover {
 }
 footer hr {
   border: 1px solid rgb(0, 0, 0, 0.3);
+}
+footer .hr {
+  width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  footer .horizontal {
+    flex-direction: column;
+    text-align: center;
+  }
+  footer .horizontal div {
+    width: 100%;
+    padding: 12px 0;
+    flex-direction: column;
+  }
+  footer {
+    justify-content: center;
+    align-items: center;
+  }
+  footer a {
+    font-size: large;
+    width: 100%;
+  }
+  footer h4 {
+    font-size: x-large;
+  }
+  footer h4:last-child {
+    font-size: initial;
+  }
 }

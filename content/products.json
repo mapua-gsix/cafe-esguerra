@@ -1,0 +1,96 @@
+{
+    "products":[
+        {
+            "id":"0000",
+            "name":"null",
+            "description":"This item does not exist",
+            "image":"../assets/placeholder.png",
+            "price":0,
+            "ingredients":[
+            ]
+        },
+        {
+            "id":"1000",
+            "name":"Test (Coffee Item)",
+            "description":"This is a test product",
+            "image":"../assets/product_images/coffee.jpg",
+            "price":100.50,
+            "ingredients":[
+                "water",
+                "milk"
+            ],
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            },
+            {
+                "name":"large" ,
+                "price": 10
+            }],
+            "temperature":["hot", "cold"],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            },{
+                "name":"extra sugar",
+                "price":5
+            }]
+        },
+        {
+            "id":"1001",
+            "name":"Test1 (Coffee Item)",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":100,
+            "ingredients":[
+                "water",
+                "milk"
+            ],
+            "sizeOptions":[],
+            "temperature":[],
+            "otherOptions":[]
+        },
+        {
+            "id":"1002",
+            "name":"Test2 (Coffee Item)",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":100,
+            "ingredients":[
+                "water",
+                "milk"
+            ],
+            "sizeOptions":[],
+            "temperature":[],
+            "otherOptions":[]
+        },
+        {
+            "id":"2000",
+            "name":"Test (Beverage Item)",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":55,
+            "ingredients":[
+                "water",
+                "milk"
+            ],
+            "sizeOptions":[],
+            "temperature":[],
+            "otherOptions":[]
+        },
+        {
+            "id":"3000",
+            "name":"Test (Dessert Item)",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":150,
+            "ingredients":[
+                "water",
+                "milk"
+            ],
+            "sizeOptions":[],
+            "temperature":[],
+            "otherOptions":[]
+        }
+    ]
+}
