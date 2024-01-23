@@ -37,18 +37,6 @@ body {
   font-style: italic;
 }
 
-.container h1 {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  font-size: 2rem;
-  background-color: #f1f1f1;
-  width: 12rem;
-  box-shadow: 0px 0px 10px #f1f1f1;
-}
-
 .test-carousel{
     display: flex;
     align-items: center;
@@ -58,26 +46,29 @@ body {
     height: 30rem;
     padding: 4rem;
     gap: 3rem;
+    background: rgba(0, 0, 0, .08);
 }
 
 .test-carousel img{
     width: 25rem;
     height: 25rem;
     display: flex;
+    border: 6px solid white;
 }
+
+/* .middle creates separation (increasing size & adds white glow) */
 
 .middle img{
     width: 28rem;
     height: 28rem;
+    box-shadow: 0 0 20px #f5f5f5;
 }
 
 .carousel {
   overflow: hidden;
   display: flex;
   position: relative;
-  background-color: var(--tint);
   background: linear-gradient(to bottom, #ffffff 80%, var(--secondary));
-  box-shadow: 0px 0px 10px #f1f1f1;
 }
 
 .carousel-images::-webkit-scrollbar {
