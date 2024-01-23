@@ -62,11 +62,11 @@ body{
     width: 0.5rem;
     height: .5rem;
     border-radius: 50%;
-    background-color: var(--tint);
+    background-color: var(--shadow);
     transition: opacity ease 500ms;
-    opacity: 75%;
+    opacity: 30%;
 }
 
 .slider-nav a:hover{
-    opacity: 1;
+    opacity: 70%;
 }
