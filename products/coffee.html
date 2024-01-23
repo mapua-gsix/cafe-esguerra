@@ -74,10 +74,24 @@
     </div>
 
     <section class="container">
-      <div class="left-container">
-        <h1>PROMOS</h1>
         <div class="carousel">
-          <div class="carousel-images" id="carousel-images">
+
+          <!---this is the test carousel banner-->
+          <div class="test-carousel">
+            <div class="promo1-container">
+              <a><img src="../assets/promo1.jpg"></img></a>
+            </div>
+            <!--USES "MIDDLE" CLASS TO DETERMINE WHICH IMG IS IN THE MIDDLE-->
+            <div class="promo2-container middle" >
+              <a><img src="../assets/promo2.jpg"></img></a>
+            </div>
+            <div class="promo3-container">
+              <a><img src="../assets/promo3.jpg"></img></a>
+            </div>
+          </div>
+          
+          <!-- OLD CAROUSEL
+            <div class="carousel-images" id="carousel-images">
             <img
               src="../assets/promo1.jpg"
               id="image1"
@@ -94,11 +108,14 @@
               class="image3 carousel-image"
             />
           </div>
+        -->
+          
           <div class="carousel-nav" id="carousel-nav">
             <a class="carousel-dot active"></a>
             <a class="carousel-dot"></a>
             <a class="carousel-dot"></a>
           </div>
+          
           <div class="carousel-controls" id="carousel-controls">
             <button onclick="plusSlides(-1)" data-slide="prev">
               <span class="material-symbols-outlined noselect">
@@ -112,9 +129,6 @@
             </button>
           </div>
         </div>
-      </div>
-
-      <div class="right-container"></div>
     </section>
     <section class="products-section">
       <!--Content is loaded using ../scripts/load_products.js
