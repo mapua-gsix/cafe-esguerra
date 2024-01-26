@@ -17,7 +17,7 @@
     <title>Café Esguerra | by cafethena</title>
   </head>
 
-  <body onload="appendProducts('coffee')">
+  <body onload="appendProducts('coffee');">
     <header>
       <nav id="navbar" class="navbar transparent">
         <div class="back">
@@ -74,23 +74,43 @@
     </div>
 
     <section class="container">
-        <div class="carousel">
-
-          <!---this is the test carousel banner-->
-          <div class="test-carousel">
-            <div class="promo1-container">
-              <a><img src="../assets/promo1.jpg"></img></a>
-            </div>
-            <!--USES "MIDDLE" CLASS TO DETERMINE WHICH IMG IS IN THE MIDDLE-->
-            <div class="promo2-container middle" >
-              <a><img src="../assets/promo2.jpg"></img></a>
-            </div>
-            <div class="promo3-container">
-              <a><img src="../assets/promo3.jpg"></img></a>
-            </div>
+      <div class="carousel">
+        <!---this is the test carousel banner-->
+        <!--USES "MIDDLE" CLASS TO DETERMINE WHICH IMG IS IN THE MIDDLE-->
+        <div class="new-carousel carousel-images" id="carousel-images">
+          <div class="padding-carousel-image">
+            <a><img src="../assets/promo1.jpg" /></a>
           </div>
-          
-          <!-- OLD CAROUSEL
+          <div class="carousel-image">
+            <a><img src="../assets/promo2.jpg" /></a>
+          </div>
+          <div class="carousel-image">
+            <a><img src="../assets/promo3.jpg" /></a>
+          </div>
+          <div class="carousel-image">
+            <a><img src="../assets/promo1.jpg" /></a>
+          </div>
+          <div class="carousel-image">
+            <a><img src="../assets/promo2.jpg" /></a>
+          </div>
+          <div class="carousel-image">
+            <a><img src="../assets/promo3.jpg" /></a>
+          </div>
+          <div class="carousel-image">
+            <a><img src="../assets/promo1.jpg" /></a>
+          </div>
+          <div class="carousel-image">
+            <a><img src="../assets/promo2.jpg" /></a>
+          </div>
+          <div class="carousel-image">
+            <a><img src="../assets/promo3.jpg" /></a>
+          </div>
+          <div class="padding-carousel-image">
+            <a><img src="../assets/promo2.jpg" /></a>
+          </div>
+        </div>
+
+        <!-- OLD CAROUSEL
             <div class="carousel-images" id="carousel-images">
             <img
               src="../assets/promo1.jpg"
@@ -109,26 +129,29 @@
             />
           </div>
         -->
-          
-          <div class="carousel-nav" id="carousel-nav">
-            <a class="carousel-dot active"></a>
-            <a class="carousel-dot"></a>
-            <a class="carousel-dot"></a>
-          </div>
-          
-          <div class="carousel-controls" id="carousel-controls">
-            <button onclick="plusSlides(-1)" data-slide="prev">
-              <span class="material-symbols-outlined noselect">
-                navigate_before
-              </span>
-            </button>
-            <button onclick="plusSlides(1)" data-slide="next">
-              <span class="material-symbols-outlined noselect">
-                navigate_next
-              </span>
-            </button>
-          </div>
+
+        <div class="carousel-nav" id="carousel-nav">
+          <a class="carousel-dot active"></a>
+          <a class="carousel-dot"></a>
+          <a class="carousel-dot"></a>
+          <a class="carousel-dot"></a>
+          <a class="carousel-dot"></a>
+          <a class="carousel-dot"></a>
         </div>
+
+        <div class="carousel-controls" id="carousel-controls">
+          <button onclick="plusSlides(-1)" data-slide="prev">
+            <span class="material-symbols-outlined noselect">
+              navigate_before
+            </span>
+          </button>
+          <button onclick="plusSlides(1)" data-slide="next">
+            <span class="material-symbols-outlined noselect">
+              navigate_next
+            </span>
+          </button>
+        </div>
+      </div>
     </section>
     <section class="products-section">
       <!--Content is loaded using ../scripts/load_products.js
