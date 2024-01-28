@@ -17,7 +17,7 @@ section {
 }
 
 #aboutheadertext {
-  padding: 50px 3%;
+  padding: 7% 5%;
   color: var(--textlight);
   text-align: center;
   font-size: clamp(10px, 4vw, 72px);
@@ -29,7 +29,7 @@ section {
 }
 
 #aboutheaderbody {
-  padding: 50px 3%;
+  padding: 2%;
   color: var(--text);
   text-align: center;
   font-size: clamp(10px, 3vw, 18px);
@@ -43,14 +43,16 @@ section {
 #aboutgallery {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px;
+  gap: 20px;
   max-width: auto;
   margin: 0 auto;
   overflow: hidden;
 }
 
 #aboutgallery img {
+  display: inline-block;
   width: 40vh;
+  max-height: 100%;
   padding: 10px;
   margin: 20px;
   border: 1px solid #ddd;
@@ -61,6 +63,14 @@ section {
 #aboutgallery img:hover {
   transform: scale(1.1);
   transition: transform ease 0.5s;
+}
+
+h1, h2{
+  text-align: center;
+}
+
+hr {
+  border: solid 5px #3f3a39;
 }
 
 #aboutgallery img.full {
@@ -74,8 +84,56 @@ section {
   background: rgba(0, 0, 0, 0.7);
 }
 
-@media only screen and (max-width: 600px) {
-  .aboutgallery {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+.fade-from-bottom {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+.fade-from-bottom.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#textcontainer {
+  display: flex;
+  text-align: justify;
+ 
+}
+
+#text {
+  flex: 1;
+  padding: 0% 4%;
+}
+
+#image {
+  flex: 1;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 900px) {
+  #aboutgallery {
+    grid-template-columns: repeat(2, minmax(0, 40%));
+    margin-left: 2%;
+    grid-column-gap: 10%;
+  }
+
+  #aboutgallery img {
+    padding: 5%;
+    margin: 5%;
+  }
+  #text {
+    padding-top: 5%;
+    font-size: 55%;
+  }
+  
+  #aboutheadertext {
+    font-size: 150%;
   }
 }
