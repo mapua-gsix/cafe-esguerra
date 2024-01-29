@@ -81,6 +81,9 @@
   color: var(--text-light);
   transition: all 0.3s ease;
 }
+.cart-button:hover .material-symbols-outlined {
+  color: var(--text-light);
+}
 .cart-button:hover .badge {
   background-color: var(--text-light);
   color: var(--accent);
