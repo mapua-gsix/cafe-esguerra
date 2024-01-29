@@ -100,7 +100,7 @@
   white-space: nowrap;
 }
 .navlinks ul li a {
-  padding: 24px 0;
+  padding: 6px 12px;
   text-decoration: none;
 }
 .navlinks > ul > li:last-child:hover .products-dropdown {
@@ -155,7 +155,7 @@
   filter: invert(100%);
 }
 .navbar.transparent a:hover {
-  color: var(--accent);
+  color: var(--accent) !important;
 }
 .menutoggle {
   display: none;
@@ -178,11 +178,18 @@
 .hideable {
   display: none;
 }
-a.active {
-  color: var(--accent) !important;
-}
 .navbar.transparent .products-dropdown span {
   color: var(--textlight);
+}
+.navbar.transparent a.active {
+  border: none;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 6px;
+  background-color: transparent;
+  color: var(--textlight);
+  backdrop-filter: blur(8px);
 }
 .navbar a span {
   color: var(--text);
@@ -191,6 +198,13 @@ a.active {
   color: var(--text);
 }
 .navbar.transparent .back span {
+  color: var(--textlight);
+}
+a.active {
+  background-color: var(--accent);
+  color: var(--textlight);
+}
+a.active span {
   color: var(--textlight);
 }
 @keyframes navslidefromtop {
@@ -221,7 +235,13 @@ a.active {
   transform: translate(-6px, 0) !important;
 }
 
-@media screen and (max-width: 900px) {
+@media only screen and (max-width: 1300px) {
+  .navlinks > ul > li {
+    padding: 0 0.2vw;
+    white-space: nowrap;
+  }
+}
+@media only screen and (max-width: 900px) {
   .navbar div:nth-child(1),
   .navbar div:nth-child(3) {
     opacity: 0;
@@ -250,6 +270,12 @@ a.active {
     width: 80%;
     flex-direction: column;
   }
+  .navbar.transparent a.active {
+    background-color: var(--accent);
+    color: var(--textlight);
+    text-decoration: none;
+  }
+
   .navbar.transparent,
   .navbar.transparent .products-dropdown {
     background-color: var(--primary);
@@ -273,7 +299,7 @@ a.active {
     background-color: transparent;
   }
   .navbar.expanded {
-    max-width: max(200px, 30vw);
+    max-width: max(300px, 30vw);
     transition: max-width 0.3s ease;
   }
   .hideable {
