@@ -184,7 +184,7 @@ a.active {
 .navbar.transparent .products-dropdown span {
   color: var(--textlight);
 }
-.navbar .products-dropdown span {
+.navbar a span {
   color: var(--text);
 }
 .navbar .back span {
