@@ -20,16 +20,16 @@ function render_data(
   var clone = document.importNode(item_template, true);
 
   clone.querySelector(".promo-image").src = bannerImagePath;
-  clone.querySelector("div.promo-header").textContent = header;
-  clone.querySelector("div.promo-date").textContent = datePosted;
+  clone.querySelector(".promo-header").textContent = header;
+  clone.querySelector(".promo-date").textContent = datePosted;
   var contentContainer = clone.querySelector("div.promo-content");
   content.forEach((element) => {
     const pElement = document.createElement("p");
     pElement.textContent = element;
     contentContainer.appendChild(pElement);
   });
-  clone.querySelector("div.promo-redirectText").textContent = redirectText;
-  clone.querySelector(".promo-redirectButton").onclick = function () {
+  clone.querySelector(".promo-redirect-text").textContent = redirectText;
+  clone.querySelector(".promo-redirect-button").onclick = function () {
     window.location.href = redirectLink;
   };
 
