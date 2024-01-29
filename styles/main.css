@@ -88,11 +88,14 @@ h1,
 h2,
 h3,
 h4,
-li {
+li a {
   font-family: var(--header-font);
 }
-li {
-  font-weight: bold;
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
 }
 a {
   color: var(--text);
@@ -195,11 +198,21 @@ section.default {
   max-height: unset;
   height: unset;
 }
+section.padding-large {
+  padding: 12% 0 12% 0 !important;
+}
+section.padding-normal {
+  padding: 8% 0 8% 0 !important;
+}
+section.padding-small {
+  padding: 4% 0 4% 0 !important;
+}
 section.adapt-to-header {
   padding-top: 80px;
 }
 .brand-font {
   font-family: "black-mango", serif;
+  white-space: nowrap;
 }
 .group {
   display: inherit;

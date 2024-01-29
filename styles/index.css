@@ -6,15 +6,7 @@ section {
 section.nomaxheight {
   max-height: unset;
 }
-section.padded1 {
-  padding: 12% 0 12% 0 !important;
-}
-section.padded2 {
-  padding: 8% 0 8% 0 !important;
-}
-section.padded2 {
-  padding: 4% 0 4% 0 !important;
-}
+
 section.enclosed {
   justify-content: center;
   align-items: center;
@@ -102,7 +94,7 @@ section.enclosed > div {
 .promo-header {
   font-family: var(--header-font);
   color: var(--text);
-  font-weight: bold;
+  font-weight: 500;
   font-size: x-large;
 }
 .promo-content {
@@ -119,6 +111,7 @@ section.enclosed > div {
 }
 .promo-redirect-button {
   display: flex;
+  align-self: flex-end;
   font-family: var(--header-font);
   font-size: large;
   background-color: transparent;
