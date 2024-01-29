@@ -107,7 +107,7 @@
 .navbar .logo img {
   height: 80%;
 }
-.navbar .cart {
+.navbar .nav-cart {
   width: 18%;
   justify-content: flex-end;
   margin-right: 24px;
@@ -254,7 +254,7 @@
     min-width: 200px;
     filter: none !important;
   }
-  .navbar .cart {
+  .navbar .nav-cart {
     width: 100%;
     height: 48px;
     position: absolute;
