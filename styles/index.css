@@ -251,4 +251,11 @@ section.enclosed > div {
     height: fit-content;
     padding: 0;
   }
+  .title {
+    padding: 48px 0;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }
