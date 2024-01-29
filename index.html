@@ -153,13 +153,13 @@
               </div>
               <div class="content">
                 <div class="group">
-                  <div class="promo-header"></div>
-                  <div class="promo-date"></div>
+                  <span class="promo-header"></span>
+                  <span class="promo-date"></span>
                 </div>
 
                 <div class="promo-content"></div>
-                <button class="promo-redirectButton">
-                  <div class="promo-redirectText"></div>
+                <button class="promo-redirect-button">
+                  <span class="promo-redirect-text"></span>
                   <span class="material-symbols-outlined">navigate_next</span>
                 </button>
               </div>
@@ -252,16 +252,16 @@
       var clone = document.importNode(item_template, true);
 
       clone.querySelector(".promo-image").src = bannerImagePath;
-      clone.querySelector("div.promo-header").textContent = header;
-      clone.querySelector("div.promo-date").textContent = datePosted;
+      clone.querySelector(".promo-header").textContent = header;
+      clone.querySelector(".promo-date").textContent = datePosted;
       var contentContainer = clone.querySelector("div.promo-content");
       content.forEach((element) => {
         const pElement = document.createElement("p");
         pElement.textContent = element;
         contentContainer.appendChild(pElement);
       });
-      clone.querySelector("div.promo-redirectText").textContent = redirectText;
-      clone.querySelector(".promo-redirectButton").onclick = function () {
+      clone.querySelector(".promo-redirect-text").textContent = redirectText;
+      clone.querySelector(".promo-redirect-button").onclick = function () {
         window.location.href = redirectLink;
       };
 
