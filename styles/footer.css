@@ -73,13 +73,25 @@ footer a:hover {
     flex-direction: column;
     text-align: center;
   }
-  footer .horizontal div {
+  footer .horizontal > div {
     width: 100%;
     padding: 12px 0;
     flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   footer {
     justify-content: center;
     align-items: center;
+  }
+  footer .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .logo img {
+    width: 40%;
   }
 }
