@@ -53,6 +53,7 @@ body {
   background: var(--primary);
   font-family: var(--bodyfont);
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 ::selection {
   background-color: var(--accent);
@@ -98,10 +99,10 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: var(--accent) !important;
+  color: var(--accent);
   transition: all 0.3s ease;
 }
-a:hover > span {
+a:hover > span.material-symbols-outlined {
   color: var(--accent) !important;
   transition: all 0.3s ease;
   animation-name: bounce;

@@ -200,11 +200,11 @@
 .navbar.transparent .back span {
   color: var(--textlight);
 }
-a.active {
+.navbar a.active {
   background-color: var(--accent);
   color: var(--textlight);
 }
-a.active span {
+.navbar a.active span {
   color: var(--textlight);
 }
 @keyframes navslidefromtop {

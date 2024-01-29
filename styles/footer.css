@@ -8,27 +8,44 @@ footer {
   overflow: hidden;
 }
 footer .horizontal {
-  width: 100%;
+  width: 90%;
   margin: 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
-footer .horizontal div {
+footer .horizontal > div {
   width: 20%;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   padding: 12px;
+  gap: 12px;
+}
+footer .logo {
+  display: flex;
+  padding-top: 24px;
+  width: 95%;
+}
+footer .logo img {
+  width: 20%;
+  object-fit: cover;
 }
 footer a {
-  width: 30%;
-  font-size: smaller;
+  font-size: 14px;
+  font-family: var(--bodyfont);
   text-decoration: none;
   user-select: none;
   white-space: nowrap;
+  font-weight: normal;
 }
-footer a:hover {
-  transform: translate(6px, 0);
+footer .links {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+footer ul {
+  list-style: none;
 }
 footer hr {
   border: 1px solid rgb(0, 0, 0, 0.3);
@@ -36,7 +53,21 @@ footer hr {
 footer .hr {
   width: 100%;
 }
-
+footer .contacts a {
+  width: 24px;
+}
+footer h4 {
+  font-size: large;
+}
+footer h4:last-child {
+  font-size: initial;
+}
+footer i {
+  font-size: x-large;
+}
+footer a:hover {
+  transform: scale(120%);
+}
 @media screen and (max-width: 900px) {
   footer .horizontal {
     flex-direction: column;
@@ -50,15 +81,5 @@ footer .hr {
   footer {
     justify-content: center;
     align-items: center;
-  }
-  footer a {
-    font-size: large;
-    width: 100%;
-  }
-  footer h4 {
-    font-size: x-large;
-  }
-  footer h4:last-child {
-    font-size: initial;
   }
 }
