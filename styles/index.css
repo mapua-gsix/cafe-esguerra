@@ -117,7 +117,7 @@ section.enclosed > div {
   opacity: 0.5;
   font-style: italic;
 }
-.promo-redirectButton {
+.promo-redirect-button {
   display: flex;
   font-family: var(--header-font);
   font-size: large;
@@ -126,13 +126,13 @@ section.enclosed > div {
   cursor: pointer;
   gap: 6px;
 }
-.promo-redirectButton * {
+.promo-redirect-button * {
   transition: all 0.3s ease;
 }
-.promo-redirectButton span {
+.promo-redirect-button span {
   color: var(--text);
 }
-.promo-redirectButton:hover * {
+.promo-redirect-button:hover * {
   transform: translate(12px, 0);
 }
 .container {
