@@ -73,7 +73,6 @@ body {
   display: flex;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
-  scroll-snap-stop: always;
   scroll-behavior: smooth;
 }
 .carousel-images::-webkit-scrollbar {
@@ -160,4 +159,12 @@ body {
 }
 .carousel-controls button:hover span {
   opacity: 1;
+}
+[data-middle="highlight"] {
+  transform: none;
+  box-shadow: none;
+}
+[data-middle="highlight"].is-inMiddle {
+  transform: scale(110%) translate(12px, 12px);
+  box-shadow: -12px -12px 0px 6px var(--primarydark);
 }
