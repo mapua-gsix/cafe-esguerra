@@ -63,19 +63,19 @@ a {
   background-color: var(--tint);
 }
 .products-list a h3 {
-  color: var(--textlight);
+  color: var(--text-light);
   opacity: 0;
   transform: translateY(5vh);
-  transition: all 0.5s var(--defaultbezier);
+  transition: all 0.5s var(--default-bezier);
 }
 .products-list a:hover h3 {
   opacity: 1;
   transform: translateY(0);
-  transition: all 0.5s var(--defaultbezier);
+  transition: all 0.5s var(--default-bezier);
 }
-.products-list a:hover > .large_button {
+.products-list a:hover > .large-button {
   padding-inline: 36px;
-  background-color: var(--textlight);
+  background-color: var(--text-light);
   color: var(--text);
   transition: all 0.3s ease;
 }

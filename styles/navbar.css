@@ -8,7 +8,7 @@
   background-color: var(--primary);
   z-index: 2;
   transition: background-color 0.3s ease;
-  animation: 0.6s cubic-bezier(0.81, 0.02, 0.2, 0.98) 0s 1 navslidefromtop;
+  animation: 0.6s cubic-bezier(0.81, 0.02, 0.2, 0.98) 0s 1 nav-slide-from-top;
 }
 .navbar * {
   user-select: none;
@@ -21,9 +21,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: var(--headerfont);
+  font-family: var(--header-font);
   background-color: transparent;
-  border: var(--defaultborder);
+  border: var(--default-border);
   border-color: var(--accent);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -50,14 +50,14 @@
 .ordernow button:hover {
   padding-inline: 12px;
   background-color: var(--accent);
-  color: var(--textlight);
+  color: var(--text-light);
   transition: all 0.3s ease;
 }
 .ordernow button:hover span {
-  color: var(--textlight);
+  color: var(--text-light);
 }
 .ordernow button:hover .badge {
-  background-color: var(--textlight);
+  background-color: var(--text-light);
   color: var(--accent);
 }
 .navbar img {
@@ -130,7 +130,7 @@
   flex-direction: column;
   position: absolute;
   transition: 0.3s ease;
-  box-shadow: var(--shadowtemplate);
+  box-shadow: var(--default-shadow);
   backdrop-filter: blur(8px);
 }
 .products-dropdown li {
@@ -149,7 +149,7 @@
 .navbar.transparent button span,
 .navbar.transparent button,
 .navbar h1 {
-  color: var(--textlight);
+  color: var(--text-light);
 }
 .navbar.transparent img {
   filter: invert(100%);
@@ -179,7 +179,7 @@
   display: none;
 }
 .navbar.transparent .products-dropdown span {
-  color: var(--textlight);
+  color: var(--text-light);
 }
 .navbar.transparent a.active {
   border: none;
@@ -188,7 +188,7 @@
   text-decoration-color: var(--accent);
   text-underline-offset: 6px;
   background-color: transparent;
-  color: var(--textlight);
+  color: var(--text-light);
   backdrop-filter: blur(8px);
 }
 .navbar a span {
@@ -198,16 +198,16 @@
   color: var(--text);
 }
 .navbar.transparent .back span {
-  color: var(--textlight);
+  color: var(--text-light);
 }
 .navbar a.active {
   background-color: var(--accent);
-  color: var(--textlight);
+  color: var(--text-light);
 }
 .navbar a.active span {
-  color: var(--textlight);
+  color: var(--text-light);
 }
-@keyframes navslidefromtop {
+@keyframes nav-slide-from-top {
   0% {
     transform: translateY(-100%);
     opacity: 0;
@@ -272,7 +272,7 @@
   }
   .navbar.transparent a.active {
     background-color: var(--accent);
-    color: var(--textlight);
+    color: var(--text-light);
     text-decoration: none;
   }
 

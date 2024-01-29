@@ -8,7 +8,7 @@ section {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background: var(--backgroundgradient);
+  background: var(--background-gradient);
   transition: all 0.3s ease;
 }
 .orders {
@@ -32,7 +32,7 @@ section {
 .image {
   aspect-ratio: 1;
   height: 100%;
-  box-shadow: var(--imageshadowsmall);
+  box-shadow: var(--image-shadow);
 }
 .product-index {
   width: 2%;
@@ -40,9 +40,9 @@ section {
   justify-content: center;
   align-items: center;
   height: fit-content;
-  border: var(--defaultborder);
+  border: var(--default-border);
   border-color: var(--accent);
-  color: var(--textlight);
+  color: var(--text-light);
   background-color: var(--accent);
 }
 .text-content {
@@ -53,7 +53,7 @@ section {
   gap: 24px;
 }
 .product-name {
-  font-family: var(--headerfont);
+  font-family: var(--header-font);
   font-size: x-large;
 }
 .product-description {
@@ -70,7 +70,7 @@ section {
   background-color: transparent;
   border: none;
   height: 24px;
-  font-family: var(--bodyfont);
+  font-family: var(--body-font);
   font-weight: 500;
   text-align: center;
 }
@@ -87,7 +87,7 @@ section {
   appearance: textfield;
 }
 .product-quantity:focus {
-  background-color: var(--textlight);
+  background-color: var(--text-light);
 }
 .increment-button {
   background-color: transparent;
@@ -96,10 +96,10 @@ section {
 }
 .remove-button {
   background-color: transparent;
-  border: var(--defaultborder);
+  border: var(--default-border);
   color: var(--text);
   border-color: var(--accent);
-  font-family: var(--headerfont);
+  font-family: var(--header-font);
   text-transform: uppercase;
   font-weight: 600;
   display: flex;
@@ -117,18 +117,18 @@ section {
 }
 .remove-button:hover {
   background-color: var(--accent);
-  color: var(--textlight);
+  color: var(--text-light);
 }
 .remove-button:hover span {
-  color: var(--textlight);
+  color: var(--text-light);
 }
 .item-price {
   font-size: medium;
-  border: var(--defaultborder);
+  border: var(--default-border);
   border-color: var(--accent);
   background-color: var(--accent);
-  font-family: var(--headerfont);
-  color: var(--textlight);
+  font-family: var(--header-font);
+  color: var(--text-light);
   padding: 8px;
   cursor: default;
 }
@@ -142,7 +142,7 @@ section {
   opacity: 0;
   overflow: hidden;
   font-size: small;
-  font-family: var(--headerfont);
+  font-family: var(--header-font);
   transition: all 0.3s ease;
 }
 .product-customizations {
@@ -153,8 +153,8 @@ section {
   background-color: var(--accent);
   padding: 4px 8px;
   text-transform: capitalize;
-  color: var(--textlight);
-  font-family: var(--headerfont);
+  color: var(--text-light);
+  font-family: var(--header-font);
   font-size: smaller;
   font-style: italic;
 }

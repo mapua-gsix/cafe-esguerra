@@ -3,7 +3,7 @@ body {
 }
 .banner {
   height: 30vw;
-  background: var(--backgroundgradient);
+  background: var(--background-gradient);
   overflow: hidden;
 }
 .hero {
@@ -18,7 +18,7 @@ body {
   background-blend-mode: multiply;
   background-size: cover;
   background-position: 0% 30%;
-  color: var(--textlight);
+  color: var(--text-light);
   overflow: hidden;
   position: relative;
 }
@@ -52,14 +52,14 @@ body {
   width: 25rem;
   height: 25rem;
   display: flex;
-  transition: all 0.5s var(--defaultbezier);
+  transition: all 0.5s var(--default-bezier);
 }
 
 /* .middle creates separation (increasing size & adds white glow) */
 
 .middle img {
   transform: scale(110%) translate(12px, 12px);
-  box-shadow: -12px -12px 0px 6px var(--primarydark);
+  box-shadow: -12px -12px 0px 6px var(--secondary);
 }
 
 .carousel {
@@ -107,7 +107,7 @@ body {
   opacity: 75%;
 }
 .carousel-nav a.active {
-  background-color: var(--textlight);
+  background-color: var(--text-light);
 }
 
 .slider-nav a {
@@ -154,7 +154,7 @@ body {
   justify-content: flex-end;
 }
 .carousel-controls span {
-  color: var(--textlight);
+  color: var(--text-light);
   opacity: 0;
   mix-blend-mode: exclusion;
 }
@@ -167,5 +167,5 @@ body {
 }
 [data-middle="highlight"].is-inMiddle {
   transform: scale(110%) translate(12px, 12px);
-  box-shadow: -12px -12px 0px 6px var(--primarydark);
+  box-shadow: -12px -12px 0px 6px var(--secondary);
 }

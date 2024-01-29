@@ -33,7 +33,7 @@ footer .logo img {
 }
 footer a {
   font-size: 14px;
-  font-family: var(--bodyfont);
+  font-family: var(--body-font);
   text-decoration: none;
   user-select: none;
   white-space: nowrap;

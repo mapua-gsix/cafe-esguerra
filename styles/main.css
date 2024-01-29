@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lustria&family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alike&display=swap");
 @font-face {
   font-family: black-mango;
   src: url("../assets/fonts/brand_fonts/BlackMango-Regular.otf");
@@ -15,26 +16,26 @@
 }
 :root {
   --primary: #e5ddd0;
-  --primarydark: #c2b090;
+  --secondary: #c2b090;
   --accent: #519440;
   --text: #3f3a39;
-  --textlight: #e7e7e0;
+  --text-light: #e7e7e0;
   --shadow: black;
   --tint: #3f3a39ca;
-  --tint2: #3f3a3960;
-  --backgroundgradient: linear-gradient(
+  --tint-light: #3f3a3960;
+  --background-gradient: linear-gradient(
     180deg,
     var(--primary) 0%,
-    var(--primarydark) 100%
+    var(--secondary) 100%
   );
-  --shadowtemplate: 0px 0px 12px -4px var(--shadow);
-  --imageshadow: -5vmin -5vmin 0px 0px var(--primarydark);
-  --imageshadowsmall: -2vmin -2vmin 0px 0px var(--primarydark);
-  --defaultborder: 3px var(--textlight) solid;
-  --defaultbezier: cubic-bezier(0.81, 0.02, 0.2, 0.98);
-  --brandfont: "black-mango", serif;
-  --headerfont: "Lustria", serif;
-  --bodyfont: "Poppins", sans-serif;
+  --default-shadow: 0px 0px 12px -4px var(--shadow);
+  --image-shadow-large: -5vmin -5vmin 0px 0px var(--secondary);
+  --image-shadow: -2vmin -2vmin 0px 0px var(--secondary);
+  --default-border: 3px var(--text-light) solid;
+  --default-bezier: cubic-bezier(0.81, 0.02, 0.2, 0.98);
+  --brand-font: "black-mango", serif;
+  --header-font: "Alike", serif;
+  --body-font: "Poppins", sans-serif;
   /*DECLARE VARIABLES ABOVE ^^^*/
 }
 .material-symbols-outlined {
@@ -51,13 +52,13 @@ body {
   margin: 0;
   padding: 0;
   background: var(--primary);
-  font-family: var(--bodyfont);
+  font-family: var(--body-font);
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 ::selection {
   background-color: var(--accent);
-  color: var(--textlight);
+  color: var(--text-light);
   border-radius: 12px;
 }
 body > .hr {
@@ -88,7 +89,7 @@ h2,
 h3,
 h4,
 li {
-  font-family: var(--headerfont);
+  font-family: var(--header-font);
 }
 li {
   font-weight: bold;
@@ -111,45 +112,73 @@ a:hover > span.material-symbols-outlined {
   animation-timing-function: ease-in-out;
 }
 p {
-  font-family: var(--bodyfont);
+  font-family: var(--body-font);
 }
 img {
   user-select: none;
 }
 
-.default_button {
-  font-family: var(--headerfont);
+.default-button {
+  font-family: var(--header-font);
   background-color: transparent;
-  border: var(--defaultborder);
+  border: var(--default-border);
   cursor: pointer;
   transition: all 0.3s ease;
-  color: var(--textlight);
+  color: var(--text-light);
   padding: 12px;
   font-size: 18px;
   font-weight: normal;
 }
-.default_button:hover {
+.default-button:hover {
   padding-inline: 18px;
-  background-color: var(--textlight);
+  background-color: var(--text-light);
   color: var(--text);
   transition: all 0.3s ease;
 }
-.large_button {
-  font-family: var(--headerfont);
+.accent-button {
+  border-color: var(--accent);
+  color: var(--text);
+}
+.accent-button:hover {
+  background-color: var(--accent);
+  color: var(--text-light);
+}
+.large-button {
+  font-family: var(--header-font);
   background-color: transparent;
-  border: var(--defaultborder);
+  border: var(--default-border);
   cursor: pointer;
   transition: all 0.3s ease;
-  color: var(--textlight);
+  color: var(--text-light);
   padding: 24px;
   font-size: 24px;
   font-weight: normal;
 }
-.large_button:hover {
+.large-button:hover {
   padding-inline: 36px;
-  background-color: var(--textlight);
+  background-color: var(--text-light);
   color: var(--text);
   transition: all 0.3s ease;
+}
+.text-button {
+  cursor: pointer;
+  background-color: transparent;
+  font-family: var(--body-font);
+  border: none;
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.text-button > * {
+  transition: all 0.3s ease;
+}
+.text-button:hover > * {
+  transform: translateX(12px);
+}
+.text-button .material-symbols-outlined {
+  color: var(--text);
 }
 .noselect {
   user-select: none;
@@ -169,7 +198,7 @@ section.default {
 section.adapt-to-header {
   padding-top: 80px;
 }
-.brandfont {
+.brand-font {
   font-family: "black-mango", serif;
 }
 .group {
@@ -180,10 +209,10 @@ section.adapt-to-header {
   gap: 24px;
 }
 .acrylic {
-  background-color: var(--tint2);
+  background-color: var(--tint-light);
   backdrop-filter: blur(8px);
 }
-.darkacrylic {
+.dark-acrylic {
   background-color: var(--tint);
   backdrop-filter: blur(8px);
 }
@@ -199,47 +228,47 @@ section.adapt-to-header {
   margin-inline: 0 !important;
   opacity: 1 !important;
 }
-[data-inviewport="fadefrombottom"] > :not(.hr) {
+[data-inviewport="fade-from-bottom"] > :not(.hr) {
   transform: translateY(20vh) !important;
   opacity: 0 !important;
   transition: all 1s cubic-bezier(0.81, 0.02, 0.2, 0.98);
 }
-[data-inviewport="fadefrombottom"].is-inViewport > :not(.hr) {
+[data-inviewport="fade-from-bottom"].is-inViewport > :not(.hr) {
   transform: translateY(0) !important;
   opacity: 1 !important;
 }
-[data-inviewport="fadefromtop"] > :not(.hr) {
+[data-inviewport="fade-from-top"] > :not(.hr) {
   transform: translateY(-20vh) !important;
   opacity: 0 !important;
   transition: all 1s cubic-bezier(0.81, 0.02, 0.2, 0.98);
 }
-[data-inviewport="fadefromtop"].is-inViewport > :not(.hr) {
+[data-inviewport="fade-from-top"].is-inViewport > :not(.hr) {
   transform: translateY(0) !important;
   opacity: 1 !important;
 }
-[data-inviewport="fadebackgroundfrombottom"] {
+[data-inviewport="fade-bg-from-bottom"] {
   pointer-events: none;
   background-position-y: 0% !important;
   transition: all 1s cubic-bezier(0.81, 0.02, 0.2, 0.98);
 }
-[data-inviewport="fadebackgroundfrombottom"].is-inViewport {
+[data-inviewport="fade-bg-from-bottom"].is-inViewport {
   pointer-events: all;
   background-position-y: 50% !important;
 }
-[data-inviewport="fadebackgroundfromtop"] {
+[data-inviewport="fade-bg-from-top"] {
   pointer-events: none;
   background-position-y: 100% !important;
   transition: all 1s cubic-bezier(0.81, 0.02, 0.2, 0.98);
 }
-[data-inviewport="fadebackgroundfromtop"].is-inViewport {
+[data-inviewport="fade-bg-from-top"].is-inViewport {
   pointer-events: all;
   background-position-y: 50% !important;
 }
-[data-inviewport="fadein"] > :not(.hr) {
+[data-inviewport="fade-in"] > :not(.hr) {
   opacity: 0 !important;
   transition: all 1s ease;
 }
-[data-inviewport="fadein"].is-inViewport > :not(.hr) {
+[data-inviewport="fade-in"].is-inViewport > :not(.hr) {
   opacity: 1 !important;
 }
 
@@ -254,7 +283,7 @@ section.adapt-to-header {
     transform: translate(0, 0);
   }
 }
-@keyframes fadein {
+@keyframes fade-in {
   0% {
     opacity: 0;
   }
