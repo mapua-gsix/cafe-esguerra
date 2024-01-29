@@ -54,6 +54,11 @@ document.querySelectorAll("[data-middle]").forEach((el) => {
 for (let i = 0; i < images.length; i++) {
   var child = document.createElement("a");
   child.className = "carousel-dot";
+  child.onclick = () => {
+    console.log("bru");
+    let prev = slideIndex;
+    showSlides((slideIndex = i), prev);
+  };
   carouselNav.appendChild(child);
 }
 
