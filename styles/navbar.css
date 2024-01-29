@@ -10,13 +10,43 @@
   transition: background-color 0.3s ease;
   animation: 0.6s cubic-bezier(0.81, 0.02, 0.2, 0.98) 0s 1 nav-slide-from-top;
 }
+.navbar.transparent {
+  background-color: transparent;
+}
 .navbar * {
+  color: var(--text);
   user-select: none;
 }
-.navbar a {
-  transition: all 0.3s ease;
+.navbar.transparent * {
+  color: var(--text-light);
 }
-.ordernow button,
+.navbar.transparent a.active {
+  border: none;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 6px;
+  background-color: transparent;
+  color: var(--text-light);
+  backdrop-filter: blur(8px);
+}
+
+.navbar a:hover {
+  color: var(--accent);
+}
+.navbar a.active {
+  background-color: var(--accent);
+  color: var(--text-light);
+}
+
+.navbar.transparent .products-dropdown {
+  background-color: var(--tint);
+}
+
+.navbar.transparent .logo img {
+  filter: invert(100%);
+}
+.cart-button,
 .back-button {
   display: flex;
   justify-content: center;
@@ -33,10 +63,8 @@
   gap: 6px;
   position: relative;
 }
-.ordernow .material-symbols-outlined {
-  color: var(--text);
-}
-.ordernow .badge {
+
+.cart-button .badge {
   background-color: var(--accent);
   padding: 2px 6px;
   border-radius: 100px;
@@ -47,24 +75,18 @@
   color: var(--text-light);
   transition: all 0.3s ease;
 }
-.ordernow button:hover {
+.cart-button:hover {
   padding-inline: 12px;
   background-color: var(--accent);
   color: var(--text-light);
   transition: all 0.3s ease;
 }
-.ordernow button:hover span {
-  color: var(--text-light);
-}
-.ordernow button:hover .badge {
+.cart-button:hover .badge {
   background-color: var(--text-light);
   color: var(--accent);
 }
-.navbar img {
-  height: 80%;
-}
+
 .navbar div {
-  vertical-align: middle;
   width: 64%;
   height: 100%;
   display: flex;
@@ -72,18 +94,29 @@
   align-items: center;
   overflow: hidden;
 }
-.navbar div:nth-child(1) {
+.navbar .logo,
+.navbar .back {
   width: 18%;
   justify-content: flex-start;
 
   margin-left: 24px;
 }
-.navbar div:nth-child(3) {
+.navbar .logo img {
+  height: 80%;
+}
+.navbar .cart {
   width: 18%;
   justify-content: flex-end;
   margin-right: 24px;
 }
-.navlinks ul {
+.navbar .products-dropdown a:hover > span.material-symbols-outlined {
+  animation-name: bounce;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+.links ul {
+  display: flex;
   list-style: none;
   margin: 0 !important;
   margin-block-start: 0px;
@@ -92,35 +125,30 @@
   margin-inline-end: 0px;
   padding-inline-start: 0px;
 }
-.navlinks > ul {
-  display: flex;
-}
-.navlinks > ul > li {
+.links li {
   padding: 0 1.5vw;
   white-space: nowrap;
 }
-.navlinks ul li a {
+.links a {
   padding: 12px 12px;
   text-decoration: none;
 }
-.navlinks > ul > li:last-child:hover .products-dropdown {
+.links .products-dropdown-button:hover .products-dropdown {
   max-height: 100vh;
   padding: 12px;
   opacity: 1;
   transition: 0.3s ease;
 }
-.navlinks > ul > li:last-child > span {
+.links .products-dropdown-button > span {
   font-size: 22px;
   transition: 0.3s ease;
 }
-.navlinks > ul > li:last-child:hover > span {
+.links .products-dropdown-button:hover > span {
   transform: rotate(180deg);
   transition: 0.3s ease;
 }
-.navlinks ul li:last-child > span {
-  cursor: pointer;
-}
 .products-dropdown {
+  transform: translateY(10px);
   max-height: 0;
   padding: 0;
   opacity: 0;
@@ -139,25 +167,8 @@
 .products-dropdown a {
   padding: 12px 0 !important;
 }
-.navbar.transparent {
-  background-color: transparent;
-}
-.navbar.transparent .products-dropdown {
-  background-color: var(--tint);
-}
-.navbar.transparent a,
-.navbar.transparent button span,
-.navbar.transparent button,
-.navbar h1 {
-  color: var(--text-light);
-}
-.navbar.transparent img {
-  filter: invert(100%);
-}
-.navbar.transparent a:hover {
-  color: var(--accent) !important;
-}
-.menutoggle {
+
+.menu-button {
   display: none;
   cursor: pointer;
   position: fixed;
@@ -168,10 +179,10 @@
   border: none;
   transition: all 0.3s ease;
 }
-.menutoggle span {
+.menu-button span {
   color: var(--accent);
 }
-.menutoggle:hover {
+.menu-button:hover {
   padding: 1px 8px;
   transition: all 0.3s ease;
 }
@@ -181,16 +192,7 @@
 .navbar.transparent .products-dropdown span {
   color: var(--text-light);
 }
-.navbar.transparent a.active {
-  border: none;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-decoration-color: var(--accent);
-  text-underline-offset: 6px;
-  background-color: transparent;
-  color: var(--text-light);
-  backdrop-filter: blur(8px);
-}
+
 .navbar a span {
   color: var(--text);
 }
@@ -200,13 +202,7 @@
 .navbar.transparent .back span {
   color: var(--text-light);
 }
-.navbar a.active {
-  background-color: var(--accent);
-  color: var(--text-light);
-}
-.navbar a.active span {
-  color: var(--text-light);
-}
+
 @keyframes nav-slide-from-top {
   0% {
     transform: translateY(-100%);
@@ -236,22 +232,44 @@
 }
 
 @media only screen and (max-width: 1300px) {
-  .navlinks > ul > li {
+  .links > ul > li {
     padding: 0 0.2vw;
     white-space: nowrap;
   }
 }
 @media only screen and (max-width: 900px) {
-  .navbar div:nth-child(1),
-  .navbar div:nth-child(3) {
-    opacity: 0;
-    width: 0%;
-    height: 0;
+  .navbar .logo {
+    width: 80%;
+    height: 156px;
   }
-
-  .navbar div:nth-child(2) {
+  .navbar .back {
+    width: 100%;
+    height: 48px;
+  }
+  .navbar .logo img {
+    width: 100%;
+    min-width: 200px;
+    filter: none !important;
+  }
+  .navbar .cart {
+    width: 100%;
+    height: 48px;
+    position: absolute;
+    bottom: 24px;
+    right: 4px;
+  }
+  .cart-button {
+    border: none;
+  }
+  .cart-button:hover {
+    background-color: transparent;
+  }
+  .cart-button,
+  .cart-button .material-symbols-outlined {
+    color: var(--text) !important;
+  }
+  .navbar .links {
     display: flex;
-    padding-top: 36px;
     width: 100%;
     height: 100%;
   }
@@ -261,7 +279,11 @@
     right: 0;
     max-width: 0;
     height: 100lvh;
-    transition: all 0s, max-width 0.3s ease;
+    position: fixed;
+    transition: all 0s linear, max-width 0.3s ease;
+  }
+  .navbar.transparent .back span {
+    color: var(--text) !important;
   }
   .navbar ul {
     text-align: left;
@@ -270,32 +292,33 @@
     width: 80%;
     flex-direction: column;
   }
+
+  .navbar.transparent {
+    background-color: var(--primary);
+  }
+  .navbar.transparent a,
+  .navbar.transparent .products-dropdown-button span,
+  .navbar.transparent .products-dropdown span {
+    color: var(--text);
+  }
+  .navbar a:hover {
+    color: var(--accent);
+  }
+  .navbar a.active:hover {
+    color: var(--text-light);
+  }
   .navbar.transparent a.active {
     background-color: var(--accent);
     color: var(--text-light);
     text-decoration: none;
   }
-
-  .navbar.transparent,
-  .navbar.transparent .products-dropdown {
-    background-color: var(--primary);
-  }
-  .navbar.transparent a,
-  .navbar.transparent button span,
-  .navbar.transparent button {
-    color: var(--text);
-  }
-  .navlinks > ul > li:last-child > span {
-    font-size: 16px;
-    transition: 0.3s ease;
-  }
-  .menutoggle {
+  .menu-button {
     display: flex;
   }
-  .menutoggle.expanded > span {
+  .menu-button.expanded > span {
     color: var(--text);
   }
-  .menutoggle.expanded:hover {
+  .menu-button.expanded:hover {
     background-color: transparent;
   }
   .navbar.expanded {
@@ -305,28 +328,29 @@
   .hideable {
     display: unset;
   }
+  .cart-button:hover .badge {
+    background-color: var(--accent);
+    color: var(--text-light);
+  }
   .products-dropdown {
     overflow: hidden;
     border-radius: 0;
     position: unset;
     box-shadow: none;
+    background-color: transparent !important;
   }
-  .navlinks > ul > li:last-child:hover .products-dropdown {
+  .links > ul > .products-dropdown-button:hover .products-dropdown {
     width: 100%;
     padding: 0;
     opacity: 1;
     padding: 6px 12px 0 0;
     transition: 0.3s ease;
   }
-  .navbar .products-dropdown span,
-  .navbar.transparent .products-dropdown span {
-    color: var(--text);
-  }
-  .navlinks > ul > li {
+  .links > ul > li {
     padding: 12px 1.5vw;
     white-space: nowrap;
   }
-  .navlinks ul li a {
+  .links ul li a {
     padding: 12px 1.5vw;
     text-decoration: none;
   }

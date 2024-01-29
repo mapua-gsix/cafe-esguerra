@@ -1,6 +1,6 @@
-var menutoggle = document.getElementById("menutoggle");
+var menutoggle = document.getElementById("menu-button");
 var navbar = document.getElementById("navbar");
-function menutoggleClick() {
+function menuButtonClick() {
   if (navbar.classList.contains("expanded")) {
     navbar.classList.remove("expanded");
     menutoggle.classList.remove("expanded");

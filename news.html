@@ -19,23 +19,19 @@
     <header>
       <nav id="navbar" class="navbar transparent">
         <div class="logo"><img src="assets/logo.svg" alt="logo" /></div>
-        <div class="navlinks">
+        <div class="links">
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li class="hideable">
-              <a href="forms/order.html"
-                ><span class="material-symbols-outlined"> shopping_cart </span>
-                Cart</a
-              >
-            </li>
-            <li><a class="active" href="about.html">About</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="forms/reservation.html">Reservations</a></li>
+
+            <li><a href="./about.html">About</a></li>
+            <li><a class="active" href="./news.html">News</a></li>
+
+            <li><a href="./forms/reservation.html">Reservations</a></li>
             <li>
-              <a href="forms/feedback.html">Feedback</a>
+              <a href="./forms/feedback.html">Feedback</a>
             </li>
-            <li>
-              <a href="products.html">Products</a
+            <li class="products-dropdown-button">
+              <a href="./products.html">Products</a
               ><span class="material-symbols-outlined noselect"
                 >expand_more
               </span>
@@ -62,17 +58,20 @@
             </li>
           </ul>
         </div>
-        <div class="ordernow">
-          <button onclick="window.location.href='./forms/order.html'">
-            <span id="badge" onload="onModifyCart()" class="badge">0</span>
+        <div class="cart">
+          <button
+            class="cart-button"
+            onclick="window.location.href='./forms/order.html'"
+          >
+            <span id="badge" class="badge">0</span>
             <span class="material-symbols-outlined"> shopping_cart </span> CART
           </button>
         </div>
       </nav>
       <button
-        id="menutoggle"
-        class="menutoggle noselect"
-        onclick="menutoggleClick()"
+        id="menu-button"
+        class="menu-button noselect"
+        onclick="menuButtonClick()"
       >
         <span class="material-symbols-outlined">menu</span>
       </button>
