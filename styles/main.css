@@ -163,7 +163,7 @@ img {
 .text-button {
   cursor: pointer;
   background-color: transparent;
-  font-family: var(--body-font);
+  font-family: var(--header-font);
   border: none;
   font-size: x-large;
   display: flex;
