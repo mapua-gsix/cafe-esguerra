@@ -104,10 +104,14 @@ function ungroup_cart(grouped_cart) {
   return array;
 }
 function onModifyCart() {
-  var cart = JSON.parse(sessionStorage.getItem("cart"));
-  var ungrouped_cart = ungroup_cart(cart);
-  cart_badge.textContent = ungrouped_cart.length;
-  getTotalPrice();
+  try {
+    var cart = JSON.parse(sessionStorage.getItem("cart"));
+    var ungrouped_cart = ungroup_cart(cart);
+    cart_badge.textContent = ungrouped_cart.length;
+    getTotalPrice();
+  } catch (err) {
+    console.log(err, "NO ITEMS IN CART");
+  }
 }
 function handle_submit(event) {
   event.preventDefault();
