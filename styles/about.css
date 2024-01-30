@@ -146,12 +146,12 @@ img {
 .selection {
   flex-direction: column;
 }
-div .hr {
+.hr.accent {
   width: 50%;
   height: unset;
   margin: 0 25% !important;
 }
-div .hr hr {
+.hr.accent hr {
   border: 2px solid var(--accent);
 }
 .welcome-title,
@@ -162,7 +162,7 @@ div .hr hr {
   width: 40%;
 }
 .selection-text {
-  width: clamp(200px, 80%, 500px);
+  width: clamp(200px, 80%, 770px);
 }
 .welcome-graphic {
   border-style: dashed;
