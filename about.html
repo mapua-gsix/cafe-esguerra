@@ -12,7 +12,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-    <title>Café Esguerra | by cafethena</title>
+    <title>About | Café ESGUERRA</title>
   </head>
   <body>
     <header>
@@ -63,7 +63,7 @@
             onclick="window.location.href='./forms/order.html'"
           >
             <span id="badge" class="badge">0</span>
-            <span class="material-symbols-outlined"> shopping_cart </span> CART
+            <span class="material-symbols-outlined"> shopping_cart </span>
           </button>
         </div>
       </nav>
@@ -91,23 +91,47 @@
     <div class="hr" data-inviewport="expand">
       <hr class="accent" />
     </div>
-    <section class="default padding-large enclosed">
-      <div id="aboutheaderbody">
-        <div id="textcontainer">
-          <div id="text">
-            <h1>Welcome</h1>
+    <section
+      class="welcome-section padding-large enclosed card-background-gradient"
+    >
+      <div class="welcome" data-inviewport="fade-in">
+        <div class="welcome-text">
+          <div class="welcome-title">
+            <h1>Welcome to <span class="brand-font">Café ESGUERRA</span></h1>
+          </div>
+          <div class="hr" data-inviewport="expand">
+            <hr />
+          </div>
+          <div class="welcome-body">
             <p>
-              Welcome to Cafe Esguerra, where the aroma of freshly brewed coffee
-              and the warmth of a welcoming ambiance converge to create an
-              unforgettable experience. Nestled in the heart of the city, Cafe
-              Esguerra is a haven for coffee enthusiasts and connoisseurs alike.
-              Our commitment to excellence is reflected in every cup we serve,
-              featuring a meticulously curated selection of premium beans from
-              around the world.
+              Welcome to <span class="brand-font">Café ESGUERRA</span>, where
+              the aroma of freshly brewed coffee and the warmth of a welcoming
+              ambiance converge to create an unforgettable experience. Nestled
+              in the heart of the city,
+              <span class="brand-font">Café ESGUERRA</span> is a haven for
+              coffee enthusiasts and connoisseurs alike. Our commitment to
+              excellence is reflected in every cup we serve, featuring a
+              meticulously curated selection of premium beans from around the
+              world.
             </p>
           </div>
-          <div id="text">
-            <h1>The Selection</h1>
+        </div>
+
+        <div class="welcome-graphic">
+          <img src="./assets/graphics/coffee.svg" alt="" />
+        </div>
+      </div>
+    </section>
+    <section class="selection-section padding-large enclosed">
+      <div class="selection" data-inviewport="fade-in">
+        <div class="selection-text">
+          <div class="selection-title">
+            <h1><span class="brand-font">Café ESGUERRA</span>'s Selection</h1>
+          </div>
+          <div class="hr" data-inviewport="expand">
+            <hr />
+          </div>
+          <div class="selection-body">
             <p>
               Beyond the exceptional coffee, our menu boasts a diverse array of
               delectable treats, ranging from artisanal pastries to savory
@@ -120,8 +144,12 @@
             </p>
           </div>
         </div>
+        <div class="products-button">
+          <button class="default-button accent-button">Check it out</button>
+        </div>
       </div>
-
+    </section>
+    <section class="default padding-large">
       <div id="textcontainer">
         <div id="text">
           <h1>Our Vision:</h1>

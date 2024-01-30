@@ -2,7 +2,16 @@ section {
   max-height: 100vh;
   padding: 0 0 0 0 !important;
 }
+section.enclosed {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+section.enclosed > div {
+  width: 90%;
 
+  background-color: var(--primary);
+}
 .banner {
   height: 30vw;
   background: var(--background-gradient);
@@ -113,10 +122,66 @@ img {
   max-width: 100%;
   height: auto;
 }
-p {
-  text-indent: 48px;
+.welcome-section,
+.selection-section {
+  max-height: unset;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--background-gradient);
+  width: 100%;
 }
-
+.selection-section {
+  background: var(--secondary);
+}
+.welcome,
+.selection {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 48px 12px 48px 12px;
+  gap: 24px;
+}
+.selection {
+  flex-direction: column;
+}
+div .hr {
+  width: 50%;
+  height: unset;
+  margin: 0 25% !important;
+}
+div .hr hr {
+  border: 2px solid var(--accent);
+}
+.welcome-title,
+.selection-title {
+  font-size: x-large;
+}
+.welcome-text {
+  width: 40%;
+}
+.selection-text {
+  width: clamp(200px, 80%, 500px);
+}
+.welcome-graphic {
+  border-style: dashed;
+  height: fit-content;
+  border-color: var(--text);
+  border-radius: 50%;
+  padding: 4vw;
+  background: var(--primary);
+  background: radial-gradient(
+    circle,
+    var(--secondary) 20%,
+    rgba(0, 212, 255, 0) 100%
+  );
+}
+.welcome-graphic img {
+  object-fit: cover;
+  height: 25vw;
+  min-height: 40vh;
+}
 @media only screen and (max-width: 900px) {
   #aboutgallery {
     grid-template-columns: repeat(2, minmax(0, 40%));
@@ -132,5 +197,11 @@ p {
   #textcontainer {
     display: flex;
     flex-direction: column;
+  }
+  .welcome {
+    flex-direction: column;
+  }
+  .welcome-text {
+    width: clamp(200px, 80%, 500px);
   }
 }
