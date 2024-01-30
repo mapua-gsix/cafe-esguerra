@@ -66,13 +66,17 @@ section.enclosed > div {
 }
 .promos {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 96px;
 }
 .promo-item {
   display: flex;
-  width: 100%;
+  width: 90%;
   justify-content: space-evenly;
+  background-color: var(--primary);
+  padding: 48px 24px;
 }
 .promo-item > div {
   display: flex;
@@ -84,6 +88,8 @@ section.enclosed > div {
 .promo-item .content {
   align-items: flex-start;
   gap: 6vh;
+
+  padding: 24px;
 }
 .promo-image {
   width: 80%;
