@@ -15,8 +15,8 @@
   font-weight: bolder;
 }
 :root {
-  --primary: #e5ddd0;
-  --secondary: #c2b090;
+  --primary: rgb(229, 221, 208);
+  --secondary: rgb(194, 170, 144);
   --accent: #519440;
   --text: #3f3a39;
   --text-light: #e7e7e0;
@@ -27,6 +27,12 @@
     180deg,
     var(--primary) 0%,
     var(--secondary) 100%
+  );
+  --background-gradient-overlay: linear-gradient(
+    180deg,
+    rgba(229, 221, 208, 1) 0%,
+    rgba(229, 221, 208, 0.5) 50%,
+    rgba(194, 170, 144, 1) 100%
   );
   --default-shadow: 0px 0px 12px -4px var(--shadow);
   --image-shadow-large: -5vmin -5vmin 0px 0px var(--secondary);
@@ -113,6 +119,11 @@ a:hover > span.material-symbols-outlined {
 
 p {
   font-family: var(--body-font);
+  text-indent: 48px;
+  text-align: justify;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 1.2px;
 }
 img {
   user-select: none;
@@ -225,6 +236,15 @@ section.adapt-to-header {
 .dark-acrylic {
   background-color: var(--tint);
   backdrop-filter: blur(8px);
+}
+.card-background-gradient {
+  background-image: var(--background-gradient-overlay),
+    url("../assets/graphics/card_background.svg") !important;
+  background-repeat: repeat;
+  background-size: 700px !important;
+}
+.card-background {
+  background-image: url("../assets/graphics/card_background.svg");
 }
 
 [data-inviewport="expand"] > * {
