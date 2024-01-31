@@ -4,26 +4,55 @@ body.modal-active {
 .products-section {
   max-height: unset;
   height: fit-content;
+  background: var(--background-gradient);
 }
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2vw;
+  width: 80%;
+}
+.product-list {
+  width: 100%;
+  padding: 48px 0;
+  display: flex;
+  justify-content: center;
+  gap: 96px;
+  align-items: center;
+  flex-direction: column;
+}
+.product-list .list-heading {
+  font-size: clamp(24px, 6vw, 4em);
+  padding: 1% 2%;
+  width: 100%;
+  text-align: center;
+  border: var(--default-border);
+  background-color: var(--text-light);
+  border-width: 24px;
+}
+.product-list .list-heading h1 {
+  margin: 0;
 }
 .product-item {
+  background-color: var(--primary);
   display: flex;
   flex-direction: column;
+  border-top: 6px solid var(--secondary);
   overflow: hidden;
   justify-content: center;
+  position: relative;
   align-items: center;
-
   gap: 24px;
-  padding: 24px;
+  padding: 24px 12px;
+  transition: transform 0.3s ease;
+}
+.product-wrapper {
+  perspective-origin: 50% 50%;
+  perspective: 400px;
 }
 .product-image {
   object-fit: cover;
-  border: var(--default-border);
-  border-color: var(--accent);
+
   border-width: 4px;
   width: 80%;
   aspect-ratio: 1;
@@ -35,10 +64,12 @@ body.modal-active {
 }
 .product-description {
   font-style: italic;
+  pointer-events: none;
 }
 .product-price {
   font-family: var(--header-font);
   font-size: x-large;
+  pointer-events: none;
 }
 .product-price::before {
   content: "₱";
