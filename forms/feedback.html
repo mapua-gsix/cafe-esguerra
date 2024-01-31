@@ -3,55 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style_feedback.css" />
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="icon" href="../assets/favicon.svg" type="image/x-icon" />
     <link rel="stylesheet" href="../styles/navbar.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
-    <link rel="stylesheet" href="../styles/style_feedback.css" />
+    <link rel="stylesheet" href="../styles/about.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-    <title>Café Esguerra | by caféthena</title>
+    <title>Café Esguerra | by cafethena</title>
   </head>
+  <style>
+    .brand-font {
+      font-family: "black-mango", serif;
+      white-space: nowrap;
+    }
+  </style>
   <body>
     <header>
-      <nav id="navbar" class="navbar">
+      <nav id="navbar" class="navbar transparent">
         <div class="logo"><img src="../assets/logo.svg" alt="logo" /></div>
         <div class="links">
           <ul>
             <li><a href="../index.html">Home</a></li>
+
             <li><a href="../about.html">About</a></li>
             <li><a href="../news.html">News</a></li>
-            <li class="hideable">
-              <a href="../forms/order.html">Orders</a>
-            </li>
-            <li><a href="../forms/reservation.html">Reservations</a></li>
+
+            <li><a href="./reservation.html">Reservations</a></li>
             <li>
-              <a href="../forms/feedback.html">Feedback</a>
+              <a class="active" href="./feedback.html">Feedback</a>
             </li>
-            <li>
+            <li class="products-dropdown-button">
               <a href="../products.html">Products</a
               ><span class="material-symbols-outlined noselect"
                 >expand_more
               </span>
               <ul class="products-dropdown">
                 <li>
-                  <a href="../products/coffee.html">Coffee</a>
+                  <a href="../products/coffee.html"
+                    ><span class="material-symbols-outlined"> coffee </span>
+                    Coffee</a
+                  >
                 </li>
                 <li>
-                  <a href="../products/beverage.html">Beverages</a>
+                  <a href="../products/beverage.html"
+                    ><span class="material-symbols-outlined"> local_bar </span>
+                    Beverages</a
+                  >
                 </li>
                 <li>
-                  <a href="../products/dessert.html">Desserts</a>
+                  <a href="../products/dessert.html"
+                    ><span class="material-symbols-outlined"> icecream </span>
+                    Desserts</a
+                  >
                 </li>
               </ul>
             </li>
           </ul>
         </div>
         <div class="nav-cart">
-          <button>
-            <nobr>Order Now!</nobr>
+          <button
+            class="cart-button"
+            onclick="window.location.href='/forms/order.html'"
+          >
+            <span id="badge" class="badge">0</span>
+            <span class="material-symbols-outlined"> shopping_cart </span>
           </button>
         </div>
       </nav>
@@ -63,13 +82,158 @@
         <span class="material-symbols-outlined">menu</span>
       </button>
     </header>
-    <section>
+    <!--Banner Section-->
+    <section class="banner-section adapt-to-header">
+      <div class="banner" data-inviewport="fade-from-bottom">
+        <div class="banner-heading">
+          <h2>Feedback</h2>
+          <h1 class="brand-font">Café ESGUERRA</h1>
+          <div class="hr" data-inviewport="expand">
+            <hr />
+          </div>
+          <h3>The journey and the destination</h3>
+        </div>
+      </div>
+    </section>
+    <div class="hr" data-inviewport="expand">
+      <hr class="accent" />
+    </div>
+    <!--Testimonial Section-->
+    <!--
+      TODO: 
+      Just change the image src and Content
+      JUSTIFY <p>
+      Alternate Images and Text Align
+    -->
+
+    <section class="mainContent imgBorder section-testimonial" >
+      <a href="#form">
+        <button id="myBtn" title="Go to form">Feedback Form</button></a
+      >
+      <div class="container2">
+        <div class="image-container">
+        <img
+          src="../assets/testimonial_images/Testimonial_1.jpg"
+          alt="Picture of a person"
+          style="width: 90px"
+        />
+      </div>
+      <br/>
+
+        <span><b>"Relaxing atmosphere"</b></span>
+
+        <p style="font-style: italic">
+          "The staff at your coffee shop went above and beyond to ensure that my
+          visit was enjoyable. Their warm and welcoming demeanor made me feel
+          like a valued customer. I can't wait to visit your coffee shop again
+          soon!"<br />
+        </p>
+        <p style="margin-left: 6vw">— Christina M.</p>
+        
+      </div>
+      
+
+      <div class="container2">
+        <img
+          src="../assets/testimonial_images/Testimonial_2.jpg"
+          alt="Picture of a person"
+          style="width: 90px"
+        />
+
+        <span><b>"Expert baristas"</b></span>
+
+        <p style="font-style: italic">
+          "Great coffee place and nice staffs 🤍😊"<br />
+        </p>
+        <p style="margin-left: 6vw">— Sharmaine C.</p>
+      </div>
+
+      <div class="container2">
+        <img
+          src="../assets/testimonial_images/Testimonial_3.jpg"
+          alt="Picture of a person"
+          style="width: 90px"
+        />
+
+        <span><b>"Cheap eats"</b></span>
+
+        <p style="font-style: italic">
+          "Great coffee, cozy vibe, and friendly staff. Definitely a go-to
+          spot!"<br />
+        </p>
+        <p style="margin-left: 6vw">— Marie B.</p>
+      </div>
+
+      <div class="container2">
+        <img
+          src="../assets/testimonial_images/Testimonial_4.jpg"
+          alt="Picture of a person"
+          style="width: 90px"
+        />
+
+        <span><b>"Friendly Staff"</b></span>
+
+        <p style="font-style: italic">
+          "Friendly staff and nakuha yung gusto ko sa coffee. Babalikan ko to.
+          😊"<br />
+        </p>
+        <p style="margin-left: 6vw">— Khay R.</p>
+      </div>
+
+      <div class="container2">
+        <img
+          src="../assets/testimonial_images/Testimonial_5.jpg"
+          alt="Picture of a person"
+          style="width: 90px"
+        />
+
+        <span><b>"Welcoming Staff"</b></span>
+
+        <p style="font-style: italic">
+          "I liked the ambiance and the coffee smell which adds to the coziness
+          of the place. “So minimalist” as other people would call it. They have
+          lovely staff and they remember if it’s your nth time visiting the
+          place as they would greet you like “Welcome back!” A personalised
+          greeting which adds to their excellent customer service
+          experience."<br />
+        </p>
+        <p style="margin-left: 6vw">— Rugen L.</p>
+      </div>
+
+      <div class="container2">
+        <img
+          src="../assets/testimonial_images/Testimonial_6.jpg"
+          alt="Picture of a person"
+          style="width: 90px"
+        />
+
+        <span><b>"Excellent Customer Service"</b></span>
+
+        <p style="font-style: italic">
+          "Minimalist coffee shop in a good location with friendly service &
+          great menu choices. They have delicious & fresh pastries at affordable
+          prices. Highly recommended!! I will be back for sure 💜"<br />
+        </p>
+        <p style="margin-left: 6vw">— Krystal L.</p>
+      </div>
+
+      <br/>
+    </section>
+
+
+    <!--Main Form Section-->
+    <section class="section-form" id="form">
       <br />
       <br />
 
-      <div class="container">
+      <div class="container" data-inviewport="fade-from-bottom">
         <div class="text">Customer Feedback</div>
-        <form action="#">
+        <!--Currently Set to My Own Email, Change to business Email-->
+        <form
+          action="mailto:asmcruz@mymail.mapua.edu.ph"
+          method="post"
+          enctype="text/plain"
+        >
           <div class="form-row">
             <div class="input-data">
               <select id="Categories" name="Categories">
@@ -110,8 +274,10 @@
             <div class="input-data textarea">
               <textarea rows="8" cols="80" required></textarea>
               <br />
-              <div class="underline"></div>
-              <label for="">Write your feedback about Cafe Esguerra!</label>
+              <div class="underline" style="bottom: -10px"></div>
+              <label for="" style="background-color: rgba(0, 0, 0, 0)"
+                >Write your feedback about Cafe Esguerra!</label
+              >
               <br />
             </div>
           </div>
@@ -125,33 +291,94 @@
       </div>
     </section>
     <footer>
-      <div class="horizontal">
-        <div class="contacts">
-          <h4>Stay connected</h4>
-          <a href="https://www.facebook.com/cafethena">Facebook</a>
-          <a href="https://www.instagram.com/cafeesguerra/">Instagram</a>
-          <a>E-mail</a>
-        </div>
-        <div class="address">
-          <h4>Find us</h4>
-          <a>Address</a>
-        </div>
+      <div class="logo" data-inviewport="fade-from-bottom">
+        <img src="../assets/logo.svg" />
+      </div>
+      <div class="horizontal" data-inviewport="fade-from-bottom">
         <div class="navigate">
           <h4>Navigate</h4>
-          <a>Home ></a>
-          <a>Products ></a>
-          <a>About ></a>
-          <a>News ></a>
-          <a>Reservations ></a>
-          <a>Feedback ></a>
-          <a>Orders ></a>
+          <a href="../index.html">Home ></a>
+          <a href="../about.html">About ></a>
+          <a href="../products.html">Products ></a>
+          <a href="../news.html">News ></a>
+          <a href="./reservation.html">Reservations ></a>
+          <a href="./feedback.html">Feedback ></a>
+        </div>
+        <div class="authors">
+          <h4>Authors</h4>
+          <a>Cunanan, Ian</a>
+          <a>Cruz, Audrize</a>
+          <a>Fernando, Heughric</a>
+          <a>Papa, Rishon</a>
+          <a>Suarez, Yuan</a>
+          <a>Victoriano, Patrick</a>
+        </div>
+        <div class="contacts">
+          <h4>Stay connected</h4>
+          <div class="links">
+            <a href="https://www.facebook.com/cafethena"
+              ><i class="fa-brands fa-square-facebook"></i
+            ></a>
+            <a href="https://www.instagram.com/cafeesguerra/"
+              ><i class="fa-brands fa-square-instagram"></i
+            ></a>
+          </div>
+
+          <h4>Find us</h4>
+          <div class="address">
+            <a href="https://maps.app.goo.gl/CKyncxri1tmE5xGR9"
+              >766 A. Bonifacio, Cainta, 1900 Rizal</a
+            >
+          </div>
         </div>
       </div>
+
+      <div class="hr" data-inviewport="expand">
+        <hr />
+      </div>
+
       <h4>© 2024 Mapúa University - Makati</h4>
     </footer>
   </body>
   <script
+    src="../scripts/transparent_navbar.js"
+    crossorigin="anonymous"
+  ></script>
+  <script
     src="../scripts/responsive_navbar.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="../scripts/load_animations.js" crossorigin="anonymous"></script>
+  <script>
+    window.onload = () => {
+      for (let i of document.querySelectorAll("#aboutgallery img")) {
+        i.onclick = () => i.classList.toggle("full");
+      }
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    document.querySelectorAll("[data-inviewport]").forEach((element) => {
+      observer.observe(element);
+    });
+
+    window.onload = () => {
+      for (let i of document.querySelectorAll("#aboutgallery img")) {
+        i.onclick = () => i.classList.toggle("full");
+      }
+    };
+  </script>
+  <script
+    src="https://kit.fontawesome.com/c4046a80c3.js"
     crossorigin="anonymous"
   ></script>
 </html>
