@@ -252,6 +252,42 @@ section.adapt-to-header {
 .card-background {
   background-image: url("../assets/graphics/card_background.svg");
 }
+.banner-section {
+  height: 30vw;
+  background: var(--background-gradient);
+  overflow: hidden;
+}
+
+.banner {
+  text-align: center;
+  background-color: var(--tint);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  flex-direction: column;
+}
+.banner-heading {
+  color: var(--text-light);
+
+  flex-direction: column;
+}
+.banner-heading h1 {
+  text-align: center;
+  margin: 0;
+  padding: 0px;
+  font-size: clamp(24px, 6vw, 144px);
+}
+.banner-heading h2 {
+  padding: 0;
+  margin: 0;
+}
 .banner-nav {
   display: flex;
   list-style: none;
