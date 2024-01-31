@@ -74,22 +74,45 @@ body {
 body > .hr {
   width: 30%;
   height: 1px;
-  margin: 0 0 0 35vw;
+  left: 35%;
   position: absolute;
 }
 body > .hr.left {
   width: 30%;
-  margin: 0 0 0 20vw;
+  height: 1px;
+  left: 20%;
 }
 body > .hr.right {
-  margin: 0 0 0 50vw;
+  height: 1px;
+  width: 30%;
+  left: 50%;
+}
+body > .hr.long {
+  width: 50%;
+  left: 25%;
+}
+body > .hr.full {
+  width: 100%;
+  left: 0;
+}
+hr.light {
+  width: 100%;
+  border-top: 6px solid var(--text-light);
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  padding: 0;
+  margin: 0;
 }
 hr {
   margin: 24px 0 24px 0;
 }
 hr.accent {
   width: 100%;
-  border: 4px solid var(--accent);
+  border-top: 6px solid var(--accent);
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
   -webkit-mask-image: unset;
   mask-image: none;
   padding: 0;
@@ -293,7 +316,6 @@ section.adapt-to-header {
   list-style: none;
   padding: 0;
   margin: 0;
-
   align-self: center;
   position: absolute;
   bottom: 12px;
