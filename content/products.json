@@ -11,72 +11,732 @@
         },
         {
             "id":"1000",
-            "name":"Test (Coffee Item)",
+            "name":"Americano",
             "description":"This is a test product",
             "image":"../assets/product_images/coffee.jpg",
-            "price":100.50,
-            "ingredients":[
-                "water",
-                "milk"
-            ],
+            "price":100,
             "sizeOptions":[{
                 "name": "regular",
                 "price": 0
-            },
-            {
-                "name":"large" ,
-                "price": 10
             }],
-            "temperature":["hot", "cold"],
+            "temperature":[{
+                "name": "hot",
+                "price": 0
+            },{
+                "name": "iced",
+                "price": 0
+            }],
             "otherOptions":[{
                 "name": "none",
                 "price": 0
-            },{
-                "name":"extra sugar",
-                "price":5
             }]
         },
         {
             "id":"1001",
-            "name":"Test1 (Coffee Item)",
+            "name":"Latte",
             "description":"This is a test product",
-            "image":"../assets/placeholder.png",
-            "price":100,
-            "ingredients":[
-                "water",
-                "milk"
-            ],
-            "sizeOptions":[],
-            "temperature":[],
-            "otherOptions":[]
+            "image":"../assets/product_images/coffee.jpg",
+            "price":120,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "hot",
+                "price": 0
+            },{
+                "name": "iced",
+                "price": 0
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
         },
         {
             "id":"1002",
-            "name":"Test2 (Coffee Item)",
+            "name":"Cappuccino",
+            "description":"This is a test product",
+            "image":"../assets/product_images/coffee.jpg",
+            "price":120,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "hot",
+                "price": 0
+            },{
+                "name": "iced",
+                "price": 0
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
+        },{
+            "id":"1003",
+            "name":"Spanish Latte",
+            "description":"This is a test product",
+            "image":"../assets/product_images/coffee.jpg",
+            "price":150,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "hot",
+                "price": 0
+            },{
+                "name": "iced",
+                "price": 0
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
+        },{
+            "id":"1004",
+            "name":"Caramel Latte",
+            "description":"This is a test product",
+            "image":"../assets/product_images/coffee.jpg",
+            "price":160,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "hot",
+                "price": 0
+            },{
+                "name": "iced",
+                "price": 0
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
+        },{
+            "id":"1005",
+            "name":"Vanilla Latte",
+            "description":"This is a test product",
+            "image":"../assets/product_images/coffee.jpg",
+            "price":160,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "hot",
+                "price": 0
+            },{
+                "name": "iced",
+                "price": 0
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
+        },{
+            "id":"1006",
+            "name":"Hazelnut Latte",
+            "description":"This is a test product",
+            "image":"../assets/product_images/coffee.jpg",
+            "price":160,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "hot",
+                "price": 0
+            },{
+                "name": "iced",
+                "price": 0
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
+        },{
+            "id":"1007",
+            "name":"Cheesecake Latte",
+            "description":"This is a test product",
+            "image":"../assets/product_images/coffee.jpg",
+            "price":160,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "hot",
+                "price": 0
+            },{
+                "name": "iced",
+                "price": 0
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
+        },{
+            "id":"1008",
+            "name":"Mocha Latte",
+            "description":"This is a test product",
+            "image":"../assets/product_images/coffee.jpg",
+            "price":170,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "hot",
+                "price": 0
+            },{
+                "name": "iced",
+                "price": 0
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
+        },{
+            "id":"1009",
+            "name":"Caaramel Macchiato",
+            "description":"This is a test product",
+            "image":"../assets/product_images/coffee.jpg",
+            "price":185,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "hot",
+                "price": 0
+            },{
+                "name": "iced",
+                "price": 0
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
+        },{
+            "id":"1010",
+            "name":"Matcha Latte",
+            "description":"This is a test product",
+            "image":"../assets/product_images/coffee.jpg",
+            "price":170,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "hot",
+                "price": 0
+            },{
+                "name": "iced",
+                "price": 0
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
+        },{
+            "id":"1011",
+            "name":"Chocolate Latte",
+            "description":"This is a test product",
+            "image":"../assets/product_images/coffee.jpg",
+            "price":175,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "hot",
+                "price": 0
+            },{
+                "name": "iced",
+                "price": 0
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
+        },{
+            "id":"1012",
+            "name":"Red Velvet",
+            "description":"This is a test product",
+            "image":"../assets/product_images/coffee.jpg",
+            "price":130,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "hot",
+                "price": 0
+            },{
+                "name": "iced",
+                "price": 0
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
+        },
+        {
+            "id":"1100",
+            "name":"Athena's Blend",
             "description":"This is a test product",
             "image":"../assets/placeholder.png",
-            "price":100,
-            "ingredients":[
-                "water",
-                "milk"
-            ],
-            "sizeOptions":[],
-            "temperature":[],
-            "otherOptions":[]
+            "price":180,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "iced",
+                "price": 0
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
+        },
+        {
+            "id":"1101",
+            "name":"European Chocolate",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":180,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "iced",
+                "price": 0
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
+        },
+        {
+            "id":"1102",
+            "name":"Oreo Cheesecake",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":170,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "iced",
+                "price": 0
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
+        },{
+            "id":"1103",
+            "name":"Strawberry Oreo",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":170,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "iced",
+                "price": 0
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
+        },{
+            "id":"1104",
+            "name":"Strawberry",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":150,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "iced",
+                "price": 0
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
+        },{
+            "id":"1105",
+            "name":"Salted Caramel",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":160,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "iced",
+                "price": 0
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
+        },{
+            "id":"1106",
+            "name":"Mixed Berry",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":190,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "iced",
+                "price": 0
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
+        },{
+            "id":"1107",
+            "name":"Caramel",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":170,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "iced",
+                "price": 0
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
+        },{
+            "id":"1108",
+            "name":"Mocha",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":170,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "iced",
+                "price": 0
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
+        },{
+            "id":"1109",
+            "name":"Matcha",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":185,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "iced",
+                "price": 0
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
+        },{
+            "id":"1110",
+            "name":"Matcha Oreo",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":190,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "iced",
+                "price": 0
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
         },
         {
             "id":"2000",
-            "name":"Test (Beverage Item)",
+            "name":"Blueberry Lychee",
             "description":"This is a test product",
             "image":"../assets/placeholder.png",
-            "price":55,
-            "ingredients":[
-                "water",
-                "milk"
-            ],
-            "sizeOptions":[],
-            "temperature":[],
-            "otherOptions":[]
+            "price":95,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "hot",
+                "price": 0
+            },{
+                "name": "iced",
+                "price": 25
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
+        },
+        {
+            "id":"2001",
+            "name":"Blueberry",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":95,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "hot",
+                "price": 0
+            },{
+                "name": "iced",
+                "price": 25
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
+        },
+        {
+            "id":"2002",
+            "name":"Lychee",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":95,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "hot",
+                "price": 0
+            },{
+                "name": "iced",
+                "price": 25
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
+        },
+        {
+            "id":"2003",
+            "name":"Strawberry",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":95,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "hot",
+                "price": 0
+            },{
+                "name": "iced",
+                "price": 25
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
+        },
+        {
+            "id":"2004",
+            "name":"Passion Fruit",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":120,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "hot",
+                "price": 0
+            },{
+                "name": "iced",
+                "price": 30
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
+        },
+        {
+            "id":"2005",
+            "name":"Lychee Ginger",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":120,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "hot",
+                "price": 0
+            },{
+                "name": "iced",
+                "price": 30
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            },{
+                "name": "ice cream",
+                "price": 30
+            },{
+                "name": "cream cheese",
+                "price": 30
+            },{
+                "name": "pearls",
+                "price": 20
+            },{
+                "name": "nata",
+                "price": 20
+            },{
+                "name": "coffee jelly",
+                "price": 25
+            },{
+                "name": "crushed oreo",
+                "price": 20
+            },{
+                "name": "syrup",
+                "price": 25
+            }]
+        },
+        {
+            "id":"2101",
+            "name":"Wintermelon",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":99,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "iced",
+                "price": 0
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            },{
+                "name": "ice cream",
+                "price": 30
+            },{
+                "name": "cream cheese",
+                "price": 30
+            },{
+                "name": "pearls",
+                "price": 20
+            },{
+                "name": "nata",
+                "price": 20
+            },{
+                "name": "coffee jelly",
+                "price": 25
+            },{
+                "name": "crushed oreo",
+                "price": 20
+            },{
+                "name": "syrup",
+                "price": 25
+            }]
+        },
+        {
+            "id":"2102",
+            "name":"Taro",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":99,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "iced",
+                "price": 0
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            },{
+                "name": "ice cream",
+                "price": 30
+            },{
+                "name": "cream cheese",
+                "price": 30
+            },{
+                "name": "pearls",
+                "price": 20
+            },{
+                "name": "nata",
+                "price": 20
+            },{
+                "name": "coffee jelly",
+                "price": 25
+            },{
+                "name": "crushed oreo",
+                "price": 20
+            },{
+                "name": "syrup",
+                "price": 25
+            }]
+        },
+        {
+            "id":"2103",
+            "name":"Okinawa",
+            "description":"This is a test product",
+            "image":"../assets/placeholder.png",
+            "price":99,
+            "sizeOptions":[{
+                "name": "regular",
+                "price": 0
+            }],
+            "temperature":[{
+                "name": "iced",
+                "price": 0
+            }],
+            "otherOptions":[{
+                "name": "none",
+                "price": 0
+            }]
         },
         {
             "id":"3000",
