@@ -8,7 +8,10 @@ html{
   max-height: -moz-fit-content;
   height: fit-content !important;
   height: -moz-fit-content;
-
+  background-image: var(--background-gradient-overlay),
+  url("../assets/graphics/card_background.svg") !important;
+  background-repeat: repeat;
+  background-size: 700px !important;
 }
 .section-form {
   display: flex;
@@ -237,7 +240,7 @@ textarea, input{
 }
 
 .container2 {
-  border: 2px solid #ccc;
+  border: 2px solid transparent;
   background-color: #C2AA90;
   border-radius: 5px;
   padding: 16px;
