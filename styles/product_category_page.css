@@ -3,7 +3,7 @@ body {
 }
 .banner {
   padding: 50px 0 0 0;
-  background: url("../assets/product_images/coffee.jpg");
+
   background-color: var(--tint);
   background-position: 0% 30%;
   color: var(--text-light);
@@ -24,21 +24,26 @@ body {
 .hero-subtitle h3 {
   font-style: italic;
 }
+.carousel-section {
+  height: fit-content;
+  max-height: unset;
+}
 
 .new-carousel {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  overflow: auto;
+  overflow: hidden;
   width: 100%;
-  height: 30rem;
-  padding: 4rem;
+  height: fit-content;
+  padding: 72px 0;
   gap: 3rem;
 }
 
 .new-carousel img {
-  width: 25rem;
-  height: 25rem;
+  width: 30vw;
+
+  min-width: 300px;
   display: flex;
   transition: all 0.5s var(--default-bezier);
 }
@@ -54,7 +59,6 @@ body {
   overflow: hidden;
   display: flex;
   position: relative;
-  background: var(--background-gradient);
 }
 
 .carousel-images {
@@ -149,11 +153,12 @@ body {
 .carousel-controls button:hover span {
   opacity: 1;
 }
+
 [data-middle="highlight"] {
   transform: none;
   box-shadow: none;
 }
 [data-middle="highlight"].is-inMiddle {
-  transform: scale(110%) translate(12px, 12px);
-  box-shadow: -12px -12px 0px 6px var(--secondary);
+  transform: scale(110%);
+  box-shadow: 0px 0px 0px 8px var(--text-light);
 }
