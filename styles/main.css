@@ -16,7 +16,7 @@
 }
 :root {
   --primary: rgb(229, 221, 208);
-  --secondary: rgb(194, 170, 144);
+  --secondary: #c2aa90;
   --accent: #519440;
   --text: #3f3a39;
   --text-light: #e7e7e0;
@@ -53,6 +53,9 @@
   color: inherit;
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 12;
 }
+html {
+  scroll-behavior: smooth !important;
+}
 body {
   color: var(--text);
   margin: 0;
@@ -60,7 +63,8 @@ body {
   background: var(--primary);
   font-family: var(--body-font);
   overflow-x: hidden;
-  scroll-behavior: smooth;
+
+  position: relative;
 }
 ::selection {
   background-color: var(--accent);
@@ -69,7 +73,9 @@ body {
 }
 body > .hr {
   width: 30%;
+  height: 1px;
   margin: 0 0 0 35vw;
+  position: absolute;
 }
 body > .hr.left {
   width: 30%;
@@ -246,6 +252,32 @@ section.adapt-to-header {
 .card-background {
   background-image: url("../assets/graphics/card_background.svg");
 }
+.banner-nav {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  align-self: center;
+  position: absolute;
+  bottom: 12px;
+  gap: 48px;
+}
+.banner-nav li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+.banner-nav li a {
+  color: var(--text-light);
+  opacity: 0.5;
+  font-size: small;
+  text-transform: uppercase;
+}
+.banner-nav li:last-child::after {
+  content: "";
+}
 
 [data-inviewport="expand"] > * {
   width: 0 !important;
@@ -345,5 +377,13 @@ section.adapt-to-header {
   }
   100% {
     transform: unset;
+  }
+}
+@media screen and (max-width: 900px) {
+  .banner-nav {
+    gap: 16px;
+  }
+  .banner-nav li a {
+    font-size: x-small;
   }
 }
