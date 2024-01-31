@@ -54,8 +54,8 @@ function show_options(product) {
   temperatureOptions.forEach((temperatureOption) => {
     temperatureOptionsFragment.appendChild(
       render_options(
-        temperatureOption,
-        0,
+        temperatureOption.name,
+        temperatureOption.price,
         temperatureOptionsTemplate,
         ".temperature-option",
         product
@@ -82,6 +82,7 @@ function show_options(product) {
       close_options();
     }
   });
+  setProductPrice(product);
   document.getElementById("modal-content").classList.add("open");
   document.getElementsByTagName("body")[0].classList.add("modal-active");
 }
@@ -102,7 +103,11 @@ function render_options(
   const input = clone.querySelector(`${class_name}-input`);
   input.value = optionName;
   input.dataset.price = optionPrice;
-  if (class_name === `.size-option` || class_name === ".other-option") {
+  if (
+    class_name === `.size-option` ||
+    class_name === ".other-option" ||
+    class_name === ".temperature-option"
+  ) {
     input.oninput = function () {
       setProductPrice(product);
     };
@@ -123,19 +128,41 @@ function setProductViewInfo(product) {
 function setProductPrice(product) {
   var sizePrice = 0;
   var otherPrice = 0;
-  document.options.sizeOptionInput.forEach((element) => {
-    if (element.checked) {
-      sizePrice = element.dataset.price;
-    }
-  });
-  document.options.otherOptionInput.forEach((element) => {
-    if (element.checked) {
-      otherPrice = element.dataset.price;
-    }
-  });
+  var temperaturePrice = 0;
+  try {
+    document.options.sizeOptionInput.forEach((element) => {
+      if (element.checked) {
+        sizePrice = element.dataset.price;
+      }
+    });
+  } catch {
+    sizePrice = 0;
+  }
+
+  try {
+    document.options.otherOptionInput.forEach((element) => {
+      if (element.checked) {
+        otherPrice = element.dataset.price;
+      }
+    });
+  } catch {
+    otherPrice = 0;
+  }
+  try {
+    document.options.temperatureOptionInput.forEach((element) => {
+      if (element.checked) {
+        temperaturePrice = element.dataset.price;
+      }
+    });
+  } catch {
+    temperaturePrice = 0;
+  }
   const productview = document.getElementById("product-view");
   productview.querySelector(".product-price").textContent = parseFloat(
-    parseFloat(product.price) + parseFloat(sizePrice) + parseFloat(otherPrice)
+    parseFloat(product.price) +
+      parseFloat(sizePrice) +
+      parseFloat(otherPrice) +
+      parseFloat(temperaturePrice)
   ).toFixed(2);
 }
 function getProductPrice() {

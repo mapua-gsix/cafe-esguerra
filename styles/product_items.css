@@ -1,0 +1,332 @@
+body.modal-active {
+  overflow: hidden;
+}
+.products-section {
+  max-height: unset;
+  height: fit-content;
+  background: var(--background-gradient);
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2vw;
+  width: 80%;
+}
+.product-list {
+  width: 100%;
+  padding: 48px 0;
+  display: flex;
+  justify-content: center;
+  gap: 96px;
+  align-items: center;
+  flex-direction: column;
+}
+.product-list .list-heading {
+  font-size: clamp(24px, 6vw, 4em);
+  padding: 1% 2%;
+  width: 100%;
+  text-align: center;
+  border: var(--default-border);
+  background-color: var(--text-light);
+  border-width: 24px;
+}
+.product-list .list-heading h1 {
+  margin: 0;
+}
+.product-item {
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  border-top: 6px solid var(--secondary);
+  overflow: hidden;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 12px;
+  transition: transform 0.3s ease;
+}
+.product-wrapper {
+  perspective-origin: 50% 50%;
+  perspective: 400px;
+}
+.product-image {
+  object-fit: cover;
+
+  border-width: 4px;
+  width: 80%;
+  aspect-ratio: 1;
+}
+.product-name {
+  font-family: var(--header-font);
+  font-size: larger;
+  font-weight: 600;
+}
+.product-description {
+  font-style: italic;
+  pointer-events: none;
+}
+.product-price {
+  font-family: var(--header-font);
+  font-size: x-large;
+  pointer-events: none;
+}
+.product-price::before {
+  content: "₱";
+}
+.add-to-cart-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: var(--accent);
+  color: var(--text);
+  gap: 8px;
+}
+.add-to-cart-button span {
+  color: var(--text);
+}
+.add-to-cart-button:hover {
+  color: var(--text-light);
+  background-color: var(--accent);
+}
+.add-to-cart-button:hover span {
+  color: var(--text-light);
+}
+.options-modal {
+  display: flex; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 999; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.options-modal.open {
+  opacity: 1;
+  pointer-events: all;
+}
+.modal-content {
+  background-color: var(--primary);
+  width: fit-content;
+  height: clamp(400px, 50%, 600px);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  align-items: center;
+  position: relative;
+  gap: 12px;
+  padding: 12px;
+  transform: translateY(20vh);
+  transition: all 0.5s var(--default-bezier);
+}
+.modal-content.open {
+  transform: translateY(0);
+  opacity: 1;
+}
+.modal-content > div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 70%;
+}
+.modal-content .add-to-cart-button {
+  width: 100%;
+}
+.close-button {
+  right: 12px;
+  top: 12px;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 1s var(--default-bezier);
+}
+
+.product-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+  gap: 36px;
+  padding: 12px;
+}
+.product-view-image {
+  height: 60%;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+.product-view-details {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.options {
+  width: fit-content;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.options > div {
+  display: flex;
+}
+.option {
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.option-label {
+  background-color: var(--accent);
+  padding: 12px;
+  color: var(--text-light);
+  text-transform: uppercase;
+  font-family: var(--header-font);
+  font-weight: 600;
+}
+.size-options,
+.temperature-options,
+.other-options {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.option-group {
+  gap: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/*start of CUSTOM RADIO BUTTON CSS */
+.input-container {
+  display: block;
+  position: relative;
+  padding-left: 12px;
+  margin-bottom: 24px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.input-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: var(--text-light);
+  transition: all 0.3s ease;
+}
+
+.input-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.input-container input:checked ~ .checkmark {
+  background-color: var(--accent);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.input-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.input-container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  background: white;
+}
+/*end of CUSTOM RADIO BUTTON CSS*/
+
+@media screen and (max-width: 900px) {
+  .modal-content {
+    height: 100dvh;
+    padding: 0;
+    width: clamp(360px, 80%, 500px);
+    justify-content: center;
+  }
+  .modal-content > div {
+    flex-direction: column;
+  }
+  .product-view {
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 40%;
+    width: 100%;
+    overflow: hidden;
+  }
+  .product-view-image {
+    width: 42%;
+    height: unset;
+    aspect-ratio: 1;
+  }
+  .product-view-details {
+    width: 42%;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .option-label {
+    font-size: smaller;
+  }
+  .option {
+    font-size: smaller;
+  }
+}
+@media screen and (max-height: 600px) {
+  .product-view {
+    height: 50%;
+  }
+  .product-view-image {
+    display: none;
+  }
+  .modal-content > h2 {
+    display: none;
+  }
+  .modal-content > div {
+    height: 100%;
+  }
+  .product-view-details {
+    flex-direction: row;
+    width: 80%;
+    align-items: center;
+  }
+}
