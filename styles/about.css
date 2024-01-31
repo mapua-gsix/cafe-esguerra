@@ -179,13 +179,11 @@ img {
 }
 .mission-vision-wrapper .mission-vision-title {
   color: var(--text-light);
-  font-size: xx-large;
+  text-align: center;
+  font-size: clamp(24px, 4vw, 36px);
   letter-spacing: 4px;
 }
-.mission-vision-wrapper .title {
-  color: var(--text-light);
-  font-size: clamp(24px, 4vw, 48px);
-}
+
 .mission-vision-wrapper .transition {
   width: 100%;
 }
@@ -219,7 +217,7 @@ img {
   padding: 48px;
 }
 .gallery-title h1 {
-  font-size: clamp(24px, 6vw, 72px);
+  font-size: clamp(36px, 6vw, 72px);
 }
 @media only screen and (max-width: 900px) {
   #gallery-proper {
