@@ -1,4 +1,121 @@
 section {
-    max-height: 100vh;
+    max-height: unset;
+    height: fit-content;
     padding: 0 0 0 0 !important;
+  }
+
+  section .reservation {
+    background: url(../assets/banner_blur.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    max-width: 100%;
+  }
+
+
+  section .reservation .form {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 35px;
+    max-width: 700px;
+    width: 90%;
+    margin: 100px auto;
+    color: #000;
+   }
+
+   section .reservation .form hr {
+    border: 2px solid #ab7d5c;
+   }
+  
+  section .reservation .form form {
+    display: grid;
+	  grid-row-gap: 18px;
+  }
+
+  section .reservation .form form h2 {
+    color: #ab7d5c;
+    font-family: var(--headerfont);
+    font-weight: bold;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  section .reservation .form form p {
+    font-family: var(--bodyfont);
+    font-weight: bold;
+    margin: 15px;
+
+  }
+
+  section .reservation .form .field {
+    display: flex;
+	  justify-content: space-between;
+  }
+
+  section .reservation .form .field input, select {
+    width: 80%; 
+    box-sizing: border-box;
+    pad: 10px 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+
+  section .reservation .form .field input, select, option ::placeholder {
+    font-family: var(--bodyfont);
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  section .reservation .form form .btn {
+    background-color: rgba(172, 113, 70, .95);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 18px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    box-shadow: 7px 10px 12px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+  }
+
+  section .reservation .form form .btn:hover {
+    transform: scale(1.03);
+	  -webkit-transform: scale(1.03);
+	  -moz-transform: scale(1.03);
+	  -ms-transform: scale(1.03);
+	  -o-transform: scale(1.03);
+	  box-shadow: 10px 12px 15px rgba(0, 0, 0, .3);
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+    .container-form  {
+      padding: 10px;
+    }
+    .heading-phone {
+      font-size: 17px;
+    }
+    
+  }
+
+
+  @media screen and (min-width: 768px) and (max-width: 880px) {
+    .container-time {
+      padding: 30px;
+    }
+    .container-form  {
+      padding: 10px;
+    }
+    
+    
   }

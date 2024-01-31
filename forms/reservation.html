@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="icon" href="assets/favicon.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="styles/navbar.css" />
-    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="../styles/navbar.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/reservations.css">
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
@@ -16,18 +17,18 @@
   <body>
     <header>
       <nav id="navbar" class="navbar transparent">
-        <div class="logo"><img src="assets/logo.svg" alt="logo" /></div>
+        <div class="logo"><img src="../assets/logo.svg" alt="logo" /></div>
         <div class="navlinks">
           <ul>
-            <li><a class="active" href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="news.html">News</a></li>
+            <li><a class="active" href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../news.html">News</a></li>
             <li class="hideable">
-              <a href="forms/order.html">Orders</a>
+              <a href="../forms/order.html">Orders</a>
             </li>
-            <li><a href="forms/reservation.html">Reservations</a></li>
+            <li><a href="../forms/reservation.html">Reservations</a></li>
             <li>
-              <a href="forms/feedback.html"><nobr>Rate Us!</nobr></a>
+              <a href="../forms/feedback.html"><nobr>Rate Us!</nobr></a>
             </li>
             <li>
               <a href="products.html">Products</a
@@ -36,19 +37,19 @@
               </span>
               <ul class="products-dropdown">
                 <li>
-                  <a href="products/coffee.html"
+                  <a href="../products/coffee.html"
                     ><span class="material-symbols-outlined"> coffee </span>
                     Coffee</a
                   >
                 </li>
                 <li>
-                  <a href="products/beverage.html"
+                  <a href="../products/beverage.html"
                     ><span class="material-symbols-outlined"> local_bar </span>
                     Beverages</a
                   >
                 </li>
                 <li>
-                  <a href="products/dessert.html"
+                  <a href="../products/dessert.html"
                     ><span class="material-symbols-outlined"> icecream </span>
                     Desserts</a
                   >
@@ -73,9 +74,47 @@
     </header>
 
     <section>
+      <div class="reservation">
+      <div class="form">
+				<form action="">
+					<h2 class="heading heading-yellow">Book your Reservation Here!</h2>
+					<div class="field">
+						<p>Full Name: </p>
+						<input type="text" placeholder="Full Name (Required)" required>
+					</div>
+					<div class="field">
+						<p>E-Mail: </p>
+						<input type="email" placeholder="E-mail Here (Required)" required>
+					</div>
+          <div class="field">
+						<p>Phone Number: </p>
+						<input type="tel" placeholder="Phone Number Here (Required)"  required>
+					</div>
+          <hr>
+					<div class="field">
+						<p>Date: </p>
+						<input type="date" required>
+					</div>
+					<div class="field">
+						<p>Time: </p>
+						<input type="time" required>
+					</div>
+					<div class="field">
+						<p>Number of Customers: </p>
+						<select name="select" id="" required>
+							<option value="1">1 PERSON</option>
+							<option value="2">2 PERSONS</option>
+							<option value="3">3 PERSONS</option>
+							<option value="4">4 PERSONS</option>
+							<option value="5">5 PERSONS</option>
+							<option value="5+">MORE THAN 5 PERSONS</option>
+						</select>
+					</div>
 
-        <div class="hello">HELLO</div>
-
+					<button class="btn">Book Reservation</button>
+				</form>
+		</div>
+  </div>
     </section>
 
     <!-- ADD <section>s as you wish. 
@@ -122,6 +161,6 @@
       <h4>© 2024 Mapúa University - Makati</h4>
     </footer>
   </body>
-  <script src="./scripts/responsive_navbar.js" crossorigin="anonymous"></script>
-  <script src="./scripts/load_animations.js" crossorigin="anonymous"></script>
+  <script src="../scripts/responsive_navbar.js" crossorigin="anonymous"></script>
+  <script src="../scripts/load_animations.js" crossorigin="anonymous"></script>
 </html>
