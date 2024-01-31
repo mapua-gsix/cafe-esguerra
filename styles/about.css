@@ -108,6 +108,7 @@ img {
 }
 .welcome-title,
 .selection-title {
+  text-align: center;
   font-size: x-large;
 }
 .welcome-text {
