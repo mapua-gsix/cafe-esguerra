@@ -214,6 +214,7 @@ img {
 .gallery-title {
   color: var(--text-light);
   width: 50%;
+  text-align: center;
   padding: 48px;
 }
 .gallery-title h1 {
