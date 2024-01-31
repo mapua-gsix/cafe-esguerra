@@ -40,13 +40,13 @@ html{
   text-align: center;
   font-size: 41px;
   font-weight: 600;
-  font-family: var(--body-font);
+  font-family: var(--header-font);
   background: -webkit-linear-gradient(
     right,
     #783b02,
-    #ac7146,
+    #af8559,
     #783b02,
-    #ac7146
+    #af8559
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -90,7 +90,7 @@ form .form-row .textarea {
 .textarea textarea:valid ~ label {
   transform: translateY(-35px);
   font-size: 14px;
-  color: #ac7146;
+  color: #519440;
 }
 .textarea textarea {
   resize: none;
@@ -122,7 +122,7 @@ textarea, input{
   content: "";
   height: 2px;
   width: 100%;
-  background: #ac7146;
+  background: #519440;
   bottom: 0;
   transform: scaleX(0);
   transform-origin: center;
@@ -200,6 +200,11 @@ textarea, input{
     bottom: 20px;
     background: #e5ddd0;
   }
+
+  .smallscreen-text{
+    font-size: small;
+  }
+
 }
 /*CSS For floating button*/
 #myBtn {
@@ -251,7 +256,7 @@ textarea, input{
 
 .container2 img {
   
-  outline: 15px groove var(--primary);
+  outline: 15px groove #E5DDD0;
   margin:50px;
   display: block;
   float: left;
@@ -265,7 +270,7 @@ textarea, input{
   }
 
   .container2 img {
-    outline: 15px groove var(--primary);
+    outline: 15px groove #C2AA90;
     margin: auto;
     margin-bottom: 50px;
     float: none;
@@ -285,3 +290,4 @@ textarea, input{
   clear: both;
   display: table;
 }
+
