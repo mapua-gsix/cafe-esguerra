@@ -46,11 +46,20 @@ section.enclosed > div {
   display: flex;
   flex-direction: column;
 }
+.hero .hr {
+  width: 100%;
+  height: unset;
+  margin: 0 0 0 0 !important;
+}
 .hero.content img {
   width: 50vw;
   min-width: 300px;
   padding: 0;
   filter: invert(100%);
+}
+.brewing-hours {
+  opacity: 0.8;
+  letter-spacing: 1.6px;
 }
 
 /*PROMO SECTION*/
@@ -135,6 +144,10 @@ section.enclosed > div {
   transform: translate(12px, 0);
 }
 .container {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -251,6 +264,10 @@ section.enclosed > div {
     text-align: center;
     width: 100%;
     display: flex;
+    font-size: medium;
     justify-content: center;
+  }
+  .text-button {
+    font-size: large;
   }
 }
