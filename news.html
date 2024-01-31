@@ -21,35 +21,35 @@
         <div class="logo"><img src="assets/logo.svg" alt="logo" /></div>
         <div class="links">
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="..index.html">Home</a></li>
 
-            <li><a href="./about.html">About</a></li>
-            <li><a class="active" href="./news.html">News</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a class="active" href="../news.html">News</a></li>
 
-            <li><a href="./forms/reservation.html">Reservations</a></li>
+            <li><a href="../forms/reservation.html">Reservations</a></li>
             <li>
-              <a href="./forms/feedback.html">Feedback</a>
+              <a href="../forms/feedback.html">Feedback</a>
             </li>
             <li class="products-dropdown-button">
-              <a href="./products.html">Products</a
+              <a href="../products.html">Products</a
               ><span class="material-symbols-outlined noselect"
                 >expand_more
               </span>
               <ul class="products-dropdown">
                 <li>
-                  <a href="products/coffee.html"
+                  <a href="../products/coffee.html"
                     ><span class="material-symbols-outlined"> coffee </span>
                     Coffee</a
                   >
                 </li>
                 <li>
-                  <a href="products/beverage.html"
+                  <a href="../products/beverage.html"
                     ><span class="material-symbols-outlined"> local_bar </span>
                     Beverages</a
                   >
                 </li>
                 <li>
-                  <a href="products/dessert.html"
+                  <a href="../products/dessert.html"
                     ><span class="material-symbols-outlined"> icecream </span>
                     Desserts</a
                   >
@@ -79,10 +79,16 @@
 <section class="banner-section adapt-to-header">
   <div class ="banner" data-inviewport="fade-from-bottom">
     <div class="banner-heading"></div>
-    <h2>News</h2>
+    <font color="#FFFFFF"><h2>News</h2>
     <h1 class="brand-font">Café ESGUERRA</h1>
     <div class="hr"data-inviewport="expand">
-      
+      <hr>
+          </div>
+          <h3>Indulge your palate with just a few clicks!</h3>
+        
+          <ul>ADSJKASDJK</p>
+        </font>
+        </div>
     </div>
   </div>
 </section>
@@ -139,16 +145,45 @@
         </footer>
   </body>
   <script
-    src="./scripts/transparent_navbar.js"
+    src="../scripts/transparent_navbar.js"
     crossorigin="anonymous"
   ></script>
-  <script src="./scripts/responsive_navbar.js" crossorigin="anonymous"></script>
-  <script src="./scripts/load_animations.js" crossorigin="anonymous"></script>
+  <script
+    src="../scripts/responsive_navbar.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="../scripts/load_animations.js" crossorigin="anonymous"></script>
   <script>
     window.onload = () => {
       for (let i of document.querySelectorAll("#aboutgallery img")) {
         i.onclick = () => i.classList.toggle("full");
       }
     };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    document.querySelectorAll("[data-inviewport]").forEach((element) => {
+      observer.observe(element);
+    });
+
+    window.onload = () => {
+      for (let i of document.querySelectorAll("#aboutgallery img")) {
+        i.onclick = () => i.classList.toggle("full");
+      }
+    };
   </script>
+  <script
+    src="https://kit.fontawesome.com/c4046a80c3.js"
+    crossorigin="anonymous"
+  ></script>
 </html>
+
