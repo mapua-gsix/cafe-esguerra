@@ -2,21 +2,9 @@ body {
   background-color: var(--primary);
 }
 .banner {
-  height: 30vw;
-  background: var(--background-gradient);
-  overflow: hidden;
-}
-.hero {
-  display: flex;
   padding: 50px 0 0 0;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100%;
   background: url("../assets/product_images/coffee.jpg");
   background-color: var(--tint);
-  background-blend-mode: multiply;
-  background-size: cover;
   background-position: 0% 30%;
   color: var(--text-light);
   overflow: hidden;
