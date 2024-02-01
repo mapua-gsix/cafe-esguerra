@@ -15,7 +15,7 @@ function load_cart() {
 
     //SETTING CHILDREN DATA
     var price = clone.querySelector(".item-price");
-    price.textContent = `Price: ₱${parseFloat(
+    price.textContent = `₱${parseFloat(
       cartItem.priceEach * cartItem.quantity
     ).toFixed(2)}`;
     clone.querySelector(".product-name").textContent =
@@ -32,9 +32,9 @@ function load_cart() {
         quantity.value = 100;
       }
       modify_item_quantities(cartItem, value);
-      price.textContent = `Price: ₱${parseFloat(
-        cartItem.priceEach * value
-      ).toFixed(2)}`;
+      price.textContent = `₱${parseFloat(cartItem.priceEach * value).toFixed(
+        2
+      )}`;
     }
     quantity.onchange = function () {
       changeQuantity(this.value);
