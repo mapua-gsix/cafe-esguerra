@@ -230,87 +230,95 @@
     </div>
     <!--Main Form Section-->
     <section class="section-form padding-large" id="form">
-      <div class="container" data-inviewport="fade-from-bottom">
-        <div class="form-heading">
-          <div class="text">
-            <h1 style="margin: 12px 0">Customer Feedback</h1>
-          </div>
-          <div class="hr" data-inviewport="expand">
-            <hr class="accent" />
-          </div>
-          <div style="text-align: justify" class="smallscreen-text">
-            <p>
-              Questions, suggestions, or just a friendly hello? We'd love to
-              hear from you! <br />Fill out the form below, and we'll get back
-              to you promptly.
-            </p>
-          </div>
-        </div>
-
-        <!--Currently Set to My Own Email, Change to business Email-->
-        <form
-          class="default-form"
-          action="mailto:asmcruz@mymail.mapua.edu.ph"
-          method="post"
-          enctype="text/plain"
-        >
-          <div class="form-row">
-            <div class="input-data">
-              <select id="Categories" name="Categories">
-                <option value="Categories">Categories</option>
-                <option value="Complaint">Complain</option>
-                <option value="Complement">Complement</option>
-                <option value="Complain">Franchise</option>
-              </select>
-              <div class="underline"></div>
+      <div class="feedback" data-inviewport="fade-from-bottom">
+        <div class="container" data-inviewport="fade-from-bottom">
+          <div class="form-heading">
+            <div class="text">
+              <h1 style="margin: 12px 0">Customer Feedback</h1>
+            </div>
+            <div class="hr" data-inviewport="expand">
+              <hr class="accent" />
+            </div>
+            <div style="text-align: justify" class="smallscreen-text">
+              <p>
+                Questions, suggestions, or just a friendly hello? We'd love to
+                hear from you! <br />Fill out the form below, and we'll get back
+                to you promptly.
+              </p>
             </div>
           </div>
 
-          <div class="form-row">
-            <div class="input-data">
-              <input placeholder=" " type="text" required />
-              <div class="underline"></div>
-              <label for="">First Name</label>
+          <!--Currently Set to My Own Email, Change to business Email-->
+          <form
+            class="default-form"
+            action="mailto:asmcruz@mymail.mapua.edu.ph"
+            method="post"
+            enctype="text/plain"
+          >
+            <div class="form-row">
+              <div class="input-data">
+                <select id="Categories" name="Categories">
+                  <option value="Categories">Categories</option>
+                  <option value="Complaint">Complain</option>
+                  <option value="Complement">Complement</option>
+                  <option value="Complain">Franchise</option>
+                </select>
+                <div class="underline"></div>
+              </div>
             </div>
-            <div class="input-data">
-              <input placeholder=" " type="text" required />
-              <div class="underline"></div>
-              <label for="">Last Name</label>
+
+            <div class="form-row">
+              <div class="input-data">
+                <input placeholder=" " type="text" required />
+                <div class="underline"></div>
+                <label for="">First Name</label>
+              </div>
+              <div class="input-data">
+                <input placeholder=" " type="text" required />
+                <div class="underline"></div>
+                <label for="">Last Name</label>
+              </div>
             </div>
-          </div>
-          <div class="form-row">
-            <div class="input-data">
-              <input placeholder=" " type="text" required />
-              <div class="underline"></div>
-              <label for="">Email Address</label>
+            <div class="form-row">
+              <div class="input-data">
+                <input placeholder=" " type="text" required />
+                <div class="underline"></div>
+                <label for="">Email Address</label>
+              </div>
+              <div class="input-data">
+                <input placeholder=" " type="text" required />
+                <div class="underline"></div>
+                <label for="">Contact</label>
+              </div>
             </div>
-            <div class="input-data">
-              <input placeholder=" " type="text" required />
-              <div class="underline"></div>
-              <label for="">Contact</label>
+            <div class="form-row">
+              <div class="input-data textarea">
+                <textarea
+                  placeholder=" "
+                  rows="8"
+                  cols="80"
+                  required
+                ></textarea>
+                <br />
+                <div class="underline" style="bottom: -10px"></div>
+                <label for="" style="background-color: rgba(0, 0, 0, 0)"
+                  >Write your feedback on
+                  <span class="brand-font">Café ESGUERRA!</span></label
+                >
+                <br />
+              </div>
             </div>
-          </div>
-          <div class="form-row">
-            <div class="input-data textarea">
-              <textarea placeholder=" " rows="8" cols="80" required></textarea>
-              <br />
-              <div class="underline" style="bottom: -10px"></div>
-              <label for="" style="background-color: rgba(0, 0, 0, 0)"
-                >Write your feedback about Cafe Esguerra!</label
+            <div class="form-row">
+              <button
+                type="submit"
+                value="submit"
+                class="default-button accent-button"
               >
-              <br />
+                SUBMIT FEEDBACK
+              </button>
             </div>
-          </div>
-          <div class="form-row">
-            <button
-              type="submit"
-              value="submit"
-              class="default-button accent-button"
-            >
-              Submit
-            </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </section>
     <footer>
