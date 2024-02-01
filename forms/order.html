@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../styles/navbar.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
     <link rel="stylesheet" href="../styles/order.css" />
+    <link rel="stylesheet" href="../styles/style_feedback.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
@@ -29,7 +30,7 @@
             <li>
               <a href="../forms/feedback.html">Feedback</a>
             </li>
-            <li>
+            <li class="products-dropdown-button">
               <a href="../products.html">Products</a
               ><span class="material-symbols-outlined noselect"
                 >expand_more
@@ -75,9 +76,15 @@
         <span class="material-symbols-outlined">menu</span>
       </button>
     </header>
-    <section class="adapt-to-header">
+    <section
+      class="cart-section padding-normal adapt-to-header card-background-gradient"
+    >
       <div class="cart">
         <h1>Your cart:</h1>
+        <div class="hr">
+          <hr />
+        </div>
+        <h3>Ready to checkout?</h3>
         <div class="orders" id="ordercontainer">
           <template id="order-item-template">
             <div class="order-item">
@@ -93,13 +100,15 @@
                 <div class="controls">
                   <div class="group">
                     <div class="quantity-controls">
-                      <button class="increment-button remove noselect">
-                        <span class="material-symbols-outlined">Remove</span>
-                      </button>
-                      <input min="1" class="product-quantity" type="number" />
-                      <button class="increment-button add noselect">
-                        <span class="material-symbols-outlined">Add</span>
-                      </button>
+                      <nobr>
+                        <button class="increment-button remove noselect">
+                          <span class="material-symbols-outlined">Remove</span>
+                        </button>
+                        <input min="1" class="product-quantity" type="number" />
+                        <button class="increment-button add noselect">
+                          <span class="material-symbols-outlined">Add</span>
+                        </button>
+                      </nobr>
                     </div>
 
                     <span class="item-price"></span>
@@ -109,12 +118,37 @@
                   <button class="remove-button">
                     <span class="material-symbols-outlined"
                       >remove_shopping_cart</span
-                    >Remove
+                    >
                   </button>
                 </div>
               </div>
             </div>
           </template>
+        </div>
+        <div class="hr">
+          <hr />
+        </div>
+        <div class="checkout-form">
+          <div class="summary">
+            <h2>Total:</h2>
+            <h2 class="total" id="total">0</h2>
+          </div>
+          <form action="">
+            <div class="form-row">
+              <div class="input-data textarea">
+                <textarea rows="8" cols="80" required></textarea>
+                <br />
+                <div class="underline" style="bottom: -10px"></div>
+                <label for="" style="background-color: rgba(0, 0, 0, 0)"
+                  >Add notes here!</label
+                >
+                <br />
+              </div>
+            </div>
+            <div class="form-row">
+              <button class="default-button accent-button">Check out!</button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
