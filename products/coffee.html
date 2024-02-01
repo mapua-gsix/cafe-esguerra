@@ -61,17 +61,31 @@
         style="background-image: url('../assets/product_images/coffee.jpg')"
         data-inviewport="fade-from-bottom"
       >
-        <div class="hero-title"><h1 class="brand-font">Coffee</h1></div>
-
-        <div class="hero-subtitle"><h3>Wake up and smell the coffee</h3></div>
+        <div class="banner-heading">
+          <!--HEADING-->
+          <h1 class="brand-font">Coffee</h1>
+          <div class="hr" data-inviewport="expand">
+            <hr />
+          </div>
+          <h3>Wake up and smell the coffee</h3>
+        </div>
+        <ul class="banner-nav">
+          <!--BANNER NAV-->
+          <li><a href="#products-coffee">coffee</a></li>
+          <li><a href="#products-frappe">frappe</a></li>
+        </ul>
       </div>
     </section>
     <div class="hr" data-inviewport="expand">
       <hr class="accent" />
     </div>
 
-    <section class="carousel-section card-background-gradient">
+    <section class="carousel-section card-background-gradient padding-large">
       <div class="carousel">
+        <div class="carousel-title"><h1>Promos</h1></div>
+        <div class="hr">
+          <hr class="accent" />
+        </div>
         <!---this is the test carousel banner-->
         <!--USES "MIDDLE" CLASS TO DETERMINE WHICH IMG IS IN THE MIDDLE-->
         <div class="new-carousel carousel-images" id="carousel-images">
@@ -102,16 +116,8 @@
                 src="../assets/promo3.jpg"
             /></a>
           </div>
-          <div class="carousel-image">
-            <a
-              ><img
-                data-middle="highlight"
-                data-index="3"
-                src="../assets/promo2.jpg"
-            /></a>
-          </div>
           <div class="padding-carousel-image">
-            <a><img src="../assets/promo2.jpg" /></a>
+            <a><img src="../assets/promo1.jpg" /></a>
           </div>
         </div>
 
@@ -152,11 +158,11 @@
       </div>
     </section>
 
-    <section class="products-section">
+    <section class="products-section card-background-gradient">
       <div class="product-list">
         <div class="list-heading"><h1>Coffee</h1></div>
 
-        <div class="products type-10">
+        <div id="products-coffee" class="products type-10">
           <template id="product-item-template">
             <div class="product-wrapper">
               <div class="product-item">
@@ -175,7 +181,7 @@
         </div>
         <div class="list-heading"><h1>Frappe</h1></div>
 
-        <div class="products type-11">
+        <div id="products-frappe" class="products type-11">
           <template id="product-item-template">
             <div class="product-wrapper">
               <div class="product-item">

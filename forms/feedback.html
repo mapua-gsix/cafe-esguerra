@@ -94,6 +94,7 @@
           <h3>What our customers says about us!</h3>
         </div>
         <ul class="banner-nav">
+          <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#form">Feedback Form</a></li>
         </ul>
       </div>
@@ -103,8 +104,18 @@
     </div>
     <!--Testimonial Section-->
 
-    <section class="imgBorder section-testimonial padding-large">
+    <section
+      class="imgBorder section-testimonial padding-small"
+      id="testimonials"
+    >
       <div class="mainContent">
+        <h1 style="text-align: center">Testimonials</h1>
+        <p style="text-align: center">
+          Dive into the heartwarming stories shared by Café ESGUERRA's patrons.
+          Each testimonial reveals the unique and delightful experiences within
+          our coffee haven, where every moment is a celebration of community and
+          joy.
+        </p>
         <div class="container2">
           <div class="image-container">
             <img
@@ -215,12 +226,11 @@
     </section>
 
     <!--Main Form Section-->
-    <section class="section-form" id="form">
-      <br />
-      <br />
-
+    <section class="section-form padding-large" id="form">
       <div class="container" data-inviewport="fade-from-bottom">
-        <div class="text" style="margin-top: 45px">Customer Feedback</div>
+        <div class="text">
+          <h1>Customer Feedback</h1>
+        </div>
         <div style="text-align: center" class="smallscreen-text">
           Questions, suggestions, or just a friendly hello? We'd love to hear
           from you! <br />Fill out the form below, and we'll get back to you
@@ -280,11 +290,15 @@
               <br />
             </div>
           </div>
-          <div class="form-row submit-btn">
-            <div class="input-data">
-              <div class="inner"></div>
-              <input type="submit" value="submit" />
-            </div>
+          <div class="form-row">
+            <button
+              type="submit"
+              value="submit"
+              class="default-button accent-button"
+              style="margin-left: 20px"
+            >
+              Submit
+            </button>
           </div>
         </form>
       </div>
@@ -380,4 +394,5 @@
     src="https://kit.fontawesome.com/c4046a80c3.js"
     crossorigin="anonymous"
   ></script>
+  <script src="../scripts/cart.js"></script>
 </html>

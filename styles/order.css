@@ -1,14 +1,31 @@
-section {
+.cart-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-height: unset;
-  height: fit-content;
-  min-height: 100vh;
+  position: relative;
+  height: auto;
+  min-height: 100% !important;
+}
+.cart-section h1 {
+  font-size: clamp(24px, 4vw, 3em);
+}
+.cart-section .hr {
+  width: 80%;
+  height: unset;
+  margin: 0 0 0 0 !important;
+}
+.cart-section .hr hr {
+  border: 2px solid var(--accent);
 }
 .cart {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  background: var(--background-gradient);
+  width: max(300px, 95%);
+  background: var(--primary);
+  height: 90%;
+  min-height: 90%;
   transition: all 0.3s ease;
 }
 .orders {
@@ -17,16 +34,18 @@ section {
   align-items: center;
   flex-direction: column;
   width: 96%;
+  gap: 48px;
 }
 .order-item {
   display: flex;
-  height: 20vh;
+  height: 20vw;
+  min-height: 20vh;
   width: 100%;
   justify-content: space-evenly;
   align-items: center;
   gap: 24px;
   background: var(--primary);
-  padding: 48px 12px;
+  padding: 6px 12px;
   overflow: hidden;
 }
 .image {
@@ -54,7 +73,7 @@ section {
 }
 .product-name {
   font-family: var(--header-font);
-  font-size: x-large;
+  font-size: clamp(18px, 2vw, 1.6em);
 }
 .product-description {
   margin-inline-start: 24px;
@@ -101,7 +120,6 @@ section {
   border-color: var(--accent);
   font-family: var(--header-font);
   text-transform: uppercase;
-  font-weight: 600;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,6 +128,9 @@ section {
   cursor: pointer;
   gap: 8px;
   transition: all 0.3s ease;
+}
+.remove-button::after {
+  content: "REMOVE";
 }
 .remove-button span {
   color: var(--text);
@@ -123,7 +144,7 @@ section {
   color: var(--text-light);
 }
 .item-price {
-  font-size: medium;
+  font-size: clamp(12px, 1vw, 1em);
   border: var(--default-border);
   border-color: var(--accent);
   background-color: var(--accent);
@@ -131,6 +152,9 @@ section {
   color: var(--text-light);
   padding: 8px;
   cursor: default;
+}
+.item-price::before {
+  content: "Price: ";
 }
 .item-price:hover ~ .product-price {
   width: 100px;
@@ -163,4 +187,80 @@ section {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+}
+.textarea textarea {
+  display: flex;
+}
+.form-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 160px;
+}
+.checkout-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.summary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.total:before {
+  content: "₱";
+}
+@media screen and (max-width: 900px) {
+  .product-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+  }
+  .product-customizations {
+    gap: 2px;
+  }
+  .product-index {
+    display: none;
+  }
+  .product-description {
+    display: none;
+  }
+  .controls {
+    gap: 0px;
+  }
+  .controls .group {
+    gap: 4px;
+  }
+  .item-price {
+    padding: 2px;
+  }
+  .item-price::before {
+    content: "";
+  }
+
+  .order-item {
+    position: relative;
+    gap: 2px;
+  }
+  .product-price {
+    display: none;
+  }
+  .image {
+    height: 70%;
+  }
+  .remove-button {
+    padding: 2px;
+    gap: 0;
+  }
+  .remove-button::after {
+    content: "";
+  }
+  .quantity-controls {
+    gap: 0;
+  }
+  .quantity-controls * {
+    padding: 0;
+  }
 }
