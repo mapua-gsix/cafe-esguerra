@@ -1,56 +1,66 @@
+function handle_search(e) {}
 function appendProductTypes(typeArray) {
   typeArray.forEach((type) => {
     appendProducts(type);
   });
 }
 function appendProducts(type) {
+  const urlParams = new URLSearchParams(window.location.search);
+  let query = urlParams.get("query");
+  const searchForm = document.getElementById("search");
+  if (query == null) {
+    query = "";
+  } else {
+    searchForm.query.value = query;
+  }
+
   switch (type) {
     case "coffee":
       console.log("loading coffee...");
       fetch("../content/products.json").then((response) =>
-        response.json().then((data) => appendItems(data, "10"))
+        response.json().then((data) => appendItems(data, "10", query))
       );
       break;
     case "frappe":
       console.log("loading frappes...");
       fetch("../content/products.json").then((response) =>
-        response.json().then((data) => appendItems(data, "11"))
+        response.json().then((data) => appendItems(data, "11", query))
       );
       break;
     case "tea":
       console.log("loading teas...");
       fetch("../content/products.json").then((response) =>
-        response.json().then((data) => appendItems(data, "20"))
+        response.json().then((data) => appendItems(data, "20", query))
       );
       break;
     case "milktea":
       console.log("loading milkteas..");
       fetch("../content/products.json").then((response) =>
-        response.json().then((data) => appendItems(data, "21"))
+        response.json().then((data) => appendItems(data, "21", query))
       );
       break;
     case "soda":
       console.log("loading sodas...");
       fetch("../content/products.json").then((response) =>
-        response.json().then((data) => appendItems(data, "22"))
+        response.json().then((data) => appendItems(data, "22", query))
       );
       break;
     case "blended":
       console.log("loading blended...");
       fetch("../content/products.json").then((response) =>
-        response.json().then((data) => appendItems(data, "23"))
+        response.json().then((data) => appendItems(data, "23", query))
       );
       break;
     case "yakult":
       console.log("loading yakult...");
       fetch("../content/products.json").then((response) =>
-        response.json().then((data) => appendItems(data, "24"))
+        response.json().then((data) => appendItems(data, "24", query))
       );
       break;
     case "desserts":
       console.log("loading desserts...");
       fetch("../content/products.json").then((response) =>
-        response.json().then((data) => appendItems(data, "30"))
+        response.json().then((data) => appendItems(data, "30", query))
       );
       break;
     default:
@@ -105,15 +115,14 @@ function render_product(product) {
   return clone;
 }
 
-function appendItems(data, type) {
+function appendItems(data, type, query) {
   const fragment = document.createDocumentFragment();
   data.products.forEach((product) => {
-    console.log(
-      `checking if ${product.id} matches with ${type * 1000} : ${Math.floor(
-        product.id / 100
-      )}`
-    );
-    if (Math.floor(product.id / 100) == type) {
+    console.log(product.name, query);
+    if (
+      Math.floor(product.id / 100) == type &&
+      product.name.toUpperCase().includes(query.toUpperCase())
+    ) {
       fragment.appendChild(render_product(product));
     }
   });

@@ -8,6 +8,7 @@
     <link rel="icon" href="../assets/favicon.svg" type="image/x-icon" />
     <link rel="stylesheet" href="../styles/navbar.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/forms.css" />
     <link rel="stylesheet" href="../styles/product_category_page.css" />
     <link rel="stylesheet" href="../styles/product_items.css" />
     <link
@@ -17,7 +18,7 @@
     <title>Desserts | Products</title>
   </head>
 
-  <body onload="appendProductTypes(['frappes'])">
+  <body onload="appendProductTypes(['tea'])">
     <header>
       <nav id="navbar" class="navbar transparent">
         <div class="back">
@@ -84,89 +85,33 @@
       <hr class="accent" />
     </div>
 
-    <section class="carousel-section card-background-gradient padding-large">
-      <div class="carousel">
-        <div class="carousel-title"><h1>Promos</h1></div>
-        <div class="hr">
-          <hr class="accent" />
-        </div>
-        <!---this is the test carousel banner-->
-        <!--USES "MIDDLE" CLASS TO DETERMINE WHICH IMG IS IN THE MIDDLE-->
-        <div class="new-carousel carousel-images" id="carousel-images">
-          <div class="padding-carousel-image">
-            <a><img src="../assets/promo1.jpg" /></a>
+    <section class="search-section">
+      <div class="search-form container">
+        <form
+          id="search"
+          class="default-form"
+          onsubmit="handle_search(event)"
+          onreset="window.location.href = (`${window.location.pathname}`);"
+        >
+          <div class="form-row">
+            <div class="input-data">
+              <input placeholder=" " type="search" name="query" />
+              <div class="underline"></div>
+              <label for=""
+                ><span class="material-symbols-outlined">search</span> What are
+                you looking for?</label
+              >
+            </div>
           </div>
-          <div class="carousel-image">
-            <a
-              ><img
-                data-middle="highlight"
-                data-index="0"
-                src="../assets/promo1.jpg"
-            /></a>
-          </div>
-          <div class="carousel-image">
-            <a
-              ><img
-                data-middle="highlight"
-                data-index="1"
-                src="../assets/promo2.jpg"
-            /></a>
-          </div>
-          <div class="carousel-image">
-            <a
-              ><img
-                data-middle="highlight"
-                data-index="2"
-                src="../assets/promo3.jpg"
-            /></a>
-          </div>
-          <div class="padding-carousel-image">
-            <a><img src="../assets/promo1.jpg" /></a>
-          </div>
-        </div>
-
-        <!-- OLD CAROUSEL
-            <div class="carousel-images" id="carousel-images">
-            <img
-              src="../assets/promo1.jpg"
-              id="image1"
-              class="image1 carousel-image"
-            />
-            <img
-              src="../assets/promo2.jpg"
-              id="image2"
-              class="image2 carousel-image"
-            />
-            <img
-              src="../assets/promo3.jpg"
-              id="image3"
-              class="image3 carousel-image"
-            />
-          </div>
-        -->
-
-        <div class="carousel-nav" id="carousel-nav"></div>
-
-        <div class="carousel-controls" id="carousel-controls">
-          <button onclick="plusSlides(-1)" data-slide="prev">
-            <span class="material-symbols-outlined noselect">
-              navigate_before
-            </span>
-          </button>
-          <button onclick="plusSlides(1)" data-slide="next">
-            <span class="material-symbols-outlined noselect">
-              navigate_next
-            </span>
-          </button>
-        </div>
+        </form>
       </div>
     </section>
 
-    <section class="products-section">
+    <section class="products-section card-background-dark">
       <div class="product-list">
-        <div class="list-heading"><h1>Frappes</h1></div>
+        <div class="list-heading"><h1>Cakes</h1></div>
 
-        <div class="products type-20">
+        <div class="products type-30">
           <template id="product-item-template">
             <div class="product-wrapper">
               <div class="product-item">
@@ -344,7 +289,6 @@
       <h4>© 2024 Mapúa University - Makati</h4>
     </footer>
   </body>
-  <script src="../scripts/carousel.js" crossorigin="anonymous"></script>
   <script
     src="../scripts/responsive_navbar.js"
     crossorigin="anonymous"

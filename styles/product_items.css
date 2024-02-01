@@ -10,10 +10,11 @@ body.modal-active {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2vw;
   width: 80%;
+  justify-items: center;
 }
 .product-list {
   width: 100%;
-  padding: 48px 0;
+  padding: 0 0 48px 0;
   display: flex;
   justify-content: center;
   gap: 96px;
@@ -21,16 +22,16 @@ body.modal-active {
   flex-direction: column;
 }
 .product-list .list-heading {
-  font-size: clamp(24px, 6vw, 4em);
+  font-size: clamp(24px, 3vw, 2em);
   padding: 1% 2%;
   width: 100%;
   text-align: center;
-  border: var(--default-border);
-  background-color: var(--text-light);
-  border-width: 24px;
+  background-color: var(--primary);
+  padding: 24px 0;
 }
 .product-list .list-heading h1 {
   margin: 0;
+  padding: 12px 0;
 }
 .product-item {
   background-color: var(--primary);
@@ -43,11 +44,13 @@ body.modal-active {
   align-items: center;
   gap: 24px;
   padding: 24px 12px;
-  transition: transform 0.3s ease;
+
+  transition: transform 100ms ease;
 }
 .product-wrapper {
   perspective-origin: 50% 50%;
-  perspective: 400px;
+  perspective: 200px;
+  max-width: 400px;
 }
 .product-image {
   object-fit: cover;
