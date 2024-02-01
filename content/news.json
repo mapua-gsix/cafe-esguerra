@@ -12,13 +12,12 @@
       "datePosted": "January 6, 2024"
     },
     {
-      "header": "Dummy content",
-      "content": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ex erat, in semper nibh suscipit non. Praesent vehicula, sem nec lacinia volutpat, lacus enim suscipit urna, suscipit faucibus urna odio sed augue. ", 
-      "Suspendisse euismod ante ut dignissim tincidunt. Proin tristique est ut enim elementum, et lobortis orci condimentum. Sed pretium ultricies sem ut imperdiet. Nunc tempor dui libero, sit amet rhoncus neque efficitur vel. Vivamus nec maximus orci. Donec accumsan tincidunt enim sed mattis. Aenean eget luctus libero."],
-      "bannerImagePath": "./assets/banner_img.jpg",
+      "header": "Important Announcement 📢🔈",
+      "content": ["We would like to inform you that we will be having a private event today, January 2, 2024. We will be closed at 8 PM onwards. See you all tomorrow!"],
+      "bannerImagePath": "./assets/announcement1.jpg",
       "redirectText": "Check it out!",
-      "redirectLink": "#",
-      "datePosted": "MMMM DD, YYYY"
+      "redirectLink": "https://www.facebook.com/photo/?fbid=765940038896916&set=a.454314990059424",
+      "datePosted": "January 2, 2024"
     },
     {
       "header": "Dummy content",
