@@ -15,6 +15,9 @@ section.enclosed > div {
 .banner {
   background-image: url("../assets/newsphotos/newsphoto1.jpg");
 }
+.live-music-photo {
+  background-image: url("../assets/newsphotos/newsphoto2.jpg")
+}
 #gallery-proper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -127,4 +130,146 @@ img {
     var(--secondary) 20%,
     rgba(0, 212, 255, 0) 100%
   );
+}
+/* News Header */
+.news-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.news-banner {
+  background-image: url('testimonials_images/banner_img.jpg');
+  background-size: cover;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #fff;
+  font-size: 32px;
+  text-decoration: underline; /* Added underline */
+}
+
+/* News Header */
+.news-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.news-banner {
+  background-image: url('testimonials_images/banner_img.jpg');
+  background-size: cover;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #fff;
+  font-size: 32px;
+  text-decoration: underline; /* Added underline */
+}
+
+/* News Box */
+.box {
+  background-color: #fff;
+  border-radius: 15px;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease-in-out; /* Added transition property */
+}
+
+.box:hover {
+  transform: scale(1.05); /* Added scale on hover */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Added box shadow on hover */
+}
+
+.box-header {
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.box-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box-content img {
+  border-radius: 5%;
+  border: 2px solid #ccc; 
+  margin-bottom: 20px; 
+  width: 350px;
+  height: 250px;
+}
+
+.box-content-text {
+  flex: 1;
+  text-align: left;
+}
+
+.box-banner {
+  background-image: url('testimonials_images/banner_blur.jpg');
+  background-size: cover;
+  height: 50px; 
+  margin-top: 10px; 
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  padding: 5px;
+  color: #fff;
+}
+
+.box-banner-text {
+  flex: 1;
+  color: black;
+  text-align: left;
+}
+
+.box-banner-date {
+  font-size: 14px;
+  color: black;
+}
+
+/* Loyalty Program Styles */
+.loyalty-section {
+margin-top: 20px;
+text-align: center;
+}
+
+.loyalty-box {
+background-color: #F7E0B8; /* Light brown background color */
+border-radius: 15px;
+margin-top: 20px;
+padding: 20px;
+border: 1px solid #ccc;
+width: 70%;
+margin-left: auto;
+margin-right: auto;
+}
+
+.loyalty-header {
+text-align: center;
+}
+
+.loyalty-header h2 {
+font-size: 28px;
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+.loyalty-content h2 {
+font-size: 20px;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.loyalty-content p {
+margin-bottom: 15px;
 }
