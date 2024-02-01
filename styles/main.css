@@ -126,6 +126,10 @@ hr.accent {
   padding: 0;
   margin: 0;
 }
+hr.accent.small {
+  width: 66%;
+  border-top: 2px solid var(--accent);
+}
 section .hr {
   width: 50%;
   height: unset;

@@ -51,7 +51,6 @@
 .image {
   aspect-ratio: 1;
   height: 100%;
-  box-shadow: var(--image-shadow);
 }
 .product-index {
   width: 2%;

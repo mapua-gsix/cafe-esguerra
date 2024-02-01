@@ -8,9 +8,14 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 100%;
+  width: 100%;
 }
-
+.reservation {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 section .reservation .form {
   background: var(--primary);
   padding: 45px;

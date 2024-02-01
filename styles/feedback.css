@@ -151,9 +151,9 @@ input {
   transition: transform 0.3s ease;
 }
 .input-data input:focus ~ .underline:before,
-.input-data input:valid ~ .underline:before,
+.input-data input:not(:placeholder-shown) ~ .underline:before,
 .textarea textarea:focus ~ .underline:before,
-.textarea textarea:valid ~ .underline:before {
+.textarea textarea:not(:placeholder-shown) ~ .underline:before {
   transform: scale(1);
 }
 .submit-btn .input-data {
@@ -202,11 +202,23 @@ input {
     font-size: 14px;
     color: #ac7146;
   }
+  .container {
+    width: 100%;
+    max-width: unset;
+    padding-inline: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .form-heading {
+    width: 90%;
+  }
   .container .text {
     font-size: 30px;
   }
   .container form {
-    padding: 10px 0 0 0;
+    width: 90%;
     gap: 48px;
   }
   .container form .form-row {
@@ -222,8 +234,8 @@ input {
     background: transparent;
   }
 
-  .smallscreen-text {
-    font-size: small;
+  .smallscreen-text p {
+    font-size: medium !important;
   }
 }
 /*CSS For floating button*/

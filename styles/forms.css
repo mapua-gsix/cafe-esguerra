@@ -18,6 +18,22 @@ html {
   background-color: var(--tint);
   background-blend-mode: multiply;
 }
+.text-gradient {
+  text-align: center;
+  font-size: 41px;
+  font-weight: 600;
+  font-family: var(--header-font);
+  background: -webkit-linear-gradient(
+    right,
+    #783b02,
+    #af8559,
+    #783b02,
+    #af8559
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .default-form {
   padding: 32px 0 32px 0;
   display: flex;
@@ -107,9 +123,9 @@ input {
   transition: transform 0.3s ease;
 }
 .input-data input:focus ~ .underline:before,
-.input-data input:valid ~ .underline:before,
+.input-data input:not(:placeholder-shown) ~ .underline:before,
 .textarea textarea:focus ~ .underline:before,
-.textarea textarea:valid ~ .underline:before {
+.textarea textarea:not(:placeholder-shown) ~ .underline:before {
   transform: scale(1);
 }
 .submit-btn .input-data {
@@ -152,7 +168,7 @@ input {
   flex-direction: column;
 }
 @media screen and (max-width: 900px) {
-  .textarea textarea:valid ~ label,
+  .textarea textarea:not(:placeholder-shown) ~ label,
   .textarea textarea:focus ~ label {
     transform: translateY(-55px) translateX(-12px);
     font-size: 14px;
