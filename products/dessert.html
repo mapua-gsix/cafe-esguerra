@@ -132,14 +132,11 @@
     </section>
     <div id="options-modal" class="options-modal">
       <div class="modal-content" id="modal-content">
-        <h2>Customize your order...</h2>
+        <h2>Customize your <span class="product-name"></span></h2>
+        <hr class="accent small" />
         <div>
           <div class="product-view" id="product-view">
             <image class="product-view-image"></image>
-            <div class="product-view-details">
-              <span class="product-name"></span>
-              <span class="product-price"></span>
-            </div>
           </div>
           <form
             onsubmit="handle_submit(event)"
@@ -154,82 +151,91 @@
               style="display: none"
             />
             <div class="group option-group">
-              <span class="option-label">Size:</span>
+              <span class="option-label">Size</span>
               <div class="size-options" id="size-options">
                 <template
                   id="size-option-template"
                   class="size-option-template"
                 >
-                  <label class="input-container">
-                    <input
-                      checked
-                      class="size-option-input"
-                      type="radio"
-                      data-price="0"
-                      required
-                      name="sizeOptionInput"
-                    />
-                    <span class="checkmark"></span>
-                  </label>
+                  <div class="option-item">
+                    <label class="input-container">
+                      <input
+                        checked
+                        class="size-option-input"
+                        type="radio"
+                        data-price="0"
+                        required
+                        name="sizeOptionInput"
+                      />
+                      <span class="checkmark"></span>
+                    </label>
 
-                  <span class="size-option option"></span>
+                    <span class="size-option option"></span>
+                  </div>
                 </template>
               </div>
             </div>
             <div class="group option-group">
-              <span class="option-label">Temperature:</span>
+              <span class="option-label">Temperature</span>
               <div class="temperature-options" id="temperature-options">
                 <template
                   id="temperature-option-template"
                   class="temperature-option-template"
                 >
-                  <label class="input-container">
-                    <input
-                      checked
-                      class="temperature-option-input"
-                      type="radio"
-                      required
-                      name="temperatureOptionInput"
-                    />
-                    <span class="checkmark"></span>
-                  </label>
-                  <span class="temperature-option option"></span>
+                  <div class="option-item">
+                    <label class="input-container">
+                      <input
+                        checked
+                        class="temperature-option-input"
+                        type="radio"
+                        required
+                        name="temperatureOptionInput"
+                      />
+                      <span class="checkmark"></span>
+                    </label>
+                    <span class="temperature-option option"></span>
+                  </div>
                 </template>
               </div>
             </div>
             <div class="group option-group">
-              <span class="option-label">Other options:</span>
+              <span class="option-label">Other</span>
               <div class="other-options" id="other-options">
                 <template
                   id="other-option-template"
                   class="other-option-template"
                 >
-                  <label class="input-container">
-                    <input
-                      checked
-                      class="other-option-input"
-                      type="radio"
-                      data-price="0"
-                      required
-                      name="otherOptionInput"
-                    />
-                    <span class="checkmark"></span>
-                  </label>
-                  <span class="other-option option"></span>
+                  <div class="option-item">
+                    <label class="input-container">
+                      <input
+                        checked
+                        class="other-option-input"
+                        type="radio"
+                        data-price="0"
+                        required
+                        name="otherOptionInput"
+                      />
+                      <span class="checkmark"></span>
+                    </label>
+                    <span class="other-option option"></span>
+                  </div>
                 </template>
               </div>
             </div>
-
-            <button
-              type="submit"
-              name="addToCart"
-              class="add-to-cart-button default-button"
-            >
-              <span class="material-symbols-outlined">add_shopping_cart</span
-              ><span>ADD TO CART</span>
-            </button>
           </form>
         </div>
+        <hr class="accent small" />
+        <span class="product-price"></span>
+        <button
+          type="submit"
+          name="addToCart"
+          form="options"
+          class="add-to-cart-button default-button"
+        >
+          <span class="material-symbols-outlined">add_shopping_cart</span
+          ><span>ADD TO CART</span>
+        </button>
+
         <button onclick="close_options()" class="close-button">
           <span class="material-symbols-outlined">close</span>
         </button>

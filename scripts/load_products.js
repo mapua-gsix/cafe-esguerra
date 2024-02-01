@@ -97,7 +97,8 @@ function render_product(product) {
     }
     let degX = (pX - 50) / 50;
     let degY = -(pY - 50) / 50;
-    item.style.transform = `rotateX(${degY}deg) rotateY(${degX}deg)`;
+    item.style.transform = `rotateX(${degY}deg) rotateY(${degX}deg) translateZ(10px)`;
+    item.style.zIndex = 99;
   };
   wrapper.onmouseleave = () => {
     item.style.transform = `rotateX(0deg) rotateY(0deg)`;

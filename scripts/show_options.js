@@ -117,9 +117,10 @@ function render_options(
 }
 function setProductViewInfo(product) {
   const productview = document.getElementById("product-view");
+  const optionsmodal = document.getElementById("options-modal");
   const options = document.getElementById("options");
-  productview.querySelector(".product-name").textContent = product.name;
-  productview.querySelector(".product-price").textContent = parseFloat(
+  optionsmodal.querySelector(".product-name").textContent = product.name;
+  optionsmodal.querySelector(".product-price").textContent = parseFloat(
     product.price
   ).toFixed(2);
   productview.querySelector(".product-view-image").src = product.image;
@@ -157,8 +158,8 @@ function setProductPrice(product) {
   } catch {
     temperaturePrice = 0;
   }
-  const productview = document.getElementById("product-view");
-  productview.querySelector(".product-price").textContent = parseFloat(
+  const optionsmodal = document.getElementById("options-modal");
+  optionsmodal.querySelector(".product-price").textContent = parseFloat(
     parseFloat(product.price) +
       parseFloat(sizePrice) +
       parseFloat(otherPrice) +
@@ -166,6 +167,6 @@ function setProductPrice(product) {
   ).toFixed(2);
 }
 function getProductPrice() {
-  const productview = document.getElementById("product-view");
-  return productview.querySelector(".product-price").textContent;
+  const optionsmodal = document.getElementById("options-modal");
+  return optionsmodal.querySelector(".product-price").textContent;
 }
