@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
-html{
+html {
   scroll-behavior: smooth;
 }
 
-.section-testimonial{
+.section-testimonial {
   max-height: fit-content !important;
   max-height: -moz-fit-content;
   height: fit-content !important;
   height: -moz-fit-content;
   background-image: var(--background-gradient-overlay),
-  url("../assets/graphics/card_background.svg") !important;
+    url("../assets/graphics/card_background.svg") !important;
   background-repeat: repeat;
   background-size: 700px !important;
 }
@@ -25,15 +25,17 @@ html{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: var(--tint);
+  background-blend-mode: multiply;
 }
 
-.banner{
+.banner {
   background-image: url("../assets/feedbackphotos/feedbackphoto1.png") !important;
 }
 
 .container {
   max-width: 800px;
-  
+
   background: #e5ddd0;
   width: 800px;
   padding: 25px 40px 10px 40px;
@@ -58,20 +60,33 @@ html{
 .container form {
   padding: 30px 0 0 0;
 }
-.container form .form-row {
-  display: flex;
-  margin: 32px 0;
-}
 
 header {
   z-index: 999;
   position: absolute;
 }
-
+.input-data {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 36px;
+}
+form .form-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+}
 form .form-row .input-data {
   width: 100%;
   height: 40px;
-  margin: 0 20px;
   position: relative;
 }
 form .form-row .textarea {
@@ -84,16 +99,19 @@ form .form-row .textarea {
   width: 100%;
   height: 100%;
   border: none;
-  font-size: 17px;
+  font-size: 16px;
+  color: var(--text);
+  font-family: var(--body-font);
+  padding: 0 0 0 8.5px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.12);
 }
 .input-data input:focus ~ label,
 .textarea textarea:focus ~ label,
 .input-data input:valid ~ label,
 .textarea textarea:valid ~ label {
-  transform: translateY(-35px);
+  transform: translateY(-35px) translateX(-12px);
   font-size: 14px;
-  color: #519440;
+  color: var(--accent);
 }
 .textarea textarea {
   resize: none;
@@ -103,16 +121,19 @@ form .form-row .textarea {
   position: absolute;
   pointer-events: none;
   bottom: 10px;
+  font-size: 18px;
+  padding: 0 12px 0 12px;
   font-size: 16px;
   transition: all 0.3s ease;
 }
-textarea, input{
+textarea,
+input {
   font-family: var(--body-font);
 }
 .textarea label {
   width: 100%;
   bottom: 40px;
-  background: #e5ddd0;
+  background: transparent;
 }
 .input-data .underline {
   position: absolute;
@@ -147,21 +168,15 @@ textarea, input{
   width: 300%;
   position: absolute;
   left: -100%;
-  background: -webkit-linear-gradient(
-    right,
-    #519440,
-    #519440
-  );
+  background: -webkit-linear-gradient(right, #519440, #519440);
   transition: all 0.4s;
 }
 .submit-btn .input-data:hover .inner {
   left: 0;
-
 }
-.submit-btn .input-data input:hover{
+.submit-btn .input-data input:hover {
   background-color: white;
-  border:3px solid #519440;
-
+  border: 3px solid #519440;
 }
 .submit-btn .input-data input {
   transition: all 0.4s ease-in;
@@ -176,24 +191,29 @@ textarea, input{
   position: relative;
   z-index: 2;
 }
+.form-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 @media screen and (max-width: 900px) {
   .textarea textarea:valid ~ label,
   .textarea textarea:focus ~ label {
-    transform: translateY(-55px);
-  font-size: 14px;
-  color: #ac7146;
+    transform: translateY(-55px) translateX(-12px);
+    font-size: 14px;
+    color: #ac7146;
   }
   .container .text {
     font-size: 30px;
   }
   .container form {
     padding: 10px 0 0 0;
+    gap: 48px;
   }
   .container form .form-row {
-    display: block;
-  }
-  form .form-row .input-data {
-    margin: 35px 0 !important;
+    flex-direction: column;
+    gap: 48px;
   }
   .submit-btn .input-data {
     width: 40% !important;
@@ -201,17 +221,12 @@ textarea, input{
   .textarea label {
     width: 100%;
     bottom: 20px;
-    background: #e5ddd0;
+    background: transparent;
   }
 
-  .smallscreen-text{
+  .smallscreen-text {
     font-size: small;
   }
-
-  button{
-    margin-left: 0px !important;
-  }
-
 }
 /*CSS For floating button*/
 #myBtn {
@@ -239,24 +254,23 @@ textarea, input{
   margin: auto;
 }
 
-.container2 p{
+.container2 p {
   text-align: justify;
 }
 
-p{
-text-indent: 0 !important;
+p {
+  text-indent: 0 !important;
 }
 
 .container2 {
   border: 2px solid transparent;
-  background-color: #C2AA90;
+  background-color: #c2aa90;
   border-radius: 5px;
   padding: 16px;
   margin: 16px 0;
   width: center;
   max-width: 100vw;
 }
-
 
 .img-container {
   border: 7px solid var(--secondary) !important;
@@ -266,22 +280,22 @@ text-indent: 0 !important;
 }
 
 .container2 img {
-  
-  outline: 15px groove #E5DDD0;
-  margin:50px;
+  outline: 15px groove #e5ddd0;
+  margin: 50px;
   display: block;
   float: left;
   margin-right: 33px;
   border-radius: 50%;
   margin-bottom: 33px;
 }
+
 @media (max-width: 500px) {
   .container2 {
     text-align: center;
   }
 
   .container2 img {
-    outline: 15px groove #C2AA90;
+    outline: 15px groove #c2aa90;
     margin: auto;
     margin-bottom: 50px;
     float: none;
@@ -301,4 +315,3 @@ text-indent: 0 !important;
   clear: both;
   display: table;
 }
-
