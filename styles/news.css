@@ -12,11 +12,16 @@ section.enclosed > div {
 
   background-color: var(--primary);
 }
+.news-section,
+.promos-section,
+.events-section {
+  max-height: unset;
+}
 .banner {
   background-image: url("../assets/newsphotos/newsphoto1.jpg");
 }
 .live-music-photo {
-  background-image: url("../assets/newsphotos/newsphoto2.jpg")
+  background-image: url("../assets/newsphotos/newsphoto2.jpg");
 }
 #gallery-proper {
   display: grid;
@@ -138,7 +143,7 @@ img {
 }
 
 .news-banner {
-  background-image: url('testimonials_images/banner_img.jpg');
+  background-image: url("testimonials_images/banner_img.jpg");
   background-size: cover;
   height: 150px;
   display: flex;
@@ -157,7 +162,7 @@ img {
 }
 
 .news-banner {
-  background-image: url('testimonials_images/banner_img.jpg');
+  background-image: url("testimonials_images/banner_img.jpg");
   background-size: cover;
   height: 150px;
   display: flex;
@@ -203,8 +208,8 @@ img {
 
 .box-content img {
   border-radius: 5%;
-  border: 2px solid #ccc; 
-  margin-bottom: 20px; 
+  border: 2px solid #ccc;
+  margin-bottom: 20px;
   width: 350px;
   height: 250px;
 }
@@ -215,10 +220,10 @@ img {
 }
 
 .box-banner {
-  background-image: url('testimonials_images/banner_blur.jpg');
+  background-image: url("testimonials_images/banner_blur.jpg");
   background-size: cover;
-  height: 50px; 
-  margin-top: 10px; 
+  height: 50px;
+  margin-top: 10px;
   border-radius: 10px;
   display: flex;
   align-items: flex-end;
@@ -239,37 +244,37 @@ img {
 
 /* Loyalty Program Styles */
 .loyalty-section {
-margin-top: 20px;
-text-align: center;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .loyalty-box {
-background-color: #F7E0B8; /* Light brown background color */
-border-radius: 15px;
-margin-top: 20px;
-padding: 20px;
-border: 1px solid #ccc;
-width: 70%;
-margin-left: auto;
-margin-right: auto;
+  background-color: #f7e0b8; /* Light brown background color */
+  border-radius: 15px;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .loyalty-header {
-text-align: center;
+  text-align: center;
 }
 
 .loyalty-header h2 {
-font-size: 28px;
-font-weight: bold;
-margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .loyalty-content h2 {
-font-size: 20px;
-font-weight: bold;
-margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .loyalty-content p {
-margin-bottom: 15px;
+  margin-bottom: 15px;
 }
