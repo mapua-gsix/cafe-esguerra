@@ -13,7 +13,7 @@
             "id":"1000",
             "name":"Americano",
             "description":"This is a test product",
-            "image":"../assets/product_images/coffee.jpg",
+            "image":"../assets/product_images/coffee_placeholder.png",
             "price":100,
             "sizeOptions":[{
                 "name": "regular",
@@ -35,7 +35,7 @@
             "id":"1001",
             "name":"Latte",
             "description":"This is a test product",
-            "image":"../assets/product_images/coffee.jpg",
+            "image":"../assets/product_images/coffee_placeholder.png",
             "price":120,
             "sizeOptions":[{
                 "name": "regular",
@@ -57,7 +57,7 @@
             "id":"1002",
             "name":"Cappuccino",
             "description":"This is a test product",
-            "image":"../assets/product_images/coffee.jpg",
+            "image":"../assets/product_images/coffee_placeholder.png",
             "price":120,
             "sizeOptions":[{
                 "name": "regular",
@@ -78,7 +78,7 @@
             "id":"1003",
             "name":"Spanish Latte",
             "description":"This is a test product",
-            "image":"../assets/product_images/coffee.jpg",
+            "image":"../assets/product_images/coffee_placeholder.png",
             "price":150,
             "sizeOptions":[{
                 "name": "regular",
@@ -99,7 +99,7 @@
             "id":"1004",
             "name":"Caramel Latte",
             "description":"This is a test product",
-            "image":"../assets/product_images/coffee.jpg",
+            "image":"../assets/product_images/coffee_placeholder.png",
             "price":160,
             "sizeOptions":[{
                 "name": "regular",
@@ -120,7 +120,7 @@
             "id":"1005",
             "name":"Vanilla Latte",
             "description":"This is a test product",
-            "image":"../assets/product_images/coffee.jpg",
+            "image":"../assets/product_images/coffee_placeholder.png",
             "price":160,
             "sizeOptions":[{
                 "name": "regular",
@@ -141,7 +141,7 @@
             "id":"1006",
             "name":"Hazelnut Latte",
             "description":"This is a test product",
-            "image":"../assets/product_images/coffee.jpg",
+            "image":"../assets/product_images/coffee_placeholder.png",
             "price":160,
             "sizeOptions":[{
                 "name": "regular",
@@ -162,7 +162,7 @@
             "id":"1007",
             "name":"Cheesecake Latte",
             "description":"This is a test product",
-            "image":"../assets/product_images/coffee.jpg",
+            "image":"../assets/product_images/coffee_placeholder.png",
             "price":160,
             "sizeOptions":[{
                 "name": "regular",
@@ -183,7 +183,7 @@
             "id":"1008",
             "name":"Mocha Latte",
             "description":"This is a test product",
-            "image":"../assets/product_images/coffee.jpg",
+            "image":"../assets/product_images/coffee_placeholder.png",
             "price":170,
             "sizeOptions":[{
                 "name": "regular",
@@ -204,7 +204,7 @@
             "id":"1009",
             "name":"Caaramel Macchiato",
             "description":"This is a test product",
-            "image":"../assets/product_images/coffee.jpg",
+            "image":"../assets/product_images/coffee_placeholder.png",
             "price":185,
             "sizeOptions":[{
                 "name": "regular",
@@ -225,7 +225,7 @@
             "id":"1010",
             "name":"Matcha Latte",
             "description":"This is a test product",
-            "image":"../assets/product_images/coffee.jpg",
+            "image":"../assets/product_images/coffee_placeholder.png",
             "price":170,
             "sizeOptions":[{
                 "name": "regular",
@@ -246,7 +246,7 @@
             "id":"1011",
             "name":"Chocolate Latte",
             "description":"This is a test product",
-            "image":"../assets/product_images/coffee.jpg",
+            "image":"../assets/product_images/coffee_placeholder.png",
             "price":175,
             "sizeOptions":[{
                 "name": "regular",
@@ -267,7 +267,7 @@
             "id":"1012",
             "name":"Red Velvet",
             "description":"This is a test product",
-            "image":"../assets/product_images/coffee.jpg",
+            "image":"../assets/product_images/coffee_placeholder.png",
             "price":130,
             "sizeOptions":[{
                 "name": "regular",
@@ -289,7 +289,7 @@
             "id":"1100",
             "name":"Athena's Blend",
             "description":"This is a test product",
-            "image":"../assets/placeholder.png",
+            "image":"../assets/product_images/frappe_placeholder.png",
             "price":180,
             "sizeOptions":[{
                 "name": "regular",
@@ -308,7 +308,7 @@
             "id":"1101",
             "name":"European Chocolate",
             "description":"This is a test product",
-            "image":"../assets/placeholder.png",
+            "image":"../assets/product_images/frappe_placeholder.png",
             "price":180,
             "sizeOptions":[{
                 "name": "regular",
@@ -327,7 +327,7 @@
             "id":"1102",
             "name":"Oreo Cheesecake",
             "description":"This is a test product",
-            "image":"../assets/placeholder.png",
+            "image":"../assets/product_images/frappe_placeholder.png",
             "price":170,
             "sizeOptions":[{
                 "name": "regular",
@@ -345,7 +345,7 @@
             "id":"1103",
             "name":"Strawberry Oreo",
             "description":"This is a test product",
-            "image":"../assets/placeholder.png",
+            "image":"../assets/product_images/frappe_placeholder.png",
             "price":170,
             "sizeOptions":[{
                 "name": "regular",
@@ -363,7 +363,7 @@
             "id":"1104",
             "name":"Strawberry",
             "description":"This is a test product",
-            "image":"../assets/placeholder.png",
+            "image":"../assets/product_images/frappe_placeholder.png",
             "price":150,
             "sizeOptions":[{
                 "name": "regular",
@@ -381,7 +381,7 @@
             "id":"1105",
             "name":"Salted Caramel",
             "description":"This is a test product",
-            "image":"../assets/placeholder.png",
+            "image":"../assets/product_images/frappe_placeholder.png",
             "price":160,
             "sizeOptions":[{
                 "name": "regular",
@@ -399,7 +399,7 @@
             "id":"1106",
             "name":"Mixed Berry",
             "description":"This is a test product",
-            "image":"../assets/placeholder.png",
+            "image":"../assets/product_images/frappe_placeholder.png",
             "price":190,
             "sizeOptions":[{
                 "name": "regular",
@@ -417,7 +417,7 @@
             "id":"1107",
             "name":"Caramel",
             "description":"This is a test product",
-            "image":"../assets/placeholder.png",
+            "image":"../assets/product_images/frappe_placeholder.png",
             "price":170,
             "sizeOptions":[{
                 "name": "regular",
@@ -435,7 +435,7 @@
             "id":"1108",
             "name":"Mocha",
             "description":"This is a test product",
-            "image":"../assets/placeholder.png",
+            "image":"../assets/product_images/frappe_placeholder.png",
             "price":170,
             "sizeOptions":[{
                 "name": "regular",
@@ -453,7 +453,7 @@
             "id":"1109",
             "name":"Matcha",
             "description":"This is a test product",
-            "image":"../assets/placeholder.png",
+            "image":"../assets/product_images/frappe_placeholder.png",
             "price":185,
             "sizeOptions":[{
                 "name": "regular",
@@ -471,7 +471,7 @@
             "id":"1110",
             "name":"Matcha Oreo",
             "description":"This is a test product",
-            "image":"../assets/placeholder.png",
+            "image":"../assets/product_images/frappe_placeholder.png",
             "price":190,
             "sizeOptions":[{
                 "name": "regular",
@@ -490,7 +490,7 @@
             "id":"2000",
             "name":"Blueberry Lychee",
             "description":"This is a test product",
-            "image":"../assets/placeholder.png",
+            "image":"../assets/product_images/tea_placeholder.png",
             "price":95,
             "sizeOptions":[{
                 "name": "regular",
@@ -512,7 +512,7 @@
             "id":"2001",
             "name":"Blueberry",
             "description":"This is a test product",
-            "image":"../assets/placeholder.png",
+            "image":"../assets/product_images/tea_placeholder.png",
             "price":95,
             "sizeOptions":[{
                 "name": "regular",
@@ -534,7 +534,7 @@
             "id":"2002",
             "name":"Lychee",
             "description":"This is a test product",
-            "image":"../assets/placeholder.png",
+            "image":"../assets/product_images/tea_placeholder.png",
             "price":95,
             "sizeOptions":[{
                 "name": "regular",
@@ -556,7 +556,7 @@
             "id":"2003",
             "name":"Strawberry",
             "description":"This is a test product",
-            "image":"../assets/placeholder.png",
+            "image":"../assets/product_images/tea_placeholder.png",
             "price":95,
             "sizeOptions":[{
                 "name": "regular",
@@ -578,7 +578,7 @@
             "id":"2004",
             "name":"Passion Fruit",
             "description":"This is a test product",
-            "image":"../assets/placeholder.png",
+            "image":"../assets/product_images/tea_placeholder.png",
             "price":120,
             "sizeOptions":[{
                 "name": "regular",
@@ -600,7 +600,7 @@
             "id":"2005",
             "name":"Lychee Ginger",
             "description":"This is a test product",
-            "image":"../assets/placeholder.png",
+            "image":"../assets/product_images/tea_placeholder.png",
             "price":120,
             "sizeOptions":[{
                 "name": "regular",
@@ -616,34 +616,13 @@
             "otherOptions":[{
                 "name": "none",
                 "price": 0
-            },{
-                "name": "ice cream",
-                "price": 30
-            },{
-                "name": "cream cheese",
-                "price": 30
-            },{
-                "name": "pearls",
-                "price": 20
-            },{
-                "name": "nata",
-                "price": 20
-            },{
-                "name": "coffee jelly",
-                "price": 25
-            },{
-                "name": "crushed oreo",
-                "price": 20
-            },{
-                "name": "syrup",
-                "price": 25
             }]
         },
         {
             "id":"2101",
             "name":"Wintermelon",
             "description":"This is a test product",
-            "image":"../assets/placeholder.png",
+            "image":"../assets/product_images/milktea_placeholder.png",
             "price":99,
             "sizeOptions":[{
                 "name": "regular",
@@ -683,7 +662,7 @@
             "id":"2102",
             "name":"Taro",
             "description":"This is a test product",
-            "image":"../assets/placeholder.png",
+            "image":"../assets/product_images/milktea_placeholder.png",
             "price":99,
             "sizeOptions":[{
                 "name": "regular",
@@ -723,7 +702,7 @@
             "id":"2103",
             "name":"Okinawa",
             "description":"This is a test product",
-            "image":"../assets/placeholder.png",
+            "image":"../assets/product_images/milktea_placeholder.png",
             "price":99,
             "sizeOptions":[{
                 "name": "regular",
@@ -736,6 +715,27 @@
             "otherOptions":[{
                 "name": "none",
                 "price": 0
+            },{
+                "name": "ice cream",
+                "price": 30
+            },{
+                "name": "cream cheese",
+                "price": 30
+            },{
+                "name": "pearls",
+                "price": 20
+            },{
+                "name": "nata",
+                "price": 20
+            },{
+                "name": "coffee jelly",
+                "price": 25
+            },{
+                "name": "crushed oreo",
+                "price": 20
+            },{
+                "name": "syrup",
+                "price": 25
             }]
         },
         {
