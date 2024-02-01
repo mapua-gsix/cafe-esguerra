@@ -57,7 +57,7 @@ html {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.container form {
+.default-form {
   padding: 32px 0 32px 0;
   display: flex;
   justify-content: center;
@@ -75,19 +75,19 @@ header {
   justify-content: flex-start;
   align-items: flex-start;
 }
-form .form-row {
+.default-form .form-row {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 36px;
 }
-form .form-row .input-data {
+.default-form .form-row .input-data {
   width: 100%;
   height: 40px;
   position: relative;
 }
-form .form-row .textarea {
+.default-form .form-row .textarea {
   height: 70px;
 }
 .input-data input,
@@ -105,8 +105,8 @@ form .form-row .textarea {
 }
 .input-data input:focus ~ label,
 .textarea textarea:focus ~ label,
-.input-data input:valid ~ label,
-.textarea textarea:valid ~ label {
+.input-data input:not(:placeholder-shown) ~ label,
+.textarea textarea:not(:placeholder-shown) ~ label {
   transform: translateY(-35px) translateX(-12px);
   font-size: 14px;
   color: var(--accent);
