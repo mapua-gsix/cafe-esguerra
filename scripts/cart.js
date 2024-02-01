@@ -108,8 +108,10 @@ function onModifyCart() {
     var cart = JSON.parse(sessionStorage.getItem("cart"));
     var ungrouped_cart = ungroup_cart(cart);
     cart_badge.textContent = ungrouped_cart.length;
-    const total = document.getElementById("total");
-    total.textContent = `${parseFloat(getTotalPrice()).toFixed(2)}`;
+    if (window.location.href.includes("order")) {
+      const total = document.getElementById("total");
+      total.textContent = `${parseFloat(getTotalPrice()).toFixed(2)}`;
+    }
   } catch (err) {
     console.log(err, "NO ITEMS IN CART");
   }
