@@ -30,6 +30,11 @@ function showSlides(n, prev) {
 const inMiddle = (entries, observer) => {
   entries.forEach((entry) => {
     entry.target.classList.toggle("is-inMiddle", entry.isIntersecting);
+    console.log(
+      parseInt(entry.target.dataset.index),
+      dots[parseInt(entry.target.dataset.index)],
+      entry.target
+    );
     dots[parseInt(entry.target.dataset.index)].classList.toggle(
       "active",
       entry.isIntersecting
@@ -63,3 +68,4 @@ for (let i = 0; i < images.length; i++) {
 }
 
 const dots = document.getElementsByClassName("carousel-dot");
+showSlides((slideIndex = 1), 0);
