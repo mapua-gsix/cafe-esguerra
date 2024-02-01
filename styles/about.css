@@ -98,14 +98,7 @@ img {
 .selection {
   flex-direction: column;
 }
-.hr.accent {
-  width: 50%;
-  height: unset;
-  margin: 0 25% !important;
-}
-.hr.accent hr {
-  border: 2px solid var(--accent);
-}
+
 .welcome-title,
 .selection-title {
   text-align: center;
