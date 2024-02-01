@@ -81,11 +81,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--background-gradient);
   width: 100%;
-}
-.selection-section {
-  background: var(--secondary);
 }
 .welcome,
 .selection {
