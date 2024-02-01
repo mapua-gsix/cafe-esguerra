@@ -118,6 +118,14 @@ hr.accent {
   padding: 0;
   margin: 0;
 }
+section .hr {
+  width: 50%;
+  height: unset;
+  margin: 0 25% !important;
+}
+section .hr hr.accent {
+  border: 2px solid var(--accent);
+}
 
 h1,
 h2,
