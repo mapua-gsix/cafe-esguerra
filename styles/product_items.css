@@ -4,7 +4,6 @@ body.modal-active {
 .products-section {
   max-height: unset;
   height: fit-content;
-  background: var(--background-gradient);
 }
 .products {
   display: grid;
