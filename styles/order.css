@@ -191,12 +191,6 @@
 .textarea textarea {
   display: flex;
 }
-.form-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 160px;
-}
 .checkout-form {
   display: flex;
   justify-content: center;
