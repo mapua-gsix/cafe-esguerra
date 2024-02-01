@@ -208,6 +208,10 @@ textarea, input{
     font-size: small;
   }
 
+  button{
+    margin-left: 0px !important;
+  }
+
 }
 /*CSS For floating button*/
 #myBtn {
