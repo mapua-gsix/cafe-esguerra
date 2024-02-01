@@ -2,8 +2,6 @@ body {
   background-color: var(--primary);
 }
 .banner {
-  padding: 50px 0 0 0;
-
   background-color: var(--tint);
   background-position: 0% 30%;
   color: var(--text-light);
@@ -27,19 +25,50 @@ body {
 .carousel-section {
   height: fit-content;
   max-height: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.carousel-title {
+  font-size: clamp(24px, 2vw, 2em);
+}
+.carousel-title h1 {
+  margin: 24px 0px;
+}
 .new-carousel {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  overflow: hidden;
+  overflow: visible;
   width: 100%;
   height: fit-content;
   padding: 72px 0;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(44, 44, 44, 1) 15%,
+    rgba(44, 44, 44, 1) 50%,
+    rgba(44, 44, 44, 1) 85%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(44, 44, 44, 1) 15%,
+    rgba(44, 44, 44, 1) 50%,
+    rgba(44, 44, 44, 1) 85%,
+    rgba(0, 0, 0, 0) 100%
+  );
   gap: 3rem;
 }
-
+.carousel .hr {
+  width: 10%;
+  height: unset;
+  margin: 0 0 0 0 !important;
+}
+.carousel .hr hr {
+  border: 2px solid var(--accent);
+}
 .new-carousel img {
   width: 30vw;
 
@@ -56,8 +85,14 @@ body {
 }
 
 .carousel {
-  overflow: hidden;
+  overflow: visible;
+  width: 90%;
+  background-color: var(--primary);
   display: flex;
+  padding: 48px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   position: relative;
 }
 

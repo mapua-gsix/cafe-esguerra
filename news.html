@@ -8,12 +8,12 @@
     <link rel="icon" href="assets/favicon.svg" type="image/x-icon" />
     <link rel="stylesheet" href="styles/navbar.css" />
     <link rel="stylesheet" href="styles/footer.css" />
-    <link rel="stylesheet" href="styles/about.css" />
+    <link rel="stylesheet" href="styles/news.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-    <title>Café Esguerra | by cafethena</title>
+    <title>News | Café ESGUERRA</title>
   </head>
   <body>
     <header>
@@ -21,35 +21,35 @@
         <div class="logo"><img src="assets/logo.svg" alt="logo" /></div>
         <div class="links">
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="..index.html">Home</a></li>
 
-            <li><a href="./about.html">About</a></li>
-            <li><a class="active" href="./news.html">News</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a class="active" href="../news.html">News</a></li>
 
-            <li><a href="./forms/reservation.html">Reservations</a></li>
+            <li><a href="../forms/reservation.html">Reservations</a></li>
             <li>
-              <a href="./forms/feedback.html">Feedback</a>
+              <a href="../forms/feedback.html">Feedback</a>
             </li>
             <li class="products-dropdown-button">
-              <a href="./products.html">Products</a
+              <a href="../products.html">Products</a
               ><span class="material-symbols-outlined noselect"
                 >expand_more
               </span>
               <ul class="products-dropdown">
                 <li>
-                  <a href="products/coffee.html"
+                  <a href="../products/coffee.html"
                     ><span class="material-symbols-outlined"> coffee </span>
                     Coffee</a
                   >
                 </li>
                 <li>
-                  <a href="products/beverage.html"
+                  <a href="../products/beverage.html"
                     ><span class="material-symbols-outlined"> local_bar </span>
                     Beverages</a
                   >
                 </li>
                 <li>
-                  <a href="products/dessert.html"
+                  <a href="../products/dessert.html"
                     ><span class="material-symbols-outlined"> icecream </span>
                     Desserts</a
                   >
@@ -64,7 +64,7 @@
             onclick="window.location.href='./forms/order.html'"
           >
             <span id="badge" class="badge">0</span>
-            <span class="material-symbols-outlined"> shopping_cart </span> CART
+            <span class="material-symbols-outlined"> shopping_cart </span>
           </button>
         </div>
       </nav>
@@ -76,12 +76,27 @@
         <span class="material-symbols-outlined">menu</span>
       </button>
     </header>
-
+<section class="banner-section adapt-to-header">
+  <div class ="banner" data-inviewport="fade-from-bottom">
+    <div class="banner-heading"></div>
+    <font color="#FFFFFF"><h2>News</h2>
+    <h1 class="brand-font">Café ESGUERRA</h1>
+    <div class="hr"data-inviewport="expand">
+      <hr>
+          </div>
+          <h3>Indulge your palate with just a few clicks!</h3>
+        
+          <ul>ADSJKASDJK</p>
+        </font>
+        </div>
+    </div>
+  </div>
+</section>
     <section>
-      <div id="aboutheader">
-        <div id="aboutheadertext">
+      <div id="newsheader">
+        <div id="newstext">
           <p> </p>
-          <h1 style="text-align:left;">News</h1>
+         
         </div>
 
         <div id="aboutheaderbody">
@@ -130,16 +145,45 @@
         </footer>
   </body>
   <script
-    src="./scripts/transparent_navbar.js"
+    src="../scripts/transparent_navbar.js"
     crossorigin="anonymous"
   ></script>
-  <script src="./scripts/responsive_navbar.js" crossorigin="anonymous"></script>
-  <script src="./scripts/load_animations.js" crossorigin="anonymous"></script>
+  <script
+    src="../scripts/responsive_navbar.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="../scripts/load_animations.js" crossorigin="anonymous"></script>
   <script>
     window.onload = () => {
       for (let i of document.querySelectorAll("#aboutgallery img")) {
         i.onclick = () => i.classList.toggle("full");
       }
     };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    document.querySelectorAll("[data-inviewport]").forEach((element) => {
+      observer.observe(element);
+    });
+
+    window.onload = () => {
+      for (let i of document.querySelectorAll("#aboutgallery img")) {
+        i.onclick = () => i.classList.toggle("full");
+      }
+    };
   </script>
+  <script
+    src="https://kit.fontawesome.com/c4046a80c3.js"
+    crossorigin="anonymous"
+  ></script>
 </html>
+
