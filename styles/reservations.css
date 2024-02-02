@@ -4,6 +4,10 @@ section {
   padding: 0 0 0 0 !important;
 }
 
+section .banner {
+  background-image: url("../assets/banner_blur.jpg") !important;
+}
+
 .reservation-section {
   display: flex;
   justify-content: center;
