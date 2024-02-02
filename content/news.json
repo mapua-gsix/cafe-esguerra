@@ -1,6 +1,42 @@
 {
   "news": [
     {
+      "header": "Customer Appreciation Week: A Big Thank You to Our Loyal Patrons",
+      "content": [
+        "To express our gratitude for your unwavering support, we're hosting a Customer Appreciation Week from February 5 - February 10. Enjoy surprise discounts, freebies, and special treats as a token of our appreciation.",
+        "Hit us up for your orders on our social media or you may contact us at 09084257473/ 09365888562."
+      ],
+      "bannerImagePath": "./assets/newsphotos/newsphoto4.jpg",
+      "redirectText": "Learn more!",
+      "redirectLink": "https://www.facebook.com/cafethena/",
+      "datePosted": "January 31, 2024"
+    },
+    {
+      "header": "Coffee Art Exhibition: A Fusion of Creativity and Caffeine",
+      "content": [
+        "Step into the world where art meets coffee in our upcoming Coffee Art Exhibition.",
+        "Local artists will showcase their masterpieces inspired by Cafe ESGUERRA's coffee culture. ",
+        "Mark your calendars for an immersive experience of creativity and caffeine."
+      ],
+      "bannerImagePath": "./assets/newsphotos/newsphoto3.jpg",
+      "redirectText": "Learn more!",
+      "redirectLink": "https://www.facebook.com/cafethena/",
+      "datePosted": "January 28, 2024"
+    },
+    {
+      "header": "Loyalty Card Rewards: Sip, Collect, and Redeem!",
+      "content": [
+        "Collect stickers, get 1 free drink!",
+        "With every coffee purchase, receive a charming sticker on your Loyalty Card. Whether it's our signature Espresso Bliss, a frothy Cappuccino, or a refreshing iced beverage, each order earns you step closer to free indulgence.",
+        "Reach 10, Redeem 1",
+      "Once your Loyalty Card boasts 10 stickers, the magic happens! Redeem your completed card for a free drink of your choice. It's our way of saying thank you for being a valued part of the Cafe ESGUERRA family."
+      ],
+      "bannerImagePath": "./assets/promo1.jpg",
+      "redirectText": "Check it out!",
+      "redirectLink": "https://www.facebook.com/cafethena/",
+      "datePosted": "January 28, 2024"
+    },
+    {
       "header": "Indulge your palate with just a few clicks! ",
       "content": [
         "FREE DELIVERY with no minimum purchase within Cainta, Rizal (Any point between Junction and Estrella).",
@@ -15,99 +51,9 @@
       "header": "Important Announcement 📢🔈",
       "content": ["We would like to inform you that we will be having a private event today, January 2, 2024. We will be closed at 8 PM onwards. See you all tomorrow!"],
       "bannerImagePath": "./assets/announcement1.jpg",
-      "redirectText": "Check it out!",
+      "redirectText": "Learn more!",
       "redirectLink": "https://www.facebook.com/photo/?fbid=765940038896916&set=a.454314990059424",
       "datePosted": "January 2, 2024"
-    },
-    {
-      "header": "Dummy content",
-      "content": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ex erat, in semper nibh suscipit non. Praesent vehicula, sem nec lacinia volutpat, lacus enim suscipit urna, suscipit faucibus urna odio sed augue. ", 
-      "Suspendisse euismod ante ut dignissim tincidunt. Proin tristique est ut enim elementum, et lobortis orci condimentum. Sed pretium ultricies sem ut imperdiet. Nunc tempor dui libero, sit amet rhoncus neque efficitur vel. Vivamus nec maximus orci. Donec accumsan tincidunt enim sed mattis. Aenean eget luctus libero."],
-      "bannerImagePath": "./assets/banner_img.jpg",
-      "redirectText": "Check it out!",
-      "redirectLink": "#",
-      "datePosted": "MMMM DD, YYYY"
-    },
-    {
-      "header": "Dummy content",
-      "content": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ex erat, in semper nibh suscipit non. Praesent vehicula, sem nec lacinia volutpat, lacus enim suscipit urna, suscipit faucibus urna odio sed augue. ", 
-      "Suspendisse euismod ante ut dignissim tincidunt. Proin tristique est ut enim elementum, et lobortis orci condimentum. Sed pretium ultricies sem ut imperdiet. Nunc tempor dui libero, sit amet rhoncus neque efficitur vel. Vivamus nec maximus orci. Donec accumsan tincidunt enim sed mattis. Aenean eget luctus libero."],
-      "bannerImagePath": "./assets/banner_img.jpg",
-      "redirectText": "Check it out!",
-      "redirectLink": "#",
-      "datePosted": "MMMM DD, YYYY"
-    },
-    {
-      "header": "Dummy content",
-      "content": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ex erat, in semper nibh suscipit non. Praesent vehicula, sem nec lacinia volutpat, lacus enim suscipit urna, suscipit faucibus urna odio sed augue. ", 
-      "Suspendisse euismod ante ut dignissim tincidunt. Proin tristique est ut enim elementum, et lobortis orci condimentum. Sed pretium ultricies sem ut imperdiet. Nunc tempor dui libero, sit amet rhoncus neque efficitur vel. Vivamus nec maximus orci. Donec accumsan tincidunt enim sed mattis. Aenean eget luctus libero."],
-      "bannerImagePath": "./assets/banner_img.jpg",
-      "redirectText": "Check it out!",
-      "redirectLink": "#",
-      "datePosted": "MMMM DD, YYYY"
-    },
-    {
-      "header": "Dummy content",
-      "content": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ex erat, in semper nibh suscipit non. Praesent vehicula, sem nec lacinia volutpat, lacus enim suscipit urna, suscipit faucibus urna odio sed augue. ", 
-      "Suspendisse euismod ante ut dignissim tincidunt. Proin tristique est ut enim elementum, et lobortis orci condimentum. Sed pretium ultricies sem ut imperdiet. Nunc tempor dui libero, sit amet rhoncus neque efficitur vel. Vivamus nec maximus orci. Donec accumsan tincidunt enim sed mattis. Aenean eget luctus libero."],
-      "bannerImagePath": "./assets/banner_img.jpg",
-      "redirectText": "Check it out!",
-      "redirectLink": "#",
-      "datePosted": "MMMM DD, YYYY"
-    },
-    {
-      "header": "Dummy content",
-      "content": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ex erat, in semper nibh suscipit non. Praesent vehicula, sem nec lacinia volutpat, lacus enim suscipit urna, suscipit faucibus urna odio sed augue. ", 
-      "Suspendisse euismod ante ut dignissim tincidunt. Proin tristique est ut enim elementum, et lobortis orci condimentum. Sed pretium ultricies sem ut imperdiet. Nunc tempor dui libero, sit amet rhoncus neque efficitur vel. Vivamus nec maximus orci. Donec accumsan tincidunt enim sed mattis. Aenean eget luctus libero."],
-      "bannerImagePath": "./assets/banner_img.jpg",
-      "redirectText": "Check it out!",
-      "redirectLink": "#",
-      "datePosted": "MMMM DD, YYYY"
-    },
-    {
-      "header": "Dummy content",
-      "content": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ex erat, in semper nibh suscipit non. Praesent vehicula, sem nec lacinia volutpat, lacus enim suscipit urna, suscipit faucibus urna odio sed augue. ", 
-      "Suspendisse euismod ante ut dignissim tincidunt. Proin tristique est ut enim elementum, et lobortis orci condimentum. Sed pretium ultricies sem ut imperdiet. Nunc tempor dui libero, sit amet rhoncus neque efficitur vel. Vivamus nec maximus orci. Donec accumsan tincidunt enim sed mattis. Aenean eget luctus libero."],
-      "bannerImagePath": "./assets/banner_img.jpg",
-      "redirectText": "Check it out!",
-      "redirectLink": "#",
-      "datePosted": "MMMM DD, YYYY"
-    },
-    {
-      "header": "Dummy content",
-      "content": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ex erat, in semper nibh suscipit non. Praesent vehicula, sem nec lacinia volutpat, lacus enim suscipit urna, suscipit faucibus urna odio sed augue. ", 
-      "Suspendisse euismod ante ut dignissim tincidunt. Proin tristique est ut enim elementum, et lobortis orci condimentum. Sed pretium ultricies sem ut imperdiet. Nunc tempor dui libero, sit amet rhoncus neque efficitur vel. Vivamus nec maximus orci. Donec accumsan tincidunt enim sed mattis. Aenean eget luctus libero."],
-      "bannerImagePath": "./assets/banner_img.jpg",
-      "redirectText": "Check it out!",
-      "redirectLink": "#",
-      "datePosted": "MMMM DD, YYYY"
-    },
-    {
-      "header": "Dummy content",
-      "content": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ex erat, in semper nibh suscipit non. Praesent vehicula, sem nec lacinia volutpat, lacus enim suscipit urna, suscipit faucibus urna odio sed augue. ", 
-      "Suspendisse euismod ante ut dignissim tincidunt. Proin tristique est ut enim elementum, et lobortis orci condimentum. Sed pretium ultricies sem ut imperdiet. Nunc tempor dui libero, sit amet rhoncus neque efficitur vel. Vivamus nec maximus orci. Donec accumsan tincidunt enim sed mattis. Aenean eget luctus libero."],
-      "bannerImagePath": "./assets/banner_img.jpg",
-      "redirectText": "Check it out!",
-      "redirectLink": "#",
-      "datePosted": "MMMM DD, YYYY"
-    },
-    {
-      "header": "Dummy content",
-      "content": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ex erat, in semper nibh suscipit non. Praesent vehicula, sem nec lacinia volutpat, lacus enim suscipit urna, suscipit faucibus urna odio sed augue. ", 
-      "Suspendisse euismod ante ut dignissim tincidunt. Proin tristique est ut enim elementum, et lobortis orci condimentum. Sed pretium ultricies sem ut imperdiet. Nunc tempor dui libero, sit amet rhoncus neque efficitur vel. Vivamus nec maximus orci. Donec accumsan tincidunt enim sed mattis. Aenean eget luctus libero."],
-      "bannerImagePath": "./assets/banner_img.jpg",
-      "redirectText": "Check it out!",
-      "redirectLink": "#",
-      "datePosted": "MMMM DD, YYYY"
-    },
-    {
-      "header": "Dummy content",
-      "content": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ex erat, in semper nibh suscipit non. Praesent vehicula, sem nec lacinia volutpat, lacus enim suscipit urna, suscipit faucibus urna odio sed augue. ", 
-      "Suspendisse euismod ante ut dignissim tincidunt. Proin tristique est ut enim elementum, et lobortis orci condimentum. Sed pretium ultricies sem ut imperdiet. Nunc tempor dui libero, sit amet rhoncus neque efficitur vel. Vivamus nec maximus orci. Donec accumsan tincidunt enim sed mattis. Aenean eget luctus libero."],
-      "bannerImagePath": "./assets/banner_img.jpg",
-      "redirectText": "Check it out!",
-      "redirectLink": "#",
-      "datePosted": "MMMM DD, YYYY"
     }
   ],
   "mode":"first_is_recent"

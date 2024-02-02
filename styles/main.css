@@ -34,6 +34,13 @@
     rgba(229, 221, 208, 0.5) 50%,
     rgba(194, 170, 144, 1) 100%
   );
+  --background-gradient-overlay-large: linear-gradient(
+    180deg,
+    rgba(229, 221, 208, 1) 0%,
+    rgba(229, 221, 208, 0.5) 5%,
+    rgba(194, 170, 144, 0.5) 80%,
+    rgba(194, 170, 144, 1) 100%
+  );
   --background-gradient-fade: linear-gradient(
     180deg,
     rgba(194, 170, 144, 1) 0%,
@@ -41,6 +48,12 @@
     rgba(194, 170, 144, 0.67) 50%,
     rgba(194, 170, 144, 0.75) 60%,
     rgba(194, 170, 144, 1) 100%
+  );
+  --foreground-gradient: radial-gradient(
+    circle,
+    rgba(229, 221, 208, 1) 0%,
+    rgba(229, 221, 208, 1) 10%,
+    rgba(194, 170, 144, 1) 400%
   );
   --default-shadow: 0px 0px 12px -4px var(--shadow);
   --image-shadow-large: -5vmin -5vmin 0px 0px var(--secondary);
@@ -224,6 +237,7 @@ img {
   cursor: pointer;
   background-color: transparent;
   font-family: var(--header-font);
+  color: var(--text);
   border: none;
   font-size: x-large;
   display: flex;
@@ -288,6 +302,13 @@ section.adapt-to-header {
 }
 .card-background-gradient {
   background-image: var(--background-gradient-overlay),
+    url("../assets/graphics/card_background.svg") !important;
+  background-repeat: repeat;
+
+  background-size: 700px !important;
+}
+.card-background-gradient-large {
+  background-image: var(--background-gradient-overlay-large),
     url("../assets/graphics/card_background.svg") !important;
   background-repeat: repeat;
 
@@ -471,5 +492,8 @@ section.adapt-to-header {
   }
   .banner-nav li a {
     font-size: x-small;
+  }
+  .hide-on-mobile {
+    display: none;
   }
 }

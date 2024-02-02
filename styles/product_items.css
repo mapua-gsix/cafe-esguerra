@@ -34,7 +34,7 @@ body.modal-active {
   padding: 12px 0;
 }
 .product-item {
-  background-color: var(--primary);
+  background: var(--foreground-gradient);
   display: flex;
   flex-direction: column;
   overflow: hidden;

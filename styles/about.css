@@ -10,7 +10,7 @@ section.enclosed {
 section.enclosed > div {
   width: 90%;
 
-  background-color: var(--primary);
+  background: var(--foreground-gradient);
 }
 .banner {
   background-image: url("../assets/aboutphotos/aboutheaderphoto.png");
@@ -136,7 +136,6 @@ img {
   background-position: center;
   background-attachment: fixed;
   background-blend-mode: multiply;
-
   width: 100%;
 }
 .mission-vision {
@@ -146,7 +145,7 @@ img {
 }
 .mission-vision > div {
   width: 30%;
-  background-color: var(--primary);
+  background: var(--foreground-gradient);
   padding: 24px 48px;
   height: fit-content;
   display: table-cell;

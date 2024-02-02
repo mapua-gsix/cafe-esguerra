@@ -76,7 +76,7 @@
       </button>
     </header>
 
-    <section class="banner-section adapt-to-header">
+    <section class="banner-section">
       <div class="banner" data-inviewport="fade-from-bottom">
         <div class="banner-heading">
           <!--HEADING-->
@@ -87,175 +87,45 @@
           </div>
           <h3>What's going on?</h3>
         </div>
-        <ul class="banner-nav">
-          <!--BANNER NAV-->
-          <li><a href="#news">News</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#promos">Promos</a></li>
-        </ul>
       </div>
     </section>
-
-    <section class="news-section padding-large">
-      <!-- News Header -->
-      <div class="news-banner">
-        <h1 class="brand-font">News</h1>
-      </div>
-
+    <div class="hr" data-inviewport="expand">
+      <hr class="accent" />
+    </div>
+    <section class="news-section padding-large card-background-gradient-large">
       <!-- News Box -->
-      <div class="box" style="background-color: #f3ead9">
-        <div class="box-header">
-          Customer Appreciation Week: A Big Thank You to Our Loyal Patrons
-        </div>
-        <div class="box-content">
-          <img
-            src="assets/newsphotos/newsphoto4.jpg"
-            alt="Customer Appreciation"
-          />
-          <div class="box-content-text">
-            <p>
-              To express our gratitude for your unwavering support, we're
-              hosting a Customer Appreciation Week from February 5 - February
-              10. Enjoy surprise discounts, freebies, and special treats as a
-              token of our appreciation. Thank you for being part of the Cafe
-              ESGUERRA family!
-            </p>
+      <div id="newscontainer" class="news">
+        <template id="news-item-template">
+          <div class="box news-item">
+            <h1 class="box-header news-header"></h1>
+            <div class="hr">
+              <hr class="accent" />
+            </div>
+            <div class="box-content">
+              <img
+                class="news-image"
+                src="assets/newsphotos/newsphoto4.jpg"
+                alt="Customer Appreciation"
+              />
+              <div class="hr">
+                <hr class="accent" />
+              </div>
+              <div class="box-content-text news-content"></div>
+            </div>
+            <hr />
+            <div class="box-details">
+              <div class="date">
+                <span class="news-date"></span>
+              </div>
+              <div class="redirect">
+                <button class="news-redirect-button text-button">
+                  <span class="news-redirect-text"></span>
+                  <span class="material-symbols-outlined">navigate_next</span>
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-        <hr />
-        <div class="box-banner">
-          <div class="box-banner-text">
-            <p>Check it out!</p>
-          </div>
-          <div class="box-banner-date">
-            <p>Posted on 01/31/2024</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="events-section padding-large">
-      <!-- Events Header -->
-      <div class="news-banner">
-        <h1 class="brand-font">Events</h1>
-      </div>
-
-      <!-- Events Box 1 -->
-      <div class="box" style="background-color: #f4e6cc">
-        <div class="box-header">
-          Coffee Art Exhibition: A Fusion of Creativity and Caffeine
-        </div>
-        <div class="box-content">
-          <img src="assets/newsphotos/newsphoto3.jpg" alt="Live Music Nights" />
-          <div class="box-content-text">
-            <p>
-              Step into the world where art meets coffee in our upcoming Coffee
-              Art Exhibition. Local artists will showcase their masterpieces
-              inspired by Cafe ESGUERRA's coffee culture. Mark your calendars
-              for an immersive experience of creativity and caffeine.
-            </p>
-          </div>
-        </div>
-        <hr />
-        <div class="box-banner">
-          <div class="box-banner-text">
-            <p>Check it out!</p>
-          </div>
-          <div class="box-banner-date">
-            <p>Posted on 01/28/2024</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Events Box 2 -->
-      <div class="box" style="background-color: #f4e6cc">
-        <div class="box-header">Live Music Nights</div>
-        <div class="box-content">
-          <img
-            src="./assets/newsphotos/newsphoto2.jpg"
-            alt="Live Music Nights"
-          />
-          <div class="box-content-text">
-            <p>Dates: Every weekend night!</p>
-            <p>
-              Experience the perfect blend of live music and exceptional coffee.
-              Join us on select evenings for a cozy atmosphere, great tunes, and
-              delightful beverages.
-            </p>
-          </div>
-        </div>
-        <hr />
-        <div class="box-banner">
-          <div class="box-banner-text">
-            <p>Check it out!</p>
-          </div>
-          <div class="box-banner-date">
-            <p>Posted on 01/28/2024</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="promos-section padding-large">
-      <!-- Promos -->
-      <div class="news-banner">
-        <h1 class="brand-font">Promos</h1>
-      </div>
-
-      <!-- Promos Box-->
-      <div class="box" style="background-color: #f7e0b8">
-        <div class="box-header">
-          Loyalty Card Rewards: Sip, Collect, and Redeem!
-        </div>
-        <div class="box-content">
-          <img src="../assets/promo1.jpg" alt="Live Music Nights" />
-          <div class="box-content-text">
-            <p>Collect stickers, get 1 free drink!</p>
-          </div>
-        </div>
-        <hr />
-        <div class="box-banner">
-          <div class="box-banner-text">
-            <p>Check it out!</p>
-          </div>
-          <div class="box-banner-date">
-            <p>Posted on 01/28/2024</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Loyalty Program Section -->
-    <section class="loyalty-section">
-      <div class="loyalty-box">
-        <div class="loyalty-header">
-          <h2>How It Works</h2>
-          <hr />
-        </div>
-        <div class="loyalty-content">
-          <h2>Sip and Collect</h2>
-          <p>
-            With every coffee purchase, receive a charming sticker on your
-            Loyalty Card. Whether it's our signature Espresso Bliss, a frothy
-            Cappuccino, or a refreshing iced beverage, each order earns you a
-            step closer to free indulgence.
-          </p>
-          <h2>Reach 10, Redeem 1</h2>
-          <p>
-            Once your Loyalty Card boasts 10 stickers, the magic happens! Redeem
-            your completed card for a free drink of your choice. It's our way of
-            saying thank you for being a valued part of the Cafe ESGUERRA
-            family.
-          </p>
-          <h2>Cafe ESGUERRA Delivers Delight to Your Doorstep</h2>
-          <p>
-            At Cafe ESGUERRA, we believe that exceptional coffee and indulgent
-            treats should be within arm's reach. That's why we're thrilled to
-            introduce our Free Delivery Promo, exclusively catering to our
-            valued patrons between the vibrant premises of Estrella and Junction
-            Cainta, Rizal.
-          </p>
-        </div>
+        </template>
       </div>
     </section>
 
@@ -350,7 +220,19 @@
 </section>
 
     <footer>
+      <div class="logo" data-inviewport="fade-from-bottom">
+        <img src="./assets/logo.svg" />
+      </div>
       <div class="horizontal" data-inviewport="fade-from-bottom">
+        <div class="navigate">
+          <h4>Navigate</h4>
+          <a href="#">Home ></a>
+          <a href="./about.html">About ></a>
+          <a href="./products.html">Products ></a>
+          <a href="./news.html">News ></a>
+          <a href="./forms/reservation.html">Reservations ></a>
+          <a href="./forms/feedback.html">Feedback ></a>
+        </div>
         <div class="authors">
           <h4>Authors</h4>
           <a>Cunanan, Ian</a>
@@ -362,23 +244,21 @@
         </div>
         <div class="contacts">
           <h4>Stay connected</h4>
-          <a href="https://www.facebook.com/cafethena">Facebook</a>
-          <a href="https://www.instagram.com/cafeesguerra/">Instagram</a>
-          <a>E-mail</a>
-        </div>
-        <div class="address">
+          <div class="links">
+            <a href="https://www.facebook.com/cafethena"
+              ><i class="fa-brands fa-square-facebook"></i
+            ></a>
+            <a href="https://www.instagram.com/cafeesguerra/"
+              ><i class="fa-brands fa-square-instagram"></i
+            ></a>
+          </div>
+
           <h4>Find us</h4>
-          <a>Address</a>
-        </div>
-        <div class="navigate">
-          <h4>Navigate</h4>
-          <a>Home ></a>
-          <a>Products ></a>
-          <a>About ></a>
-          <a>News ></a>
-          <a>Reservations ></a>
-          <a>Feedback ></a>
-          <a>Orders ></a>
+          <div class="address">
+            <a href="https://maps.app.goo.gl/CKyncxri1tmE5xGR9"
+              >766 A. Bonifacio, Cainta, 1900 Rizal</a
+            >
+          </div>
         </div>
       </div>
 
@@ -393,6 +273,7 @@
     src="./scripts/transparent_navbar.js"
     crossorigin="anonymous"
   ></script>
+  <script src="./scripts/cart.js"></script>
   <script src="./scripts/responsive_navbar.js" crossorigin="anonymous"></script>
   <script src="./scripts/load_animations.js" crossorigin="anonymous"></script>
   <script>
@@ -427,4 +308,5 @@
     src="https://kit.fontawesome.com/c4046a80c3.js"
     crossorigin="anonymous"
   ></script>
+  <script src="./scripts/load_news.js"></script>
 </html>

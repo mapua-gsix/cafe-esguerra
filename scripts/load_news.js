@@ -1,4 +1,4 @@
-//Use this to generate news/promos/announcement, simply use <template id=promo-item-template>
+//Use this to generate news/promos/announcement, simply use <template id=news-item-template>
 
 fetch("../content/news.json")
   .then(function (response) {
@@ -15,21 +15,21 @@ function render_data(
   redirectText,
   redirectLink
 ) {
-  var item_template = document.getElementById("promo-item-template").content;
+  var item_template = document.getElementById("news-item-template").content;
 
   var clone = document.importNode(item_template, true);
 
-  clone.querySelector(".promo-image").src = bannerImagePath;
-  clone.querySelector(".promo-header").textContent = header;
-  clone.querySelector(".promo-date").textContent = datePosted;
-  var contentContainer = clone.querySelector("div.promo-content");
+  clone.querySelector(".news-image").src = bannerImagePath;
+  clone.querySelector(".news-header").textContent = header;
+  clone.querySelector(".news-date").textContent = datePosted;
+  var contentContainer = clone.querySelector("div.news-content");
   content.forEach((element) => {
     const pElement = document.createElement("p");
     pElement.textContent = element;
     contentContainer.appendChild(pElement);
   });
-  clone.querySelector(".promo-redirect-text").textContent = redirectText;
-  clone.querySelector(".promo-redirect-button").onclick = function () {
+  clone.querySelector(".news-redirect-text").textContent = redirectText;
+  clone.querySelector(".news-redirect-button").onclick = function () {
     window.location.href = redirectLink;
   };
 
@@ -37,7 +37,7 @@ function render_data(
 }
 function appendData(data) {
   if ("content" in document.createElement("template")) {
-    const container = document.getElementById("promocontainer");
+    const container = document.getElementById("newscontainer");
     for (let i = 0; i < data.news.length; i++) {
       container.appendChild(
         render_data(

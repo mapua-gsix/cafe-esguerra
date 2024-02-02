@@ -1,280 +1,75 @@
-section {
-  max-height: 100vh;
-  padding: 0 0 0 0 !important;
-}
-section.enclosed {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-section.enclosed > div {
-  width: 90%;
-
-  background-color: var(--primary);
-}
-.news-section,
-.promos-section,
-.events-section {
-  max-height: unset;
-}
 .banner {
-  background-image: url("../assets/newsphotos/newsphoto1.jpg");
+  background-image: url("../assets/newsphotos/news_banner.jpg");
 }
-.live-music-photo {
-  background-image: url("../assets/newsphotos/newsphoto2.jpg");
-}
-#gallery-proper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
-  width: 100%;
-  overflow: hidden;
-  margin: 0;
-  padding: 48px;
-  background-color: var(--primary);
-}
-
-#gallery-proper img {
-  display: inline-block;
-  width: 40vh;
-  max-height: 100%;
-  padding: 10px;
-  margin: auto;
-  border: 1px solid #ddd;
-  background: #fff;
-  object-fit: fill;
-  transition: transform ease 0.5s;
-}
-
-#gallery-proper img:hover {
-  transform: scale(1.1);
-}
-
-#gallery-proper img.full {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  width: 100vw;
-  height: 100vh;
-  object-fit: contain;
-  background: rgba(0, 0, 0, 0.7);
-}
-#textcontainer {
+.news-section {
   display: flex;
-  text-align: justify;
-}
-
-#text {
-  flex: 1;
-  font-size: 1.2rem;
-  padding: 0% 4%;
-}
-
-#image {
-  flex: 1;
-  text-align: center;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-.welcome-section,
-.selection-section {
+  justify-content: flex-start;
+  align-items: center;
   max-height: unset;
   height: fit-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--background-gradient);
+  min-height: 100vh;
   width: 100%;
-}
-.selection-section {
-  background: var(--secondary);
-}
-.welcome,
-.selection {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 48px 12px 48px 12px;
-  gap: 24px;
-}
-.selection {
   flex-direction: column;
 }
-.hr.accent {
-  width: 50%;
-  height: unset;
-  margin: 0 25% !important;
-}
-.hr.accent hr {
-  border: 2px solid var(--accent);
-}
-.welcome-title,
-.selection-title {
-  text-align: center;
-  font-size: x-large;
-}
-.welcome-text {
-  width: 40%;
-}
-.selection-text {
-  width: clamp(200px, 80%, 770px);
-}
-.welcome-graphic {
-  border-style: dashed;
-  height: fit-content;
-  border-color: var(--text);
-  border-radius: 50%;
-  padding: 4vw;
-  background: var(--primary);
-  background: radial-gradient(
-    circle,
-    var(--secondary) 20%,
-    rgba(0, 212, 255, 0) 100%
-  );
-}
-/* News Header */
-.news-section {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.news-banner {
-  background-image: url("testimonials_images/banner_img.jpg");
-  background-size: cover;
-  height: 150px;
+.news {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  padding: 20px;
-  color: #fff;
-  font-size: 32px;
-  text-decoration: underline; /* Added underline */
+  flex-direction: column;
+  gap: 48px;
 }
-
-/* News Header */
-.news-section {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.news-banner {
-  background-image: url("testimonials_images/banner_img.jpg");
-  background-size: cover;
-  height: 150px;
+.news-item {
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 20px;
-  color: #fff;
-  font-size: 32px;
-  text-decoration: underline; /* Added underline */
+  align-items: center;
+  flex-direction: column;
+  width: max(250px, 80%);
+  background: var(--foreground-gradient);
+  padding: 32px;
+  gap: 24px;
+  transition: all 0.3s ease;
 }
-
-/* News Box */
-.box {
-  background-color: #fff;
-  border-radius: 15px;
-  margin-top: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  transition: transform 0.3s ease-in-out; /* Added transition property */
-}
-
-.box:hover {
-  transform: scale(1.05); /* Added scale on hover */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Added box shadow on hover */
-}
-
-.box-header {
-  font-size: 24px;
-  font-weight: bold;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-}
-
 .box-content {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  width: 80%;
 }
-
-.box-content img {
-  border-radius: 5%;
-  border: 2px solid #ccc;
-  margin-bottom: 20px;
-  width: 350px;
-  height: 250px;
+.news-header {
+  background-color: var(--accent);
+  color: var(--text-light);
+  padding: 12px;
 }
-
-.box-content-text {
-  flex: 1;
-  text-align: left;
-}
-
-.box-banner {
-  background-image: url("testimonials_images/banner_blur.jpg");
-  background-size: cover;
-  height: 50px;
-  margin-top: 10px;
-  border-radius: 10px;
+.box-details {
   display: flex;
-  align-items: flex-end;
-  padding: 5px;
-  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
 }
-
-.box-banner-text {
-  flex: 1;
-  color: black;
-  text-align: left;
+.news-image {
+  height: 25vw;
+  min-height: 200px;
+  min-width: 200px;
+  object-fit: cover;
+  aspect-ratio: 1;
 }
-
-.box-banner-date {
-  font-size: 14px;
-  color: black;
+.news-date {
+  font-family: var(--header-font);
+  font-size: clamp(14px, 1vw, 1em);
 }
-
-/* Loyalty Program Styles */
-.loyalty-section {
-  margin-top: 20px;
-  text-align: center;
+.news-date::before {
+  content: "Posted on: ";
 }
-
-.loyalty-box {
-  background-color: #f7e0b8; /* Light brown background color */
-  border-radius: 15px;
-  margin-top: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
+.news-item .text-button {
+  font-size: clamp(14px, 1vw, 1em);
 }
-
-.loyalty-header {
-  text-align: center;
-}
-
-.loyalty-header h2 {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.loyalty-content h2 {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.loyalty-content p {
-  margin-bottom: 15px;
+@media screen and (max-width: 600px) {
+  .news-date::before {
+    content: "";
+  }
+  .news-item .text-button {
+    gap: 0;
+  }
 }
