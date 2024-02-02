@@ -1,6 +1,6 @@
 //Use this to generate news/promos/announcement, simply use <template id=news-item-template>
 
-fetch("./content/news.json")
+fetch("../content/news.json")
   .then(function (response) {
     return response.json();
   })
