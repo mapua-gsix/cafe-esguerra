@@ -57,12 +57,13 @@ function appendProducts(type) {
         response.json().then((data) => appendItems(data, "24", query))
       );
       break;
-    case "desserts":
-      console.log("loading desserts...");
+    case "pastry":
+      console.log("loading pastries...");
       fetch("../content/products.json").then((response) =>
         response.json().then((data) => appendItems(data, "30", query))
       );
       break;
+
     default:
       break;
   }

@@ -740,17 +740,41 @@
         },
         {
             "id":"3000",
-            "name":"Test (Dessert Item)",
+            "name":"Choco Butternut Crinkles",
             "description":"This is a test product",
-            "image":"../assets/placeholder.png",
-            "price":150,
+            "image":"../assets/product_images/3000.png",
+            "price":70,
+            "sizeOptions":[{"name":"regular","price":0}],
+            "temperature":[{"name":"n/a","price":0}],
+            "otherOptions":[{"name":"none","price":0}]
+        },
+        {
+            "id":"3002",
+            "name":"Brownies",
+            "description":"This is a test product",
+            "image":"../assets/product_images/3002.png",
+            "price":35,
+            "sizeOptions":[{"name":"regular","price":0}],
+            "temperature":[{"name":"n/a","price":0}],
+            "otherOptions":[{"name":"none","price":0}]
+        },
+        {
+            "id":"3003",
+            "name":"Cookies",
+            "description":"This is a test product",
+            "image":"../assets/product_images/3003.png",
+            "price":60,
             "ingredients":[
                 "water",
                 "milk"
             ],
-            "sizeOptions":[],
-            "temperature":[],
-            "otherOptions":[]
+            "sizeOptions":[{"name":"regular","price":0}],
+            "temperature":[{"name":"n/a","price":0}],
+            "otherOptions":[
+                {"name":"none","price":0},
+                {"name":"cashews","price":10},
+                {"name":"chocolate chips","price":10}
+            ]
         }
     ]
 }
